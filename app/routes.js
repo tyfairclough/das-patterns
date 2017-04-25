@@ -7,13 +7,13 @@ module.exports = {
 		
 		app.get('/:id*', function(req, res){
 			
-			var defaultView = 'index';
+			var defaultView = '/index';
 			
 			if (req.param(0) !== '') {
-				defaultView = req.param(0);
+				defaultView = req.param(0) + "/index";
 			}
 			
-		 res.render("patterns/" + req.param('id') + "/" + defaultView);
+		 res.render("patterns/" + req.param('id') + defaultView);
 		});
 		
  }
