@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Sprint {{sprint}} - Funding
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+{% block content %}
+<style>
+    .header-organisation {
+        display: none;
+    }
+    .header-user h2 {
+        display: none;
+    }
+</style>
+<main class="elements-index" id="content" role="main" tabindex="-1">
+
+    <section id="notifications">
+   
+    </section>
+    
+ <div class="grid-row">
+    <div class="column-two-thirds">
+                    <div class="hgroup">
+            <h1 class="heading-xlarge">Invitations</h1>
+            </div>
+  </div>
+</div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+
+            
+            
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Account name</th>
+                                <th scope="col">What you can do</th>
+                                <th>Expires in</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td class=""><span class="company-name">Acme Ltd Coventry</span>
+                                </td>
+                                <td>Everything – you're an owner</td>
+                                <td>7 days</td>
+<td><a href="/sprint/{{sprint}}/user/index.html?invite=accepted">Accept</a></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>            
+ 
+            
+            
+            
+        </div>
+    </div>
+
+</main>
+{% endblock %}

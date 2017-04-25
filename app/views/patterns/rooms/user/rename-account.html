@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Sprint {{sprint}} - Funding
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+{% block content %}
+<style>
+    .header-organisation {
+        display: none;
+    }
+    .header-user h2 {
+        display: none;
+    }
+</style>
+<main class="rename-account" id="content" role="main" tabindex="-1">
+  <!--{% include "includes/link-back.html" %}-->
+
+    <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+
+  <ul class="error-summary-list">
+    <li><a href="#example-personal-details">Enter a name</a></li>
+  </ul>
+
+</div>
+    
+  <div class="grid-row">
+    <div class="column-two-thirds">
+<div class="hgroup">
+      <h1 class="heading-xlarge">Rename levy account</h1>
+</div>        
+<form>
+    <div class="form-group">
+            <label class="form-label-bold" for="email">Current account name</label>
+            <input class="form-control company-name" id="currentName" maxlength="128" name="email" type="text" tabindex="0" disabled value="Your levy account">  
+    </div>
+    <div class="form-group hidden">
+            <label class="form-label-bold" for="email">Account ID</label>
+            <input class="form-control" id="email" maxlength="128" name="email" type="text" tabindex="0" disabled value="XC993">  
+    </div>
+    <div class="form-group error" id="newName">
+            <label class="form-label-bold" for="new-name">
+                
+                New account name
+        <span class="error-message">
+          Enter a name
+        </span>
+
+        </label>
+        
+            <input class="form-control" id="new-name" maxlength="128" name="email" type="text"> 
+    </div>
+    <div class="form-group">
+        <a class="button" href="/sprint/{{sprint}}/user/index.html?name=new">Save and continue</a>
+        <a class="button text-link" href="/sprint/{{sprint}}/user/index.html?name=cancel">Cancel</a>
+    </div>
+</form>
+        
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

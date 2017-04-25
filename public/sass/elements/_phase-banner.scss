@@ -1,0 +1,21 @@
+// Phase banners
+// ==========================================================================
+
+.phase-banner {
+  @include phase-banner();
+}
+
+// These classnames are deprecated,
+// they will be removed in a future version of GOV.UK elements
+.phase-banner-alpha,
+.phase-banner-beta {
+  @include phase-banner();
+}
+
+
+.phase-banner {
+    border-bottom: none;
+    .phase-tag {
+            background: $govuk-blue;
+    }
+}

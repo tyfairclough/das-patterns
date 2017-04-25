@@ -1,0 +1,458 @@
+    <section id="table">
+        <h3 class="heading-large">Tables</h3>
+        <p>We use tables to organise rows of data.</p>
+        <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+        <li><a href="#responsive-table">Responsive tables</a></li>
+        <li><a href="#data-table-numeric">Numeric tabular data</a></li>
+        <li><a href="#data-in-a-table">Data in a table</a></li>
+        <li><a href="#data-visualisation">Data visualisation</a></li>
+      </ul>
+    </div>
+  </div>
+        
+<div class="hgroup">        
+<h3 class="heading-medium" id="responsive-table">Responsive tables — card UI</h3>
+        <p>Your tables should work on mobile devices. To utilise the responsive table behaviour use the class <code class="code">.responsive</code> against the <code class="code">&lt;table&gt;</code> element.</p>
+</div>        
+<details>
+    <summary>SASS</summary>
+<pre>
+    <code class="sass">
+
+td, th {
+    &.highlight {
+        background: $grey-3;
+    }
+}
+
+// Responsive Tables
+
+table.responsive {
+    thead {
+        display: none;
+    }
+    tr {
+       // border: 1px solid $border-colour;
+        margin-bottom: 10px;
+        display: block;
+        float: lefåt;
+        width: 100%;
+        box-sizing: border-box;
+        td {
+            display: block;
+            text-align: right;
+            clear:left;
+            float:left;
+            width: 100%;
+            padding: 10px 10px 8px;
+            box-sizing: border-box;
+            border-bottom: 1px dotted $border-colour;
+            &:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                padding-right: 10px;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            &:empty {
+                display: none;
+            }
+        }
+        &.total {
+            border: 2px solid #000;
+        }
+    }
+}
+
+@include media(tablet) {
+    table.responsive {
+        thead {
+            display: table-header-group;
+        }
+        tr {
+            display: table-row;
+            border:none;
+            float: none;
+            margin: 0;
+            th, td {
+                display: table-cell;
+                text-align: left;
+                float: none;
+                clear: none;
+                padding: 0.6em 1em 0.5em;
+                border-bottom-style: solid;
+                width: auto;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+                &:before {
+                    display: none;
+                }
+                &.numeric {
+                    text-align: right;
+                }
+                &.colgroup {
+                    text-align: center
+                }
+                &:last-child {
+                    border-bottom: 1px solid $border-colour;
+                }
+            }
+            &.total {
+                border: none;
+                td {
+                    border-bottom: none;
+                    &.total {
+                        border-bottom: 2px solid #000;
+                    }
+                }
+            }
+        }
+    }
+
+    @for $i from 1 through 14 {
+        table.responsive tr th.tw-#{$i * 5} {
+            width: $i * 5%;
+        }
+    }
+
+}    
+    </code>
+</pre>
+</details>                
+
+<div class="example">
+<table class="responsive">
+            <thead>
+                <tr>
+                    <th scope="col" class="tw-25"><span class="no-wrap">Date</span></th>
+                    <th scope="col" class="tw-25">Description</th>
+                    <th scope="col" class="numeric">Amount</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Date">
+                        <span class="no-wrap"> 22 April 2017 </span>
+                    </td>
+                    <td data-label="Description">
+                        Levy
+
+                    </td>
+                    <td class="numeric" data-label="Amount"> £5,000.00</td>
+                    <td class="numeric">
+                        <a title="View details for the transaction on 15 Mar 2018" href="/sprint/31/account/finance/levy.html">
+                            Details <span class="vh"> for the transaction on 20 Oct 2017</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Date">
+                        <span class="no-wrap"> 5 Apr 2017</span>
+                    </td>
+                    <td data-label="Description">
+
+                            Acme Ltd
+
+                    </td>
+                    <td class="numeric" data-label="Amount"> -£2,000.00</td>
+                    <td class="numeric">
+                        <a title="View details for the transaction on 15 Apr 2018" href="/sprint/31/account/finance/payment-details-levy.html">
+                            Details <span class="vh"> for the transaction on  4 Nov 2017</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Date">
+                        <span class="no-wrap"> 5 Apr 2017</span>
+                    </td>
+                    <td data-label="Description">
+
+                            Co-invested — Anvil Plc
+
+                    </td>
+                    <td class="numeric" data-label="Amount"> -£1,000.00</td>
+                    <td class="numeric">
+                        <a title="View details for the transaction on 15 Apr 2018" href="/sprint/31/account/finance/payment-details.html">
+                            Details <span class="vh"> for the transaction on  4 Nov 2017</span>
+                        </a>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        
+</div>
+<details>
+    <summary>HTML</summary>
+<pre>
+    <code class="html">
+&lt;table class="responsive"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th scope="col" class="tw-25"&gt;&lt;span class="no-wrap"&gt;Date&lt;/span&gt;&lt;/th&gt;
+                    &lt;th scope="col" class="tw-25"&gt;Description&lt;/th&gt;
+                    &lt;th scope="col" class="numeric"&gt;Amount&lt;/th&gt;
+                    &lt;th&gt;&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Date"&gt;
+                        &lt;span class="no-wrap"&gt; 22 April 2017 &lt;/span&gt;
+                    &lt;/td&gt;
+                    &lt;td data-label="Description"&gt;
+                        Levy
+
+                    &lt;/td&gt;
+                    &lt;td class="numeric" data-label="Amount"&gt; £5,000.00&lt;/td&gt;
+                    &lt;td class="numeric"&gt;
+                        &lt;a title="View details for the transaction on 15 Mar 2018" href="/sprint/31/account/finance/levy.html"&gt;
+                            Details &lt;span class="vh"&gt; for the transaction on 20 Oct 2017&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Date"&gt;
+                        &lt;span class="no-wrap"&gt; 5 Apr 2017&lt;/span&gt;
+                    &lt;/td&gt;
+                    &lt;td data-label="Description"&gt;
+
+                            Acme Ltd
+
+                    &lt;/td&gt;
+                    &lt;td class="numeric" data-label="Amount"&gt; -£2,000.00&lt;/td&gt;
+                    &lt;td class="numeric"&gt;
+                        &lt;a title="View details for the transaction on 15 Apr 2018" href="/sprint/31/account/finance/payment-details-levy.html"&gt;
+                            Details &lt;span class="vh"&gt; for the transaction on  4 Nov 2017&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Date"&gt;
+                        &lt;span class="no-wrap"&gt; 5 Apr 2017&lt;/span&gt;
+                    &lt;/td&gt;
+                    &lt;td data-label="Description"&gt;
+
+                            Co-invested — Anvil Plc
+
+                    &lt;/td&gt;
+                    &lt;td class="numeric" data-label="Amount"&gt; -£1,000.00&lt;/td&gt;
+                    &lt;td class="numeric"&gt;
+                        &lt;a title="View details for the transaction on 15 Apr 2018" href="/sprint/31/account/finance/payment-details.html"&gt;
+                            Details &lt;span class="vh"&gt; for the transaction on  4 Nov 2017&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+
+
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    </code>
+</pre>    
+</details>               
+        
+        
+<h4 class="heading-small">Additional treatments</h4>        
+        <p>If you need to highlight columns use the <code class="code">.highlight</code> class on the cells that need highlighting.</p>
+        
+<div class="example">
+        <table class="responsive">
+            <thead>
+                <tr>
+                    <th colspan="2"></th>
+                    <th class="highlight colgroup" scope="colgroup" colspan="2">Co-investment</th>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col" class="numeric">Paid from levy</th>
+                    <th scope="col" class="highlight numeric">90% paid by Government</th>
+                    <th scope="col" class="highlight numeric">10% paid by you</th>
+                    <th scope="col" class="numeric">Amount</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Course">Financial services administrator level 3</td>
+                    <td data-label="Paid from levy" class="numeric">-£1000.00</td>
+                    <td data-label="90% paid by Government" class="highlight numeric">£0.00</td>
+                    <td data-label="10% by you" class="highlight numeric">£0.00</td>
+                    <td data-label="Amount" class="numeric">£-1000.00</td>
+                    <td><a href="">Details</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Course">Financial services administrator level 3</td>
+                    <td data-label="Paid from levy" class="numeric">-£1000.00</td>
+                    <td data-label="90% paid by Government" class="highlight numeric">£0.00</td>
+                    <td data-label="10% by you" class="highlight numeric">£0.00</td>
+                    <td data-label="Amount" class="numeric">£-1000.00</td>
+                    <td><a href="">Details</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Course">Financial services administrator level 3</td>
+                    <td data-label="Paid from levy" class="numeric">-£1000.00</td>
+                    <td data-label="90% paid by Government" class="highlight numeric">£0.00</td>
+                    <td data-label="10% by you" class="highlight numeric">£0.00</td>
+                    <td data-label="Amount" class="numeric">£-1000.00</td>
+                    <td><a href="">Details</a></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="total">
+                    <td data-label="Totals"> </td>
+                    <td data-label="Paid from levy" class="total numeric">-£875.00</td>
+                    <td data-label="90% paid by Government" class="total numeric highlight">-£875.00</td>
+                    <td data-label="10% by you" class="total numeric highlight">-£875.00</td>
+                    <td data-label="Amount"s class="total numeric">-£875.00</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+</div>
+        
+<details>
+    <summary>HTML</summary>
+    <pre>
+        <code class="html">
+&lt;table class="responsive"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th colspan="2"&gt;&lt;/th&gt;
+                    &lt;th class="highlight colgroup" scope="colgroup" colspan="2"&gt;Co-investment&lt;/th&gt;
+                    &lt;th colspan="2"&gt;&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th scope="col"&gt;Course&lt;/th&gt;
+                    &lt;th scope="col" class="numeric"&gt;Paid from levy&lt;/th&gt;
+                    &lt;th scope="col" class="highlight numeric"&gt;90% paid by Government&lt;/th&gt;
+                    &lt;th scope="col" class="highlight numeric"&gt;10% paid by you&lt;/th&gt;
+                    &lt;th scope="col" class="numeric"&gt;Amount&lt;/th&gt;
+                    &lt;th&gt;&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Course"&gt;Financial services administrator level 3&lt;/td&gt;
+                    &lt;td data-label="Paid from levy" class="numeric"&gt;-£1000.00&lt;/td&gt;
+                    &lt;td data-label="90% paid by Government" class="highlight numeric"&gt;£0.00&lt;/td&gt;
+                    &lt;td data-label="10% by you" class="highlight numeric"&gt;£0.00&lt;/td&gt;
+                    &lt;td data-label="Amount" class="numeric"&gt;£-1000.00&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=""&gt;Details&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Course"&gt;Financial services administrator level 3&lt;/td&gt;
+                    &lt;td data-label="Paid from levy" class="numeric"&gt;-£1000.00&lt;/td&gt;
+                    &lt;td data-label="90% paid by Government" class="highlight numeric"&gt;£0.00&lt;/td&gt;
+                    &lt;td data-label="10% by you" class="highlight numeric"&gt;£0.00&lt;/td&gt;
+                    &lt;td data-label="Amount" class="numeric"&gt;£-1000.00&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=""&gt;Details&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td data-label="Course"&gt;Financial services administrator level 3&lt;/td&gt;
+                    &lt;td data-label="Paid from levy" class="numeric"&gt;-£1000.00&lt;/td&gt;
+                    &lt;td data-label="90% paid by Government" class="highlight numeric"&gt;£0.00&lt;/td&gt;
+                    &lt;td data-label="10% by you" class="highlight numeric"&gt;£0.00&lt;/td&gt;
+                    &lt;td data-label="Amount" class="numeric"&gt;£-1000.00&lt;/td&gt;
+                    &lt;td&gt;&lt;a href=""&gt;Details&lt;/a&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+            &lt;tfoot&gt;
+                &lt;tr class="total"&gt;
+                    &lt;td data-label="Totals"&gt; &lt;/td&gt;
+                    &lt;td data-label="Paid from levy" class="total numeric"&gt;-£875.00&lt;/td&gt;
+                    &lt;td data-label="90% paid by Government" class="total numeric highlight"&gt;-£875.00&lt;/td&gt;
+                    &lt;td data-label="10% by you" class="total numeric highlight"&gt;-£875.00&lt;/td&gt;
+                    &lt;td data-label="Amount"s class="total numeric"&gt;-£875.00&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tfoot&gt;
+        &lt;/table&gt;
+        </code>
+    </pre>
+</details>        
+        
+        
+<h3 class="heading-medium" id="data-table-numeric">Numeric tabular data</h3>        
+<ul class="text list list-bullet">
+    <li>when comparing rows of numbers, align numbers to the right in table cells</li>
+    <li>use the GOV.UK frontend toolkit’s <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#tabular-numbers" rel="external">tabular numbers</a> to allow numbers of the same width to be more easily compared</li>
+  </ul>
+<div class="example">
+  <table>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th class="numeric" scope="col">Paper form</th>
+      <th class="numeric" scope="col">Digital</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>25 November to 1 December 2013</td>
+      <td class="numeric">2,763</td>
+      <td class="numeric">1,792</td>
+    </tr>
+    <tr>
+      <td>2 to 8 December 2013</td>
+      <td class="numeric">2,850</td>
+      <td class="numeric">1,740</td>
+    </tr>
+    <tr>
+     <td>9 to 15 December 2013</td>
+      <td class="numeric">2,388</td>
+      <td class="numeric">1,683</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+      
+<details>
+    <summary>HTML</summary>
+<pre>
+    <code class="html">
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Date&lt;/th&gt;
+      &lt;th class="numeric" scope="col"&gt;Paper form&lt;/th&gt;
+      &lt;th class="numeric" scope="col"&gt;Digital&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;25 November to 1 December 2013&lt;/td&gt;
+      &lt;td class="numeric">2,763&lt;/td&gt;
+      &lt;td class="numeric">1,792&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2 to 8 December 2013&lt;/td&gt;
+      &lt;td class="numeric">2,850&lt;/td&gt;
+      &lt;td class="numeric">1,740&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+     &lt;td&gt;9 to 15 December 2013&lt;/td&gt;
+      &lt;td class="numeric">2,388&lt;/td&gt;
+      &lt;td class="numeric">1,683&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+    </code>
+</pre>
+</details>
+
+        
+    </section>
+    
+    

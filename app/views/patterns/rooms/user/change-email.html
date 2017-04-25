@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Sprint {{sprint}} - Funding
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+{% block content %}
+<style>
+    .header-organisation {
+        display: none;
+    }
+    .header-user h2 {
+        display: none;
+    }
+</style>
+<main class="elements-index" id="content" role="main" tabindex="-1">
+  <!--{% include "includes/link-back.html" %}-->
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+<div class="hgroup">
+      <h1 class="heading-xlarge">Change your email address</h1>
+</div>        
+<form>
+    <div class="form-group">
+            <label class="form-label-bold" for="email">New email address</label>
+            <input class="form-control" id="email" maxlength="128" name="email" pattern="[A-Za-z0-9_\-\+/{\t\n\r}#$%^\\&amp;\[\]*=()|?'~`! :]+([.][A-Za-z0-9_\-\+/{\t\n\r}#$%^\\&amp;\[\]*=()|?'~`! :]+)*@[A-Za-z0-9\[\]:]+([.-][A-Za-z0-9\[\]:]+)*\.[A-Za-z0-9\[\]:]+([-.][A-Za-z0-9\[\]:]+)*" type="email" tabindex="0"> 
+    </div>
+    <div class="form-group">
+            <label class="form-label-bold" for="email2">Re-type email address</label>
+            <input class="form-control" id="email2" maxlength="128" name="email" pattern="[A-Za-z0-9_\-\+/{\t\n\r}#$%^\\&amp;\[\]*=()|?'~`! :]+([.][A-Za-z0-9_\-\+/{\t\n\r}#$%^\\&amp;\[\]*=()|?'~`! :]+)*@[A-Za-z0-9\[\]:]+([.-][A-Za-z0-9\[\]:]+)*\.[A-Za-z0-9\[\]:]+([-.][A-Za-z0-9\[\]:]+)*" type="email" tabindex="0"> 
+    </div>
+    <div class="form-group">
+        <a class="button" href="/sprint/{{sprint}}/user/reset-password.html">Continue</a>
+    </div>
+</form>
+        
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

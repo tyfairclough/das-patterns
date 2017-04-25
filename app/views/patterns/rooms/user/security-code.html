@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Sprint {{sprint}} - Funding
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+
+
+{% block content %}
+<main class="elements-index" id="content" role="main" tabindex="-1">
+
+    <section id="notifications">
+        <div class="govuk-box-highlight"> 
+            <h2 class="bold-large">Check your email</h2> 
+            <p>We've sent a security code to <span class="bold-small user-email">ty@digi2al.co.uk</span></p> </div>
+    </section>
+    
+    
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+          Enter your security code
+      </h1>
+    
+
+        <form>
+        <div class="form-group">  
+            <label class="form-label-bold" for="code">Enter security code</label>
+            <input class="form-control" type="text" id="code"> 
+        </div>
+        <div class="form-group">  
+            <label class="form-label-bold" for="email">Password</label>
+            <input class="form-control" type="password"> 
+        </div>
+            <div class="form-group">
+                <a href="/sprint/{{sprint}}/user/index.html" class="button">Continue</a>
+            </div>
+        </form>
+        <h2 class="heading-small">Not received your security code?</h2>
+        <ul class="list list-links">
+        <li>You can <a href="#">request another security code.</a></li>
+        </ul>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

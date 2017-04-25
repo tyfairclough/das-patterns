@@ -1,0 +1,22 @@
+{% extends "aml-template-copy.html" %}
+
+{% block head %}
+  {% include "includes/elements_head.html" %}
+  {% include "includes/snippets_head.html" %}
+  {% include "includes/snippets_scripts.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block body_end %}
+
+{% include "sprint/"+sprint+"/includes/scripts.html" ignore missing %}
+
+{% endblock %}
+

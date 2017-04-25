@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Sprint {{sprint}} - Funding
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+{% block content %}
+<style>
+    .header-organisation {
+        display: none;
+    }
+    .header-user h2 {
+        display: none;
+    }
+</style>
+<main class="switch-levy-account" id="content" role="main" tabindex="-1">
+
+    
+      <section id="notifications" class="">
+        <div class="govuk-box-highlight rolechange">
+                <h2 class="bold-large">
+            Account renamed
+          </h2>
+                <p>
+                    You successfully updated the account name
+                </p>
+            </div>
+          
+
+    </section>
+    
+
+
+<div class="grid-row">
+    <div class="column-full">
+
+                <h1 class="heading-xlarge" id="Levy-accounts">Your accounts</h1>
+                <p>Select an account or add a new one.</p>
+                <table>
+                      <col width="10">
+  <col width="8">
+  <col width="2">
+                    <thead>
+                        <tr>
+                            <th scope="col">Account name</th>
+                            <th scope="col">What you can do</th>
+                            <th scope="col"><span class="vh">Select account</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td class="responsive-td">
+                                    <span class="force-word-wrap">
+                                        TYIT LTD
+                                        <br>
+                                        <span style="color: #6F777B">Account ID: 46MYXV</span>
+                                    </span>
+                                </td>
+                                <td class="responsive-td">
+                                    Accept agreements, view information and manage PAYE schemes, organisations, apprentices and team members
+                                </td>
+                                <td class="responsive-td link-right">
+                                    <a aria-label="View account homepage for TYIT LTD" title="View account homepage for TYIT LTD" href="/accounts/46MYXV">
+                                        Open<span class="vh"> TYIT LTD account homepage</span>
+                                    </a>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <a href="/EmployerAccount/SelectEmployer" class="button" id="add_new_account" aria-label="Add new account">Add new account</a>
+                </p>
+
+
+
+            </div>
+        </div>
+
+
+    
+
+</main>
+{% endblock %}

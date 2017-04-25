@@ -1,0 +1,294 @@
+{% extends "layout.html" %} {% block page_title %} Sprint {{sprint}} - Dashboard {% endblock %} {% block inside_header %} {% endblock %} {% block content %} {% block after_header %} {% include "sprint/"+sprint+"/includes/header.html" %} {% endblock %}
+
+<main id="content" role="main" tabindex="-1">
+    <h1 class="heading-xlarge">
+      Materials
+  </h1>
+
+    <div class="text">
+        <p class="lede">
+            All the HTML Elements that can exist according to W3C
+        </p>
+    </div>
+
+     {% include "sprint/"+sprint+"/materials/contents.html" %}
+
+    
+ <section id="p">
+        <div class="text">
+        <h3 class="heading-small">Paragraph text</h3>
+        <p>Use the GDS Transport Website font in Light and Bold. It’s licensed for use on the GOV.UK domains only.</p>
+        <p>For services publicly available on different domains, use an alternative typeface like Arial.</p>
+            
+            <h3 class="heading-small">Body copy</h3>
+<ul class="list list-bullet text">
+    <li>use GDS Transport Website Light</li>
+    <li>avoid using bold and italics</li>
+    <li>use 19px for body copy – 16px for smaller screens</li>
+    <li>use smaller sizes only if there’s a user need (eg 16px, 14px, 12px)</li>
+    <li>make sure lines of text don’t exceed 75 characters, as they become harder to read beyond that point</li>
+  </ul>
+            
+<div class="example">
+  <div class="text">
+    <p>
+  A <em class="highlight">19px</em> body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+</p>
+
+<p class="font-xsmall">
+  A <em class="highlight">16px</em> supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+</p>
+
+  </div>
+</div>
+            
+<details>
+    <summary>HTML</summary>
+    <pre>
+        <code class="html">
+&lt;p&gt;A 19px body copy paragraph, maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+&lt;p class="font-xsmall"&gt;A 16px supporting text paragraph, maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.&lt;/p        
+        </code>
+    </pre>
+
+</details>            
+        </div>
+     
+     
+     <div class="text">
+        <h3 class="heading-small">Lead paragraph</h3>
+         <ul class="list list-bullet">
+            <li>use 24px for a lead paragraph</li>
+            <li>there should only be one lead paragraph per page</li>
+         </ul>
+<div class="example">
+  <div class="text">
+    <p class="lede">
+  A <em class="highlight">24px</em> lead paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+</p>
+  </div>
+</div>
+     <details>
+        <summary>HTML</summary>    
+         <pre>
+            <code class="html">
+&lt;p class="lede"&gt;
+    A 24px lead paragraph, maecenas sed diam eget risus varius.
+&lt;/p&gt;
+            </code>
+         </pre>
+     </details>
+     </div>
+     
+    </section>
+    
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h4 class="heading-medium">&lt;a&gt;</h4>
+            <ul class="list list-bullet text">
+                <li>links within body copy should be blue and underlined</li>
+                <li>links without surrounding text should not have a full stop at the end</li>
+                <li>link colours can be found in the <a href="/colour">colour palette</a></li>
+            </ul>
+            <div class="example">
+                <div class="text">
+                    <p>
+                        <a href="#">A 19px link without surrounding text</a>
+                    </p>
+
+                    <p>
+                        <a href="#">A 19px body copy link</a>. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                    </p>
+
+                    <a href="#" class="link-back">Back</a>
+
+                </div>
+            </div>
+            
+<details>
+    <summary>HTML</summary>
+<pre>
+                <code class="html">
+&lt;p&gt;&lt;a href="#"&gt;A 19px link without surrounding text&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="#"&gt;A 19px body copy link&lt;/a&gt;. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
+&lt;a href="#" class="link-back"&gt;Back&lt;/a&gt;
+                </code>
+            </pre>    
+</details>            
+
+<details>
+                <summary>
+                    SASS
+                </summary>
+            <pre>
+                <code class="sass">
+    a {
+    &:link {
+        color: #005ea5;
+        }
+    &:visited {
+        color: #4c2c92;
+        }
+    &:hover {
+        color: #2b8cc4;
+        }
+    &:active {
+        color: #2b8cc4;
+        }
+    &:focus {
+        background-color: #ffbf47;
+        outline: 3px solid #ffbf47;
+        }
+    }
+                </code>
+            </pre>                
+            </details>
+            
+
+        </div>
+    </div>
+    
+    <section id="Heading_Elements">
+        <h3 class="heading-small">Heading elements</h3>
+<ul class="list list-bullet text">
+    <li>use GDS Transport Website Bold</li>
+    <li>use sentence case for headings</li>
+    <li>use headings consistently to create a clear hierarchy</li>
+  </ul>
+        
+        <div class="example">
+  <h1 class="heading-xlarge">A <em class="highlight">48px Bold</em> heading</h1>
+
+<h2 class="heading-large">A <em class="highlight">36px Bold</em> heading</h2>
+
+<h3 class="heading-medium">A <em class="highlight">24px Bold</em> heading</h3>
+
+<h4 class="heading-small">A <em class="highlight">19px Bold</em> heading</h4>
+
+</div>
+        
+<details>
+    <summary>HTML</summary>
+    <pre>
+        <code class="html">
+&lt;h1 class="heading-xlarge"&gt;A &lt;em class="highlight"&gt;48px Bold&lt;/em&gt; heading&lt;/h1&gt;
+
+&lt;h2 class="heading-large"&gt;A &lt;em class="highlight"&gt;36px Bold&lt;/em&gt; heading&lt;/h2&gt;
+
+&lt;h3 class="heading-medium"&gt;A &lt;em class="highlight"&gt;24px Bold&lt;/em&gt; heading&lt;/h3&gt;
+
+&lt;h4 class="heading-small"&gt;A &lt;em class="highlight"&gt;19px Bold&lt;/em&gt; heading&lt;/h4&gt;
+
+        
+        </code>
+    </pre>
+</details>        
+        
+    </section>
+    
+    <section id="ul">
+        <h3 class="heading-small">ul — lists</h3>
+        <p>List items start with a lowercase letter and have no full stop at the end.</p>    
+        <div class="example">
+<ul class="list list-bullet">
+  <li>here is a bulleted list</li>
+  <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+  <li>vestibulum id ligula porta felis euismod semper</li>
+  <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+</ul>
+
+<ol class="list list-number">
+  <li>here is a numbered list</li>
+  <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+  <li>vestibulum id ligula porta felis euismod semper</li>
+  <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+</ol>
+
+<ul class="list">
+  <li><a href="#">Related link</a></li>
+  <li><a href="#">Related link</a></li>
+  <li><a href="#">Related link</a></li>
+  <li><a href="#" class="bold-xsmall">More</a></li>
+</ul>
+    </div>
+       <details>
+            <summary>HTML</summary>
+        <pre>
+            <code class="html">
+&lt;ul class="list list-bullet"&gt;
+  &lt;li&gt;here is a bulleted list&lt;/li&gt;
+  &lt;li&gt;vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor&lt;/li&gt;
+  &lt;li&gt;vestibulum id ligula porta felis euismod semper&lt;/li&gt;
+  &lt;li&gt;integer posuere erat a ante venenatis dapibus posuere velit aliquet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class="list list-number"&gt;
+  &lt;li&gt;here is a numbered list&lt;/li&gt;
+  &lt;li&gt;vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor&lt;/li&gt;
+  &lt;li&gt;vestibulum id ligula porta felis euismod semper&lt;/li&gt;
+  &lt;li&gt;integer posuere erat a ante venenatis dapibus posuere velit aliquet&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul class="list"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Related link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Related link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Related link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="bold-xsmall"&gt;More&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+        </pre>
+        </details>        
+    </section>
+   
+    
+    <section id="details">
+        <h3 class="heading-small">&lt;details&gt; — hidden text (progressive disclosure)</h3>
+        <p>Use this to make your page easier to scan, only showing contextual information when required.</p>
+        <p>Use this to make your page easier to scan, only showing contextual information when required.</p>
+        
+        <div class="example">
+  <details role="group">
+
+  <summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">Help with nationality</span></summary>
+
+  <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+
+    <p>
+      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+    </p>
+
+    <p>
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+    </p>
+
+  </div>
+
+</details>
+
+</div>
+<details>
+    <summary>HTML</summary>
+    <pre>
+            <code class="html">
+&lt;details role="group"&gt;
+  &lt;summary role="button" aria-controls="details-content-0" aria-expanded="false"&gt;&lt;span class="summary"&gt;Help with nationality&lt;/span&gt;&lt;/summary&gt;
+  &lt;div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true"&gt;
+    &lt;p&gt;
+      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+    &lt;/p&gt;
+    &lt;p&gt;
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;  
+            </code>
+        </pre>    
+</details>
+        </section>
+    
+    {% include "sprint/"+sprint+"/materials/tables.html" %}
+
+
+</main>
+{% endblock %}

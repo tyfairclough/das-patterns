@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Sprint {{sprint}} - Dashboard
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+
+
+<main class="index" id="content" role="main" tabindex="-1">
+
+    <div class="hgroup text">
+      <h1 class="heading-xlarge">
+Home and Garden UI Design
+            </h1>
+<p>Home and Garden design is an abstract analogy of UX&amp;D</p>
+            <p>The analogy is designed to help categorize UI framework elements into a logical and easy to recall resource.</p>
+            
+        <ul class="list list-bullet">
+            <li>lift design patterns for your UI</li>
+            <li>reference to when asked to validate your design choices</li>
+            <li>align yourself with other SFA products</li>
+        </ul>
+        </div>
+    
+    <div class="grid-row">
+            <div class="column-one-third" style="outline: 4px solid #ffbf47;">
+
+      <h2 class="heading-medium"><a  href="/sprint/{{sprint}}/garden/index">Garden</a></h2>
+      <p>
+          Demonstrating how external sites flow into the core product. 
+      </p>
+        <ul class="list list-bullet">
+            <li>mico-sites</li>
+            <li>landing pages</li>
+            <li>social media presence</li>
+        </ul>   
+
+    </div>
+        
+    <div class="column-one-third">
+
+      <h2 class="heading-medium"><a  href="/sprint/{{sprint}}/showroom/index">Showroom</a></h2>
+      <p>
+          Common user journey patterns.
+      </p>
+        <ul class="list list-bullet">
+            <li>authentification</li>
+            <li>check &amp; sign</li>
+            <li>invitations</li>
+        </ul>
+
+    </div>
+        
+    
+    </div>
+    <div class="grid-row">
+      
+    <div class="column-one-third">
+
+      <h2 class="heading-medium"><a  href="/sprint/{{sprint}}/interior/index">Interior design</a></h2>
+      <p>
+          The visceral experience and tone of voice
+      </p>
+         <ul class="list list-bullet">
+             <li>content style guide</li>
+             <li>visual design language</li>
+        </ul>
+
+    </div>
+    <div class="column-one-third">
+
+      <h2 class="heading-medium"><a  href="/sprint/{{sprint}}/plumbing/index">Plumbing &amp; Wiring</a></h2>
+      <p>
+         The micro interactions joiningthe experience together
+        </p>
+         <ul class="list list-bullet">
+             <li>javascript enahcements</li>
+             <li>forms</li>
+             <li>validation</li>
+             <li>notifications</li>
+        </ul>
+
+    </div>
+
+          <div class="column-one-third">
+
+      <h2 class="heading-medium"><a  href="/sprint/{{sprint}}/rooms/index">Rooms</a></h2>
+      <p>
+          Page designs
+      </p>
+        <ul class="list list-bullet">
+             <li>dashboards</li>
+             <li>search results</li>
+             <li>guides</li>
+        </ul>
+
+    </div>
+  </div>
+    <div class="grid-row">
+          
+            <div class="column-one-third">
+
+      <h2 class="heading-medium"><a href="/sprint/{{sprint}}/materials/index">Materials</a></h2>
+      <p>
+          All the HTML Elements that can exist according to W3C
+      </p>
+                <ul class="list list-bullet">
+                    <li>p</li>
+                    <li>div</li>
+                    <li>input</li>
+                </ul>
+
+    </div>
+        
+    <div class="column-one-third">
+
+      <h2 class="heading-medium"><a href="/sprint/{{sprint}}/plans/index">Plans</a></h2>
+      <p>
+          Design language for layout
+    </p>
+        <ul class="list list-bullet">
+            <li>grid layout</li>
+            <li>baseline grid</li>
+            <li>page layouts</li>
+        </ul>
+
+    </div>
+    <div class="column-one-third">
+
+      <h2 class="heading-medium"><a href="/sprint/{{sprint}}/foundation/index">Foundation</a></h2>
+      <p>
+          Building blocks for any web based application
+        </p>
+        <ul class="list list-bullet">
+            <li>HTML boilerplate</li>
+            <li>CSS reset</li>
+            <li>CSS pre-processors</li>
+            <li>javascript frameworks</li>
+        </ul>
+
+    </div>
+      
+  </div>
+
+</main><!-- / #content -->
+{% endblock %}

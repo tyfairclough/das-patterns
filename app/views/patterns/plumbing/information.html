@@ -1,0 +1,256 @@
+<section id="information">
+
+    <div class="text">
+    <div class="hgroup">
+        <h2 class="heading-large">Information</h2>
+        <p>When information is not part of a feedback loop we use these visual treatments to draw attention to information deemed more important than the body content. There are several levels of contrast that can be used to achieve the level of prescendence you require.</p>
+        <p>While Notifications must remain at the top of the content the information boxes should be used in situe, close to the item it impacts.</p>
+    </div>
+    
+
+            <h3 class="heading-small">Highlighted text</h3>
+            <p>This is our strongest call out. It uses gov <code class="code">$purple</code> and is designed to contrast with the surrounding content thanks to the accent bar and 10% <code class="code">$purple</code>.</p>
+</div>            
+            <div class="example">
+            <div class="info-highlighted">
+                        <h3 class="heading-medium">Only levy payers can continue</h3>
+                        <p>By continuing you confirm that your organisation, or its <a href="#">connected organisations</a>, submits or will submit apprenticeship levy payments to HMRC.</p>
+                    </div>
+            </div>
+    
+<details>
+    <summary>HTML</summary>
+            <pre>
+<code class="html">
+&lt;div class="info-highlighted"&gt;
+    &lt;h3 class="heading-medium"&gt;Only levy payers can continue&lt;/h3&gt;
+    &lt;p&gt;By continuing you confirm that your organisation, or its &lt;a href="#"&gt;connected organisations&lt;/a&gt;, submits or will submit apprenticeship levy payments to HMRC.&lt;/p&gt;
+&lt;/div&gt;
+</code>
+            </pre>
+</details>    
+
+
+<details>
+    <summary>SASS</summary>
+    <pre>
+        <code class="sass">
+.info-highlighted {
+    max-width: 30em;
+    background: mix(white,$purple,90%);
+    border: none;
+    border-left: solid 10px $purple;
+}            
+        </code>
+    </pre>
+</details>
+    
+                <h3 class="heading-small">Inset text</h3>
+            <p>Use bordered inset text to draw attention to important content on the page. Comes in two flavours <code class="code">panel-border-narrow</code> and <code class="code">panel-border-wide</code>.</p>
+
+            <div class="example">
+           <div class="panel panel-border-narrow text">
+  <p>
+By continuing you confirm that your organisation, or its <a href="#">connected organisations</a>, submits or will submit apprenticeship levy payments to HMRC.
+  </p>
+</div>
+            </div>
+
+            <div class="example">
+           <div class="panel panel-border-wide text">
+  <p>
+By continuing you confirm that your organisation, or its <a href="#">connected organisations</a>, submits or will submit apprenticeship levy payments to HMRC.
+  </p>
+</div>
+            </div>
+    
+<details>
+    <summary>HTML</summary>
+    <pre>
+<code class="html">
+&lt;div class="panel panel-border-wide"&gt;
+    &lt;h3 class="heading-medium"&gt;Only levy payers can continue&lt;/h3&gt;
+    &lt;p&gt;By continuing you confirm that your organisation, or its &lt;a href="#"&gt;connected organisations&lt;/a&gt;, submits or will submit apprenticeship levy payments to HMRC.&lt;/p&gt;
+&lt;/div&gt;
+</code>
+            </pre>
+</details>
+
+<details>
+    <summary>SASS</summary>
+
+    <pre>
+        <code class="sass">
+.panel {
+  @include box-sizing(border-box);
+  @extend %contain-floats;
+  clear: both;
+  border-left-style: solid;
+  border-color: $border-colour;
+
+  padding: em(15, 19);
+  margin-bottom: em(15, 19);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :only-child,
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.panel-border-wide {
+  border-left-width: 10px;
+}
+
+// Used to show the left edge of "toggled" content
+.panel-border-narrow {
+  border-left-width: 5px;
+}
+
+// Panels within form groups
+// By default, panels have 15px bottom margin
+.form-group .panel-border-narrow {
+  float: left;
+  width: 100%;
+  // Remove the bottom padding as .form-group sets a bottom margin
+  padding-bottom: 0;
+  // Don't remove the bottom margin for all panels, assume they are often within stacked groups
+}
+
+// Note: This is incredibly fragile, and needs rebuilding.
+
+// The first panel in a group
+.form-group .panel-border-narrow:first-child {
+  margin-top: 10px;
+}
+
+// The last panel in a group
+.form-group .panel-border-narrow:last-child {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+// For inline panels
+.inline .panel-border-narrow {
+  margin-top: 10px;
+  margin-bottom: 0;
+}          
+        </code>
+    </pre>
+</details>
+
+       <h3 class="heading-small">Legal text</h3>
+            <p>Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.</p>
+
+            <div class="example">
+<div class="notice">
+  <i class="icon icon-important">
+    <span class="visually-hidden">Warning</span>
+  </i>
+  <strong class="bold-small">
+    You can be fined up to £5,000 if you don’t register.
+  </strong>
+</div>
+
+            </div>
+<details>
+    <summary>HTML</summary>
+            <pre>
+<code class="html">
+&lt;div class="notice"&gt;
+  &lt;i class="icon icon-important"&gt;
+    &lt;span class="visually-hidden"&gt;Warning&lt;/span&gt;
+  &lt;/i&gt;
+  &lt;strong class="bold-small"&gt;
+    You can be fined up to £5,000 if you don’t register.
+  &lt;/strong&gt;
+&lt;/div&gt;
+</code>
+            </pre>    
+</details>            
+
+
+<div class="text">
+<h3 class="heading-small">Hidden text (progressive disclosure)</h3>
+<p>Use this to make your page easier to scan, only showing contextual information when required.</p>
+</div>
+
+<div class="example">
+    <details>
+        <summary>Help with nationality</summary>
+        <div class="text">
+        <p>
+      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+    </p>
+
+    <p>
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+    </p>
+    </div>
+    </details>
+</div>
+<details>
+    <summary>HTML</summary>
+<pre>
+    <code class="html">
+            &lt;details&gt;
+        &lt;summary&gt;Help with nationality&lt;/summary&gt;
+        &lt;div class="text"&gt;
+        &lt;p&gt;
+      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+    &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/details&gt;
+    </code>
+</pre>    
+</details>
+
+
+<details>
+    <summary>SASS</summary>
+    
+    <pre>
+        <code class="sass">
+details {
+  display: block;
+  clear: both;
+
+  summary {
+    display: inline-block;
+    color: $govuk-blue;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: em(5);
+
+    &:hover {
+      color: $link-hover-colour;
+    }
+
+    &:focus {
+      outline: 3px solid $focus-colour;
+    }
+  }
+
+  // Underline only summary text (not the arrow)
+  .summary {
+    text-decoration: underline;
+  }
+
+  // Match fallback arrow spacing with -webkit default
+  .arrow {
+    margin-right: .35em;
+    font-style: normal;
+  }
+
+}        
+        </code>
+    </pre>
+</details>
+</section>

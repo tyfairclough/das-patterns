@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Sprint {{sprint}} - Dashboard
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+
+<main id="content" role="main" tabindex="-1">
+  <h1 class="heading-xlarge">
+      Plumbing &amp; Wiring
+  </h1>
+
+  <div class="text">
+    <p class="lede">
+The micro interactions joiningthe experience together
+    </p>
+  </div>
+
+  <h2 class="heading-small heading-contents">Contents:</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+          <li><a href="#forms">forms</a></li>
+          <li><a href="#help">Help</a></li>
+          <li><a href="#user">User</a></li>
+          <li><a href="#notifications">Notifications</a></li>
+          <li><a href="#transactions">Transactions</a></li>
+          <li><a href="#errors">Errors</a></li>
+          <li><a href="#information">Information</a>
+            <ul class="list list-bullet hidden">
+                <li>Highlighted text</li>
+                <li>Inset text</li>
+                <li>Legal text</li>
+                <li>Hidden text</li>
+            </ul>
+          </li>
+          <li><a href="#textarea">Texarea count</a>
+            <ul class="list list-bullet hidden">
+                <li>Character count</li>  
+                <li>Word count</li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+    
+
+    {% include "sprint/"+sprint+"/plumbing/forms.html" %}
+    {% include "sprint/"+sprint+"/plumbing/notifications.html" %}
+    {% include "sprint/"+sprint+"/plumbing/transactions.html" %}
+    {% include "sprint/"+sprint+"/plumbing/errors.html" %}
+    {% include "sprint/"+sprint+"/plumbing/information.html" %}
+    {% include "sprint/"+sprint+"/plumbing/textarea.html" %}
+
+ 
+
+
+
+       
+
+
+
+  
+    
+</main>
+{% endblock %}

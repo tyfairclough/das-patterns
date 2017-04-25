@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+EAS/MYA/DAS
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+{% block after_header %}
+{% include "sprint/"+sprint+"/includes/header.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="test" id="content" role="main" tabindex="-1">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="hgroup">
+      <h1 class="heading-xlarge">
+Apprenticeship Service help           </h1>
+        </div>
+        
+                    
+        
+        <p>Contact the apprenticeships service helpdesk on:</p>
+        
+        <ul class="list list-bullet">
+            <li>08000 150 600</li>
+            <li><a href="mailto:helpdesk@manage-apprenticeships.service.gov.uk">helpdesk@manage-apprenticeships.service.gov.uk</a></li>
+        </ul>
+
+        
+    </div>
+  </div>
+
+</main><!-- / #content -->
+{% endblock %}
