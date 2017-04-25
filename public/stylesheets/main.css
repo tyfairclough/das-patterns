@@ -831,6 +831,8 @@ hr {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
   -webkit-appearance: none;
   -webkit-box-shadow: 0 2px 0 #003618;
   -moz-box-shadow: 0 2px 0 #003618;
@@ -2034,7 +2036,7 @@ input[type=number] {
   letter-spacing: 1px;
   text-decoration: none;
   color: #fff;
-  background-color: #d53880;
+  background-color: #005ea5;
 }
 
 @media (min-width: 641px) {
@@ -2097,7 +2099,7 @@ input[type=number] {
   letter-spacing: 1px;
   text-decoration: none;
   color: #fff;
-  background-color: #d53880;
+  background-color: #005ea5;
 }
 
 @media (min-width: 641px) {
@@ -2315,7 +2317,7 @@ input[type=number] {
 }
 
 .phase-banner-alpha .phase-tag {
-  background: #f47738;
+  background: #005ea5;
 }
 
 #global-header-bar {

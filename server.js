@@ -10,6 +10,7 @@ var port = (process.env.PORT || 5000)
 // Application settings
 app.set('view engine', 'html')
 app.set('views', [path.join(__dirname, '/app/views'), path.join(__dirname, '/lib/')])
+app.set('base', 'patterns');
 
 nunjucks.setup({
   autoescape: true,
@@ -43,7 +44,9 @@ app.use(function (req, res, next) {
 
 // routes (found in routes.js)
 
-routes.bind(app, '/public/')
+routes.bind(app)
+
+
 
 // start the app
 

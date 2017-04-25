@@ -1,51 +1,87 @@
 {
-  "name": "govuk_template_jinja",
-  "version": "0.19.1",
+  "_args": [
+    [
+      {
+        "raw": "govuk_template_jinja@0.19.1",
+        "scope": null,
+        "escapedName": "govuk_template_jinja",
+        "name": "govuk_template_jinja",
+        "rawSpec": "0.19.1",
+        "spec": "0.19.1",
+        "type": "version"
+      },
+      "/Development/projects-gov/das-patterns"
+    ]
+  ],
+  "_from": "govuk_template_jinja@0.19.1",
+  "_id": "govuk_template_jinja@0.19.1",
+  "_inCache": true,
+  "_location": "/govuk_template_jinja",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/govuk_template_jinja-0.19.1.tgz_1478882258178_0.8164155725389719"
+  },
+  "_npmUser": {
+    "name": "alphagov",
+    "email": "govuk-dev@digital.cabinet-office.gov.uk"
+  },
+  "_npmVersion": "1.4.28",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "govuk_template_jinja@0.19.1",
+    "scope": null,
+    "escapedName": "govuk_template_jinja",
+    "name": "govuk_template_jinja",
+    "rawSpec": "0.19.1",
+    "spec": "0.19.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/govuk_template_jinja/-/govuk_template_jinja-0.19.1.tgz",
+  "_shasum": "8ced5b293782977ff4b1b4ad76233cdffe39deba",
+  "_shrinkwrap": null,
+  "_spec": "govuk_template_jinja@0.19.1",
+  "_where": "/Development/projects-gov/das-patterns",
+  "author": {
+    "name": "Government Digital Service developers",
+    "url": "https://gds.blog.gov.uk/"
+  },
+  "bugs": {
+    "url": "https://github.com/alphagov/govuk_template_jinja/issues"
+  },
+  "dependencies": {},
   "description": "Jinja packaged version of the GOV.UK template",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8ced5b293782977ff4b1b4ad76233cdffe39deba",
+    "tarball": "https://registry.npmjs.org/govuk_template_jinja/-/govuk_template_jinja-0.19.1.tgz"
+  },
+  "gitHead": "d08e325640eff93bb44233649dec04c85534f7ef",
+  "homepage": "https://github.com/alphagov/govuk_template_jinja",
   "keywords": [
     "alphagov",
     "govuk",
     "jinja",
     "template"
   ],
-  "bugs": {
-    "url": "https://github.com/alphagov/govuk_template_jinja/issues"
-  },
   "license": "MIT",
-  "author": {
-    "name": "Government Digital Service developers",
-    "url": "https://gds.blog.gov.uk/"
-  },
   "main": "views/layouts/govuk_template.html",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/alphagov/govuk_template_jinja.git"
-  },
-  "gitHead": "d08e325640eff93bb44233649dec04c85534f7ef",
-  "homepage": "https://github.com/alphagov/govuk_template_jinja",
-  "_id": "govuk_template_jinja@0.19.1",
-  "scripts": {},
-  "_shasum": "8ced5b293782977ff4b1b4ad76233cdffe39deba",
-  "_from": "govuk_template_jinja@0.19.1",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "alphagov",
-    "email": "govuk-dev@digital.cabinet-office.gov.uk"
-  },
   "maintainers": [
     {
       "name": "alphagov",
       "email": "govuk-dev@digital.cabinet-office.gov.uk"
     }
   ],
-  "dist": {
-    "shasum": "8ced5b293782977ff4b1b4ad76233cdffe39deba",
-    "tarball": "https://registry.npmjs.org/govuk_template_jinja/-/govuk_template_jinja-0.19.1.tgz"
+  "name": "govuk_template_jinja",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alphagov/govuk_template_jinja.git"
   },
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/govuk_template_jinja-0.19.1.tgz_1478882258178_0.8164155725389719"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/govuk_template_jinja/-/govuk_template_jinja-0.19.1.tgz"
+  "scripts": {},
+  "version": "0.19.1"
 }
