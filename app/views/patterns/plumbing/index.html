@@ -15,7 +15,7 @@
 
 
 {% block after_header %}
-{% include "sprint/"+sprint+"/includes/header.html" %}
+{% include "patterns/includes/header.html" %}
 {% endblock %}
 
 <main id="content" role="main" tabindex="-1">
@@ -33,7 +33,7 @@ The micro interactions joiningthe experience together
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-          <li><a href="#forms">forms</a></li>
+          <li><a href="#forms">Forms</a></li>
           <li><a href="#help">Help</a></li>
           <li><a href="#user">User</a></li>
           <li><a href="#notifications">Notifications</a></li>
@@ -58,12 +58,12 @@ The micro interactions joiningthe experience together
   </div>
     
 
-    {% include "sprint/"+sprint+"/plumbing/forms.html" %}
-    {% include "sprint/"+sprint+"/plumbing/notifications.html" %}
-    {% include "sprint/"+sprint+"/plumbing/transactions.html" %}
-    {% include "sprint/"+sprint+"/plumbing/errors.html" %}
-    {% include "sprint/"+sprint+"/plumbing/information.html" %}
-    {% include "sprint/"+sprint+"/plumbing/textarea.html" %}
+    {% include "patterns/plumbing/forms.html" %}
+    {% include "patterns/plumbing/notifications.html" %}
+    {% include "patterns/plumbing/transactions.html" %}
+    {% include "patterns/plumbing/errors.html" %}
+    {% include "patterns/plumbing/information.html" %}
+    {% include "patterns/plumbing/textarea.html" %}
 
  
 
