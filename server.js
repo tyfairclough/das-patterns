@@ -5,7 +5,7 @@ var routes = require('./app/routes.js')
 var app = express()
 var bodyParser = require('body-parser')
 var config = require('./app/config.js')
-var port = (process.env.PORT || 5000)
+var port = (process.env.PORT || 8080)
 
 // Application settings
 app.set('view engine', 'html')

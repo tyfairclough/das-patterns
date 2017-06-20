@@ -1,22 +1,14 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Sprint {{sprint}} - Dashboard
+{% extends "layout.html" %} 
+{% block page_title %} 
+DAS pattern library 
+{% endblock %} 
+{% block inside_header %} 
+{% endblock %} 
+{% block content %} 
+{% block after_header %} 
+{% include "patterns/includes/header.html" %} 
 {% endblock %}
 
-{% block inside_header %}
-
-{% endblock %}
-
-
-
-
-{% block content %}
-
-
-{% block after_header %}
-{% include "sprint/"+sprint+"/includes/header.html" %}
-{% endblock %}
 
 <main id="content" role="main" tabindex="-1">
   <h1 class="heading-xlarge">
@@ -25,8 +17,8 @@
 
   <div class="text">
     <p class="lede">
-The micro interactions joiningthe experience together
-    </p>
+The micro interactions joining the experience together
+    </p> 
   </div>
 
   <h2 class="heading-small heading-contents">Contents:</h2>
@@ -56,24 +48,11 @@ The micro interactions joiningthe experience together
       </ul>
     </div>
   </div>
-    
-
-    {% include "sprint/"+sprint+"/plumbing/forms.html" %}
-    {% include "sprint/"+sprint+"/plumbing/notifications.html" %}
-    {% include "sprint/"+sprint+"/plumbing/transactions.html" %}
-    {% include "sprint/"+sprint+"/plumbing/errors.html" %}
-    {% include "sprint/"+sprint+"/plumbing/information.html" %}
-    {% include "sprint/"+sprint+"/plumbing/textarea.html" %}
-
- 
-
-
-
-       
-
-
-
-  
-    
+    {% include "patterns/plumbing/forms.html" %}
+    {% include "patterns/plumbing/notifications.html" %}
+    {% include "patterns/plumbing/transactions.html" %}
+    {% include "patterns/plumbing/errors.html" %}
+    {% include "patterns/plumbing/information.html" %}
+    {% include "patterns/plumbing/textarea.html" %}    
 </main>
 {% endblock %}

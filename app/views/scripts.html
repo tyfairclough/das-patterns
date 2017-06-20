@@ -99,7 +99,7 @@ case 'organisations-address':
      $(".button").click(function(e){
          e.preventDefault();
          localStorage.setItem("organisation-address", JSON.stringify($("#address").val()));
-         window.location.href = "/sprint/{{sprint}}/account/organisations/confirm.html?orgtype=";
+         window.location.href = "/account/organisations/confirm.html?orgtype=";
      });
 break;
        case 'organisations-address-manual':
@@ -272,9 +272,9 @@ for ( var i = 0; i < orgArray.length; i++ ) {
 
     if (i === 0 ) { 
     $line.append( $( "<td></td>" ).html( orgName ) );
-    $line.append( $( "<td><a href='/sprint/{{sprint}}/account/organisations/sign.html'>Enable spending</a></td>" ) );
+    $line.append( $( "<td><a href='/account/organisations/sign.html'>Enable spending</a></td>" ) );
     $line.append( $( "<td><div></div><div style='color:#6F777B' class='font-xsmall'>Not signed</div></td>" ) );
-    $line.append( $( "<td class='numeric'><a href='/sprint/{{sprint}}/account/organisations/sign.html' id='"+i+"' class='remove'>Remove</a></td>" ) );
+    $line.append( $( "<td class='numeric'><a href='/account/organisations/sign.html' id='"+i+"' class='remove'>Remove</a></td>" ) );
     $table.append( $line );
     continue;
     }
@@ -282,7 +282,7 @@ for ( var i = 0; i < orgArray.length; i++ ) {
     $line.append( $( "<td></td>" ).html( orgName ) );
     $line.append( $( "<td>Spending enabled</td>" ) );
     $line.append( $( "<td><div>John Doe</div><div style='color:#6F777B' class='font-xsmall'>Signed on: 14 May 2017</div></td>" ) );
-    $line.append( $( "<td class='numeric'><a href='/sprint/{{sprint}}/account/organisations/sign.html' id='"+i+"' class='remove'>Remove</a></td>" ) );
+    $line.append( $( "<td class='numeric'><a href='/account/organisations/sign.html' id='"+i+"' class='remove'>Remove</a></td>" ) );
     $table.append( $line );
 }
 
@@ -306,7 +306,7 @@ $table.appendTo( $( "#orgTable" ) );
             console.log(rowNum);
             orgArray.splice(rowNum,1);
                 localStorage.setItem("organisations", JSON.stringify(orgArray));
-              window.location.href = "/sprint/{{sprint}}/account/organisations/index.html";
+              window.location.href = "/account/organisations/index.html";
         });
         
     }
@@ -316,7 +316,7 @@ $table.appendTo( $( "#orgTable" ) );
               e.preventDefault();
               sessionState = localStorage.setItem("sessionState","1");
               sessionState = localStorage.setItem("onboarding","0");            
-              window.location.href = "/sprint/{{sprint}}/account/dashboard/index.html";
+              window.location.href = "/account/dashboard/index.html";
         });
     }
     
@@ -337,7 +337,7 @@ $table.appendTo( $( "#orgTable" ) );
             addOrg(orgName);
             
         localStorage.setItem("organisation-name", JSON.stringify(orgName));
-            window.location.href = "/sprint/{{sprint}}/account/organisations/address.html";
+            window.location.href = "/account/organisations/address.html";
         })
         
     }
@@ -380,7 +380,7 @@ $table.appendTo( $( "#orgTable" ) );
                     localStorage.setItem("user.name", JSON.stringify(name));           
                     localStorage.setItem("user.email", JSON.stringify(email));           
                     localStorage.setItem("user.password", JSON.stringify(password));  
-                    window.location.href = "/sprint/{{sprint}}/onboarding/check-mail.html";                           
+                    window.location.href = "/onboarding/check-mail.html";                           
     }
 });
     }
@@ -422,11 +422,11 @@ $table.appendTo( $( "#orgTable" ) );
               // take to account success - onboarding
               sessionState = localStorage.setItem("sessionState","1");
               sessionState = localStorage.setItem("onboarding","0");
-              window.location.href = "/sprint/{{sprint}}/account/dashboard/index.html?accountCreated=y";
+              window.location.href = "/account/dashboard/index.html?accountCreated=y";
           } else {
               //alert("normal user")
               // add legal entity complete
-              window.location.href = "/sprint/{{sprint}}/account/organisations/index.html?newOrgSigned=y";
+              window.location.href = "/account/organisations/index.html?newOrgSigned=y";
           }
       });
     };
@@ -455,25 +455,25 @@ $table.appendTo( $( "#orgTable" ) );
     
         function areYouReady() {
                           if ( $('input[name=radio-group]:checked', 'form').val() == "no" ) {
-                                window.location.href = "/sprint/{{sprint}}/onboarding/not-ready.html";                           
+                                window.location.href = "/onboarding/not-ready.html";                           
                           } else {
-                                window.location.href = "/sprint/{{sprint}}/onboarding/zxcvbn.html";    
+                                window.location.href = "/onboarding/zxcvbn.html";    
                           }            
         }
     
         function orgQuestion() {
                           if ( $('input[name=radio-group]:checked', 'form').val() == "charity" ) {
-                                window.location.href = "/sprint/{{sprint}}/account/organisations/addcharity.html";                           
+                                window.location.href = "/account/organisations/addcharity.html";                           
                           } else {
-                                window.location.href = "/sprint/{{sprint}}/account/organisations/public-sector-searh.html";    
+                                window.location.href = "/account/organisations/public-sector-searh.html";    
                           }
         };
     
         function chQuestion() {
                             if ( $('input[name=radio-group]:checked', 'form').val() == "yes" ) {
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/companieshouse.html?orgtype=limited";                                            
+                            window.location.href = "/account/organisations/companieshouse.html?orgtype=limited";                                            
                             } else {
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/add.html";                                            
+                            window.location.href = "/account/organisations/add.html";                                            
                             }
 
         }
@@ -504,14 +504,14 @@ $table.appendTo( $( "#orgTable" ) );
                     
                     if($("#chn").val().match(/(IP|ip)/g)) {
                             localStorage.setItem("organisation-type", JSON.stringify("ip"));
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/address.html?orgtype=ip";            
+                            window.location.href = "/account/organisations/address.html?orgtype=ip";            
                     } else if ($("#chn").val().match(/(RC|rc)/g)) {
                             localStorage.setItem("organisation-type", JSON.stringify("rc"));
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/address.html?orgtype=rc";                            
+                            window.location.href = "/account/organisations/address.html?orgtype=rc";                            
                     }
                     else if ( chnNumber < 5 || chnNumber > 8 ) {
                             console.log("number isn't right length");
-                            //window.location.href = "/sprint/{{sprint}}/account/organisations/manual-input.html";            
+                            //window.location.href = "/account/organisations/manual-input.html";            
                             $("#limited-group .form-group").addClass("error");
                             $("#companyNotFound").removeClass("hidden");
                             $(".additional-help").removeClass("hidden");
@@ -520,16 +520,16 @@ $table.appendTo( $( "#orgTable" ) );
                     }
                     else {
                             localStorage.setItem("organisation-type", JSON.stringify("ltd"));
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/confirm.html?name='Acme Ltd'";            
+                            window.location.href = "/account/organisations/confirm.html?name='Acme Ltd'";            
                     }
 
                 } else if ( $('input[name=radio-group]:checked', 'form').val() == "public" ) {
                     //public
                             localStorage.setItem("organisation-number", JSON.stringify("12345678"));                    
                             localStorage.setItem("organisation-type", JSON.stringify("public"));
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/public-sector-search.html";                
+                            window.location.href = "/account/organisations/public-sector-search.html";                
                 } else if ( $('input[name=radio-group]:checked', 'form').val() == "sole-trader" ) {
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/manual-input.html";                                                       
+                            window.location.href = "/account/organisations/manual-input.html";                                                       
                 }
                 else {
                     //charity
@@ -545,7 +545,7 @@ $table.appendTo( $( "#orgTable" ) );
                     } else {
                             localStorage.setItem("organisation-number", JSON.stringify(ccn));                    
                             localStorage.setItem("organisation-type", JSON.stringify("charity"));
-                            window.location.href = "/sprint/{{sprint}}/account/organisations/confirm.html?orgtype=charity";                        
+                            window.location.href = "/account/organisations/confirm.html?orgtype=charity";                        
                     }
                 }
 
@@ -609,7 +609,7 @@ $table.appendTo( $( "#orgTable" ) );
             searchExp = iName.match(exp);
 
             if (searchExp != null) {
-                stn += '<li><a href="/sprint/{{sprint}}/account/organisations/confirm.html?name=' + iName + '">' + iName + iSector  + '</a></li>';
+                stn += '<li><a href="/account/organisations/confirm.html?name=' + iName + '">' + iName + iSector  + '</a></li>';
             };
         });
 
@@ -692,11 +692,11 @@ $table.appendTo( $( "#orgTable" ) );
                 //content += '<tr>';
                 //content += '<td class="org-name">' + iName + '</td>';
                 //content += '<td class="org-name">' + iSector + '</td>';
-                //content += '<td class="numeric"><a href="/sprint/{{sprint}}/account/organisations/confirm.html">Select organisation</a></td>';
+                //content += '<td class="numeric"><a href="/account/organisations/confirm.html">Select organisation</a></td>';
                 //content += '</tr>';
                 
                 
-                content += '<li><a href="/sprint/{{sprint}}/account/organisations/address.html">' + iName + '</a></li>';
+                content += '<li><a href="/account/organisations/address.html">' + iName + '</a></li>';
             });
 
             returnDirectory(content);
@@ -749,7 +749,7 @@ $.each(list.letters, function(i, letter){
                //alert("hi");
                e.preventDefault();
                localStorage.setItem("organisation-name", JSON.stringify($(this).text()));
-               window.location.href = "/sprint/{{sprint}}/account/organisations/address.html";
+               window.location.href = "/account/organisations/address.html";
            });
     }
     
@@ -933,9 +933,9 @@ var chart = c3.generate({
             if ( $('input[name=radio-group]:checked', 'form').val() == "new" ) {
                     //set cookie about on-boarding
                 localStorage.setItem('onboarding',"1");
-                    window.location.href = "/sprint/{{sprint}}/onboarding/before-you-start.html";
+                    window.location.href = "/onboarding/before-you-start.html";
             } else {
-                window.location.href = "/sprint/{{sprint}}/user/login.html";
+                window.location.href = "/user/login.html";
                                 localStorage.setItem('onboarding',"0");
             }
         })
@@ -946,16 +946,16 @@ var chart = c3.generate({
                 var payeCount = localStorage.getItem('payeCount');
                 payeCount++;
                localStorage.setItem('payeCount', payeCount ); 
-                window.location.href = "/sprint/{{sprint}}/onboarding/paye-check.html";
+                window.location.href = "/onboarding/paye-check.html";
             });
     
     // add paye scheme loop
                 $(".sprint-11 .paye-check .button").click(function(e){
             e.preventDefault();
             if ( $('input[name=radio-group]:checked', 'form').val() == "addMore" ) {
-                    window.location.href = "/sprint/{{sprint}}/onboarding/gateway-login.html";
+                    window.location.href = "/onboarding/gateway-login.html";
             } else {
-                window.location.href = "/sprint/{{sprint}}/account/dashboard/index.html?newLevyAccount=y";
+                window.location.href = "/account/dashboard/index.html?newLevyAccount=y";
             }
         });
     

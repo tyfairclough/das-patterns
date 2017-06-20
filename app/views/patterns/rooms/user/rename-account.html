@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block after_header %}
-{% include "sprint/"+sprint+"/includes/header.html" %}
+{% include "patterns/includes/header.html" %}
 {% endblock %}
 {% block content %}
 <style>
@@ -58,8 +58,8 @@
             <input class="form-control" id="new-name" maxlength="128" name="email" type="text"> 
     </div>
     <div class="form-group">
-        <a class="button" href="/sprint/{{sprint}}/user/index.html?name=new">Save and continue</a>
-        <a class="button text-link" href="/sprint/{{sprint}}/user/index.html?name=cancel">Cancel</a>
+        <a class="button" href="/user/index.html?name=new">Save and continue</a>
+        <a class="button text-link" href="/user/index.html?name=cancel">Cancel</a>
     </div>
 </form>
         

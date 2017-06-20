@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block after_header %}
-{% include "sprint/"+sprint+"/includes/header.html" %}
+{% include "patterns/includes/header.html" %}
 {% endblock %}
 {% block content %}
 <style>
@@ -38,7 +38,7 @@
             <input class="form-control" id="email2" maxlength="128" name="email" pattern="[A-Za-z0-9_\-\+/{\t\n\r}#$%^\\&amp;\[\]*=()|?'~`! :]+([.][A-Za-z0-9_\-\+/{\t\n\r}#$%^\\&amp;\[\]*=()|?'~`! :]+)*@[A-Za-z0-9\[\]:]+([.-][A-Za-z0-9\[\]:]+)*\.[A-Za-z0-9\[\]:]+([-.][A-Za-z0-9\[\]:]+)*" type="email" tabindex="0"> 
     </div>
     <div class="form-group">
-        <a class="button" href="/sprint/{{sprint}}/user/reset-password.html">Continue</a>
+        <a class="button" href="/user/reset-password.html">Continue</a>
     </div>
 </form>
         

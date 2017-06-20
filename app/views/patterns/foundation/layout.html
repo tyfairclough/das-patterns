@@ -1,25 +1,4 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Sprint {{sprint}} - Dashboard
-{% endblock %}
-
-{% block inside_header %}
-
-{% endblock %}
-
-
-
-
-{% block content %}
-
-
-{% block after_header %}
-{% include "sprint/"+sprint+"/includes/header.html" %}
-{% endblock %}
-
-<main id="content" role="main" tabindex="-1">
-  <h1 class="heading-xlarge">
+<h1 class="heading-xlarge" id="#layout">
     <span class="heading-secondary">GOV.UK elements</span>
     Layout
   </h1>
@@ -273,7 +252,3 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
-
-
-</main>
-{% endblock %}

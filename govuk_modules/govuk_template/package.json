@@ -10,7 +10,7 @@
         "spec": "0.19.1",
         "type": "version"
       },
-      "/Development/projects-gov/das-patterns"
+      "/Applications/XAMPP/xamppfiles/htdocs/das-patterns"
     ]
   ],
   "_from": "govuk_template_jinja@0.19.1",
@@ -43,7 +43,7 @@
   "_shasum": "8ced5b293782977ff4b1b4ad76233cdffe39deba",
   "_shrinkwrap": null,
   "_spec": "govuk_template_jinja@0.19.1",
-  "_where": "/Development/projects-gov/das-patterns",
+  "_where": "/Applications/XAMPP/xamppfiles/htdocs/das-patterns",
   "author": {
     "name": "Government Digital Service developers",
     "url": "https://gds.blog.gov.uk/"
