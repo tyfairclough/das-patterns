@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  DAS pattern library
+  Sprint {{sprint}} - Dashboard
 {% endblock %}
 
 {% block inside_header %}
@@ -20,12 +20,13 @@
 
 <main id="content" role="main" tabindex="-1">
   <h1 class="heading-xlarge">
-      Showroom
-    </h1>
+    <span class="heading-secondary">SFA design language</span>
+    Plans
+  </h1>
 
   <div class="text">
     <p class="lede">
-Common user journey patterns.
+        Design language for layout
     </p>
   </div>
 
@@ -33,11 +34,9 @@ Common user journey patterns.
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-          <li><a href="#errors">Search</a></li>
-          <li><a href="#help">Next steps</a></li>
-          <li><a href="#user">Register</a></li>
-          <li><a href="#user">Welcome wizard</a></li>
-          <li><a href="#user">CRUD</a></li>
+        <li><a href="/sprint/home-and-garden/plans/#2+1">2 thirds with rail</a></li>
+        <li><a href="/sprint/home-and-garden/plans/#2+0">2 thirds without rail</a></li>
+        <li><a href="/sprint/home-and-garden/plans/#1+0">full width</a></li>
       </ul>
     </div>
   </div>

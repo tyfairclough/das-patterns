@@ -1,12 +1,21 @@
-{% extends "layout.html" %} 
-{% block page_title %} 
-DAS pattern library 
-{% endblock %} 
-{% block inside_header %} 
-{% endblock %} 
-{% block content %} 
-{% block after_header %} 
-{% include "patterns/includes/header.html" %} 
+{% extends "layout.html" %}
+
+{% block page_title %}
+  DAS pattern library
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+{% block after_header %}
+{% include "patterns/includes/header.html" %}
 {% endblock %}
 
 
@@ -25,7 +34,7 @@ The micro interactions joining the experience together
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-          <li><a href="#forms">forms</a></li>
+          <li><a href="#forms">Forms</a></li>
           <li><a href="#help">Help</a></li>
           <li><a href="#user">User</a></li>
           <li><a href="#notifications">Notifications</a></li>
@@ -48,11 +57,15 @@ The micro interactions joining the experience together
       </ul>
     </div>
   </div>
+    
     {% include "patterns/plumbing/forms.html" %}
     {% include "patterns/plumbing/notifications.html" %}
     {% include "patterns/plumbing/transactions.html" %}
     {% include "patterns/plumbing/errors.html" %}
     {% include "patterns/plumbing/information.html" %}
     {% include "patterns/plumbing/textarea.html" %}    
+
+
+
 </main>
 {% endblock %}
