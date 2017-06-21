@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  DAS pattern library
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+{% block after_header %}
+{% include "patterns/includes/header.html" %}
+{% endblock %}
+
+<main id="content" role="main" tabindex="-1">
+
+<section id="ul">
+        <h3 class="heading-large">ul — lists</h3>
+        <p>List items start with a lowercase letter and have no full stop at the end.</p>    
+        <div class="example">
+<ul class="list list-bullet">
+  <li>here is a bulleted list</li>
+  <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+  <li>vestibulum id ligula porta felis euismod semper</li>
+  <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+</ul>
+
+<ol class="list list-number">
+  <li>here is a numbered list</li>
+  <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+  <li>vestibulum id ligula porta felis euismod semper</li>
+  <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+</ol>
+
+<ul class="list">
+  <li><a href="#">Related link</a></li>
+  <li><a href="#">Related link</a></li>
+  <li><a href="#">Related link</a></li>
+  <li><a href="#" class="bold-xsmall">More</a></li>
+</ul>
+    </div>
+       <details>
+            <summary>HTML</summary>
+        <pre>
+            <code class="html">
+&lt;ul class="list list-bullet"&gt;
+  &lt;li&gt;here is a bulleted list&lt;/li&gt;
+  &lt;li&gt;vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor&lt;/li&gt;
+  &lt;li&gt;vestibulum id ligula porta felis euismod semper&lt;/li&gt;
+  &lt;li&gt;integer posuere erat a ante venenatis dapibus posuere velit aliquet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class="list list-number"&gt;
+  &lt;li&gt;here is a numbered list&lt;/li&gt;
+  &lt;li&gt;vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor&lt;/li&gt;
+  &lt;li&gt;vestibulum id ligula porta felis euismod semper&lt;/li&gt;
+  &lt;li&gt;integer posuere erat a ante venenatis dapibus posuere velit aliquet&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul class="list"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Related link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Related link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Related link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="bold-xsmall"&gt;More&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+        </pre>
+        </details>        
+    </section>
+</main>
+{% endblock %}

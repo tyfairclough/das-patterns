@@ -1,4 +1,26 @@
-    <section id="table">
+{% extends "layout.html" %}
+
+{% block page_title %}
+  DAS pattern library
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+{% block after_header %}
+{% include "patterns/includes/header.html" %}
+{% endblock %}
+
+<main id="content" role="main" tabindex="-1">
+
+<section id="table">
         <h3 class="heading-large">Tables</h3>
         <p>We use tables to organise rows of data.</p>
         <div class="grid-row">
@@ -455,4 +477,7 @@ table.responsive {
         
     </section>
     
+</main>
+    
+    {% endblock %}
     
