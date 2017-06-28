@@ -1,15 +1,12 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  DAS pattern library
+DAS pattern library
 {% endblock %}
 
 {% block inside_header %}
 
 {% endblock %}
-
-
-
 
 {% block content %}
 
@@ -18,54 +15,50 @@
 {% include "patterns/includes/header.html" %}
 {% endblock %}
 
-
 <main id="content" role="main" tabindex="-1">
   <h1 class="heading-xlarge">
-      Plumbing &amp; Wiring
+    Plumbing &amp; Wiring
   </h1>
-
   <div class="text">
-    <p class="lede">
-The micro interactions joining the experience together
-    </p> 
+      <p class="lede">
+          The micro interactions joining the experience together
+      </p>
   </div>
-
   <h2 class="heading-small heading-contents">Contents:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-          <li><a href="#forms">Forms</a></li>
-          <li><a href="#help">Help</a></li>
-          <li><a href="#user">User</a></li>
-          <li><a href="#notifications">Notifications</a></li>
-          <li><a href="#transactions">Transactions</a></li>
-          <li><a href="#errors">Errors</a></li>
-          <li><a href="#information">Information</a>
-            <ul class="list list-bullet hidden">
-                <li>Highlighted text</li>
-                <li>Inset text</li>
-                <li>Legal text</li>
-                <li>Hidden text</li>
-            </ul>
-          </li>
-          <li><a href="#textarea">Texarea count</a>
-            <ul class="list list-bullet hidden">
-                <li>Character count</li>  
-                <li>Word count</li>
-            </ul>
-          </li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#user">User</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#errors">Errors</a></li>
+        <li><a href="#information">Information</a>
+          <ul class="list list-bullet hidden">
+            <li>Highlighted text</li>
+            <li>Inset text</li>
+            <li>Legal text</li>
+            <li>Hidden text</li>
+          </ul>
+        </li>
+        <li><a href="#textarea">Texarea count</a>
+          <ul class="list list-bullet hidden">
+            <li>Character count</li>
+            <li>Word count</li>
+          </ul>
+        </li>
+        <li><a href="#accordion">Accordion</li>
       </ul>
     </div>
   </div>
-    
-    {% include "patterns/plumbing/forms.html" %}
-    {% include "patterns/plumbing/notifications.html" %}
-    {% include "patterns/plumbing/transactions.html" %}
-    {% include "patterns/plumbing/errors.html" %}
-    {% include "patterns/plumbing/information.html" %}
-    {% include "patterns/plumbing/textarea.html" %}    
-
-
-
+  {% include "patterns/plumbing/forms.html" %}
+  {% include "patterns/plumbing/notifications.html" %}
+  {% include "patterns/plumbing/transactions.html" %}
+  {% include "patterns/plumbing/errors.html" %}
+  {% include "patterns/plumbing/information.html" %}
+  {% include "patterns/plumbing/textarea.html" %}
+  {% include "patterns/plumbing/accordion.html" %} 
 </main>
+
 {% endblock %}
