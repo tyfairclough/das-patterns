@@ -1,6 +1,6 @@
 {
   "name": "govuk_frontend_toolkit",
-  "version": "5.2.0",
+  "version": "5.1.2",
   "description": "npm package for using the GOV.UK frontend toolkit",
   "repository": {
     "type": "git",
@@ -14,12 +14,12 @@
   "bugs": {
     "url": "https://github.com/alphagov/govuk_frontend_toolkit/issues"
   },
-  "gitHead": "463d7b077027435f4dc6f4b24cffaf296c135be3",
+  "gitHead": "f2ad537f2c702384f3550d46fdce8f520a8740e5",
   "homepage": "https://github.com/alphagov/govuk_frontend_toolkit_npm#readme",
-  "_id": "govuk_frontend_toolkit@5.2.0",
+  "_id": "govuk_frontend_toolkit@5.1.2",
   "scripts": {},
-  "_shasum": "f5f6c5ae48e431ecb97d8b808b1e8db7782abc7f",
-  "_from": "govuk_frontend_toolkit@>=5.0.0 <6.0.0",
+  "_shasum": "d380fbe248e603f3419bb2983a9af54b87a8415c",
+  "_from": "govuk_frontend_toolkit@5.1.2",
   "_npmVersion": "2.15.1",
   "_nodeVersion": "0.10.48",
   "_npmUser": {
@@ -27,8 +27,8 @@
     "email": "govuk-dev@digital.cabinet-office.gov.uk"
   },
   "dist": {
-    "shasum": "f5f6c5ae48e431ecb97d8b808b1e8db7782abc7f",
-    "tarball": "https://registry.npmjs.org/govuk_frontend_toolkit/-/govuk_frontend_toolkit-5.2.0.tgz"
+    "shasum": "d380fbe248e603f3419bb2983a9af54b87a8415c",
+    "tarball": "https://registry.npmjs.org/govuk_frontend_toolkit/-/govuk_frontend_toolkit-5.1.2.tgz"
   },
   "maintainers": [
     {
@@ -38,8 +38,9 @@
   ],
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/govuk_frontend_toolkit-5.2.0.tgz_1490691065741_0.04473077203147113"
+    "tmp": "tmp/govuk_frontend_toolkit-5.1.2.tgz_1489759479478_0.603055460145697"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/govuk_frontend_toolkit/-/govuk_frontend_toolkit-5.2.0.tgz"
+  "_resolved": "https://registry.npmjs.org/govuk_frontend_toolkit/-/govuk_frontend_toolkit-5.1.2.tgz",
+  "readme": "ERROR: No README data found!"
 }

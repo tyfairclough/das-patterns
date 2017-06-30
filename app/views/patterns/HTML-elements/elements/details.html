@@ -1,0 +1,55 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+ <section id="details">
+        <h3 class="heading-large">&lt;details&gt; — hidden text (progressive disclosure)</h3>
+        <p>Use this to make your page easier to scan, only showing contextual information when required.</p>
+        <p>Use this to make your page easier to scan, only showing contextual information when required.</p>
+        
+        <div class="example">
+  <details role="group">
+
+  <summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">Help with nationality</span></summary>
+
+  <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+
+    <p>
+      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+    </p>
+
+    <p>
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+    </p>
+
+  </div>
+
+</details>
+
+</div>
+<details>
+    <summary>HTML</summary>
+    <pre>            <code class="html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"details-content-0"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"summary"</span>&gt;</span>Help with nationality<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"panel panel-border-narrow"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"details-content-0"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>  
+            </code>
+        </pre>    
+</details>
+        </section>   
+</main>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+
+ <section id="a">
+   
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h4 class="heading-large">&lt;b&gt;</h4>
+            <p>gov.uk have removed &lt;b&gt; styling through the <a class="disabled" href="#">reset css</a> but have included an override via the use of the <span class="code">.bold-{size}</span> class.</p>
+            <p>You can also use the decoration class <span class="code">.bold</span> to make any text bold agnostic of its size.</p>
+
+            <div class="example">
+                <p class="bold-xsmall">bold extra small</p>
+                <p class="bold-small">bold small</p>
+                <p class="bold-medium">bold medium</p>
+                <p class="bold-large">bold large</p>
+                <p class="bold-xlarge">bold extra large</p>
+                <p class="bold-xxlarge">bold extra extra large</p>
+            </div>
+            
+<details>
+    <summary>HTML</summary>
+<pre>
+                <code class="html">
+&lt;p class="bold-xsmall"&gt;bold extra small&lt;/p&gt;
+&lt;p class="bold-small"&gt;bold small&lt;/p&gt;
+&lt;p class="bold-medium"&gt;bold medium&lt;/p&gt;
+&lt;p class="bold-large"&gt;bold large&lt;/p&gt;
+&lt;p class="bold-xlarge"&gt;bold extra large&lt;/p&gt;
+&lt;p class="bold-xxlarge"&gt;bold extra extra large&lt;/p&gt;
+                </code>
+            </pre>    
+</details>            
+
+<details>
+                <summary>
+                    SASS
+                </summary>
+            <pre>
+                <code class="sass">
+    // Bold font sizes
+.bold-xxlarge {
+  @include bold-80();
+}
+
+.bold-xlarge {
+  @include bold-48();
+}
+
+.bold-large {
+  @include bold-36();
+}
+
+.bold-medium {
+  @include bold-24();
+}
+
+.bold-small {
+  @include bold-19();
+}
+
+.bold-xsmall {
+  @include bold-16();
+}
+
+// Bold, without needing a font size
+.bold {
+  font-weight: 700;
+}
+                </code>
+            </pre>                
+            </details>
+            
+
+        </div>
+    </div>
+     
+    </section>
+</main>
+    {% endblock %}

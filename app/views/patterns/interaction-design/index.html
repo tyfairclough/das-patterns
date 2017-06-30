@@ -1,0 +1,61 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+  <h1 class="heading-xlarge">
+    Interaction design
+  </h1>
+  <div class="text">
+      <p class="lede">
+          The micro interactions joining the experience together
+      </p>
+  </div>
+  <h2 class="heading-small heading-contents">Contents:</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#user">User</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#errors">Errors</a></li>
+        <li><a href="#information">Information</a>
+          <ul class="list list-bullet hidden">
+            <li>Highlighted text</li>
+            <li>Inset text</li>
+            <li>Legal text</li>
+            <li>Hidden text</li>
+          </ul>
+        </li>
+        <li><a href="#textarea">Texarea count</a>
+          <ul class="list list-bullet hidden">
+            <li>Character count</li>
+            <li>Word count</li>
+          </ul>
+        </li>
+        <li><a href="#accordion">Accordion</a></li>
+      </ul>
+    </div>
+  </div>
+  {% include "patterns/interaction-design/forms.html" %}
+  {% include "patterns/interaction-design/notifications.html" %}
+  {% include "patterns/interaction-design/transactions.html" %}
+  {% include "patterns/interaction-design/errors.html" %}
+  {% include "patterns/interaction-design/information.html" %}
+  {% include "patterns/interaction-design/textarea.html" %}
+  {% include "patterns/interaction-design/accordion.html" %} 
+
+  <!-- Mask -->
+  <script src="/public/javascripts/jquery.mask.min.js"></script>
+  <!-- Patterns -->
+  <script src="/public/javascripts/patterns/NEEDS-TO-BE-BROKEN-DOWN.js"></script>
+
+</main>
+{% endblock %}
+

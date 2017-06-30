@@ -1,0 +1,49 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+   <section id="Heading_Elements">
+        <h3 class="heading-large">&lt;h1&gt;–&lt;h6&gt;</h3>
+<ul class="list list-bullet text">
+    <li>use GDS Transport Website Bold</li>
+    <li>use sentence case for headings</li>
+    <li>use headings consistently to create a clear hierarchy</li>
+  </ul>
+        
+        <div class="example">
+  <h1 class="heading-xlarge">A <em class="highlight">48px Bold</em> heading</h1>
+
+<h2 class="heading-large">A <em class="highlight">36px Bold</em> heading</h2>
+
+<h3 class="heading-medium">A <em class="highlight">24px Bold</em> heading</h3>
+
+<h4 class="heading-small">A <em class="highlight">19px Bold</em> heading</h4>
+
+</div>
+        
+<details>
+    <summary>HTML</summary>
+    <pre>
+        <code class="html">
+&lt;h1 class="heading-xlarge"&gt;A &lt;em class="highlight"&gt;48px Bold&lt;/em&gt; heading&lt;/h1&gt;
+
+&lt;h2 class="heading-large"&gt;A &lt;em class="highlight"&gt;36px Bold&lt;/em&gt; heading&lt;/h2&gt;
+
+&lt;h3 class="heading-medium"&gt;A &lt;em class="highlight"&gt;24px Bold&lt;/em&gt; heading&lt;/h3&gt;
+
+&lt;h4 class="heading-small"&gt;A &lt;em class="highlight"&gt;19px Bold&lt;/em&gt; heading&lt;/h4&gt;
+
+        
+        </code>
+    </pre>
+</details>        
+        
+    </section>
+    
+</main>    
+{% endblock %}

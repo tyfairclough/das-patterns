@@ -1,0 +1,200 @@
+<section id="textarea">
+    <h2 class="heading-large">Textarea count</h2>
+    <p>By showing limits on inputs users are less likely to cause an error.</p>
+    <h3 class="heading-medium">Character count</h3>
+    
+    
+    <p>Use this micro interaction if you have a limiting input size due to a system constraint</p>
+    
+    <div class="example">
+        <div class="form-group">
+        <textarea class="form-control" data-val-length-max="240" type="text" ></textarea>
+        <span class="sfa-form-control-after">
+        <span class="maxchar-count">100</span>
+        <span class="maxchar-text"> characters remaining</span>
+        </span>
+        </div>
+    </div>
+    
+    <details>
+        <summary>HTML</summary>
+            <pre>
+                <code class="html">
+                &lt;div class="form-group"&gt;
+                &lt;textarea class="form-control" data-val-length-max="240" type="text" &gt;&lt;/textarea&gt;
+                &lt;span class="sfa-form-control-after"&gt;
+                &lt;span class="maxchar-count"&gt;100&lt;/span&gt;
+                &lt;span class="maxchar-text"&gt; characters remaining&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;/div&gt;            
+                </code>
+            </pre>
+    </details>
+
+    <details>
+        <summary>SASS</summary>
+        <pre>
+            <code class="sass">
+.sfa-form-control-after {
+    font-size: 16px;
+    line-height: 1.25;
+    display: block;
+    color: $secondary-text-colour;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    @include media(tablet){
+      font-size: 19px;
+      line-height: 1.31579;
+    }
+}
+            </code>
+        </pre>        
+    </details>
+    <details>
+        <summary>JS</summary>
+<pre>
+        <code class="js">
+characterCount = function(n) {
+  console.log(n);
+  var i = $(n)
+    , r = i.attr("data-val-length-max")
+    , e = i.val()
+    , h = (e.match(/\n/g) || []).length
+    , o = e.length + h
+    , u = Math.abs(r - o)
+    , f = i.closest(".form-group").find(".maxchar-count")
+    , t = i.closest(".form-group").find(".maxchar-text")
+    , s = i.closest(".form-group").find(".aria-limit");
+  if (r)
+      f.text(u);
+  else {
+      t.hide();
+      return
+  }
+  o > r ? (f.parent().addClass("has-error"),
+  t.text(" characters over the limit"),
+  s.text("Character limit has been reached, you must type fewer than " + r + " characters"),
+  u == 1 ? t.text(" character over the limit") : t.text(" characters over the limit")) : (f.parent().removeClass("has-error"),
+  t.text(" characters remaining"),
+  s.text(""),
+  u == 1 ? t.text(" character remaining") : t.text(" characters remaining"))
+}
+$("textarea").on("keyup", function() {
+    console.log(this);
+    characterCount(this);
+});
+$("textarea").each(function() {
+    characterCount(this);
+});        
+        </code>
+</pre>
+    </details>
+    
+    
+    
+        <h3 class="heading-medium">Word count</h3>
+    <p>Use this micro interaction if you have a soft limit on the content.</p>
+    
+    <div class="example">
+        <div class="word-count">
+            <textarea class="form-control" type="text" id="wordlimit" data-max-length-in-words="5"></textarea>
+            <span class="sfa-form-control-after" id="#charlimit">
+                <span class="words-left">5</span>
+            </span>
+        </div>
+    </div>
+    
+    <details>
+        <summary>HTML</summary>
+        <pre>
+            <code class="html">
+        &lt;div class="word-count"&gt;
+            &lt;textarea class="form-control" type="text" id="wordlimit" data-max-length-in-words="5"&gt;&lt;/textarea&gt;
+            &lt;span class="sfa-form-control-after" id="#charlimit"&gt;
+                &lt;span class="words-left">5&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;            
+            </code>
+        </pre>
+    </details>
+    
+    <details>
+        <summary>JS</summary>
+        <pre>
+            <code class="js">
+var wordLen = $("#wordlimit").data("max-length-in-words");
+var len;
+    $(".words-left").html(wordLen+ ' words left');	
+    $('#wordlimit').keydown(function(event) {	
+        len = $('#wordlimit').val().split(/[\s]+/);
+        console.log(len.length + " words are typed out of an available " + wordLen);
+        wordsLeft = (wordLen) - len.length;
+        if (len.length <= wordLen) { 
+            $('.words-left').html(wordsLeft+ ' words left');		
+        } else {
+            $('.words-left').html((wordsLeft *= -1 ) + ' words too many');		        
+        }
+    });            
+            </code>
+        </pre>
+    </details>
+
+</section>
+
+<script>
+    $(document).ready(function() {
+
+        /* ------------------------------------------
+         Character count
+        ------------------------------------------ */  
+        characterCount = function(n) {
+            // console.log(n);
+            var i = $(n),
+                r = i.attr("data-val-length-max"),
+                e = i.val(),
+                h = (e.match(/\n/g) || []).length,
+                o = e.length + h,
+                u = Math.abs(r - o),
+                f = i.closest(".form-group").find(".maxchar-count"),
+                t = i.closest(".form-group").find(".maxchar-text"),
+                s = i.closest(".form-group").find(".aria-limit");
+            if (r)
+                f.text(u);
+            else {
+                t.hide();
+                return
+            }
+            o > r ? (f.parent().addClass("has-error"),
+                t.text(" characters over the limit"),
+                s.text("Character limit has been reached, you must type fewer than " + r + " characters"),
+                u == 1 ? t.text(" character over the limit") : t.text(" characters over the limit")) : (f.parent().removeClass("has-error"),
+                t.text(" characters remaining"),
+                s.text(""),
+                u == 1 ? t.text(" character remaining") : t.text(" characters remaining"))
+        }
+        $("textarea").on("keyup", function() {
+            // console.log(this);
+            characterCount(this);
+        });
+        $("textarea").each(function() {
+            characterCount(this);
+        });
+
+        /* ------------------------------------------
+         Word count
+        ------------------------------------------ */
+        var wordLen = $("#wordlimit").data("max-length-in-words");
+        var len;
+        $(".words-left").html(wordLen + ' words left');
+        $('#wordlimit').keydown(function(event) {
+            len = $('#wordlimit').val().split(/[\s]+/);
+            // console.log(len.length + " words are typed out of an available " + wordLen);
+            wordsLeft = (wordLen) - len.length;
+            if (len.length <= wordLen) {
+                $('.words-left').html(wordsLeft + ' words left');
+            } else {
+                $('.words-left').html((wordsLeft *= -1) + ' words too many');
+            }
+        });
+    });
+</script>

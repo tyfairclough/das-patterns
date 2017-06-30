@@ -1,0 +1,339 @@
+<section id="accordion">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h2 class="heading-large" id="transactions">Accordion</h2>
+            <p>Use this pattern to breakdown larger lists on links or information, to provide the user with easier to select from subcategories</p>
+        </div>
+    </div>
+    <div class="example">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="js-hidden" data-module="accordion-with-descriptions">
+					<div class="subsection-wrapper">
+						<div class="subsection js-subsection">
+							<div class="subsection__header">
+								<h2 class="subsection__title">Category one</h2>
+								<p class="subsection__description">Short sentence describing category.</p>
+							</div>
+							<div class="subsection__content js-subsection-content" id="subsection_content_0">
+								<ul class="subsection__list">
+									<li class="subsection__list-item">
+										<a href="#1">List item one</a>
+									</li>
+									<li class="subsection__list-item">
+										<a href="#1">List item two</a>
+									</li>                      
+								</ul>
+							</div>
+						</div>
+						<div class="subsection js-subsection">
+							<div class="subsection__header">
+								<h2 class="subsection__title">Category two</h2>
+								<p class="subsection__description">Short sentence describing category.</p>
+							</div>
+							<div class="subsection__content js-subsection-content" id="subsection_content_1">
+								<ul class="subsection__list">
+									<li class="subsection__list-item">
+										<a href="#1">List item one</a>
+									</li>
+									<li class="subsection__list-item">
+										<a href="#1">List item two</a>
+									</li>                      
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <details>
+        <summary>SASS</summary>
+        <pre>
+			<code class="sass">
+.subsection {
+    width: 100%;
+    margin-bottom: 30px
+}
+
+@media (min-width: 641px) {
+    .subsection {
+        margin-bottom:45px
+    }
+}
+
+.subsection__title {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 5px
+}
+
+@media (min-width: 641px) {
+    .subsection__title {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+.subsection__description {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 7.5px
+}
+
+@media (min-width: 641px) {
+    .subsection__description {
+        font-size:19px;
+        line-height: 1.31579
+    }
+}
+
+@media (min-width: 641px) {
+    .subsection__description {
+        margin-bottom:15px
+    }
+}
+
+.subsection__list {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    padding-left: 0;
+    list-style-type: none
+}
+
+@media (min-width: 641px) {
+    .subsection__list {
+        font-size:19px;
+        line-height: 1.31579
+    }
+}
+
+.subsection__list-item {
+    margin-bottom: 0.5em
+}
+
+.subsection__list-item a {
+    text-decoration: none
+}
+
+.js-accordion-with-descriptions .subsection-controls button {
+    float: right;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #005ea5;
+    padding: 0.5em 0
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection-controls button {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+.js-accordion-with-descriptions .subsection-wrapper {
+    border-bottom: 1px solid #bfc1c3
+}
+
+.js-accordion-with-descriptions .subsection {
+    margin-bottom: 0
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection {
+        margin-bottom:0
+    }
+}
+
+.js-accordion-with-descriptions .subsection__header {
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-top: 1px solid #bfc1c3
+}
+
+.js-accordion-with-descriptions .subsection__header:hover {
+    cursor: pointer;
+    background: #f8f8f8
+}
+
+.js-accordion-with-descriptions .subsection__title {
+    margin-bottom: 0;
+    margin-right: 15px
+}
+
+.js-accordion-with-descriptions .subsection__title button {
+    color: #005ea5;
+    cursor: pointer;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    background: none;
+    border: 0;
+    padding-left: 0;
+    text-align: left
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__title button {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__title {
+        margin-right:30px
+    }
+}
+
+.js-accordion-with-descriptions .subsection__description {
+    margin-bottom: 0;
+    margin-right: 15px
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__description {
+        margin-bottom:0;
+        margin-right: 30px
+    }
+}
+
+.js-accordion-with-descriptions .subsection__icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 16px;
+    width: 16px;
+    margin-top: -8px;
+    background-image: url(https://assets.publishing.service.gov.uk/service-manual-frontend/icons-plus-minus-1bd32ac92894793f16898334c6a8af216b283adcb4d0a9b8cbe1621509f6b0d5.png);
+    background: url(https://assets.publishing.service.gov.uk/service-manual-frontend/icons-plus-minus-d4de828db60520db2057af7ed3526d770973e70a94c4d8a1ba6cf4a6dcf6490e.svg),linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: 0 -16px
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection__icon {
+        right:15px
+    }
+}
+
+.js-accordion-with-descriptions .subsection--is-open .subsection__icon {
+    background-position: 0 0
+}
+
+.js-accordion-with-descriptions .subsection__content {
+    padding-top: 5px;
+    padding-bottom: 15px
+}
+
+@media (min-width: 641px) {
+    .js-accordion-with-descriptions .subsection--is-open .subsection__content {
+        padding-top:10px;
+        padding-bottom: 30px
+    }
+}
+
+p {
+    margin-top: 0.3125em;
+    margin-bottom: 1.25em
+}
+
+@media (min-width: 641px) {
+    p {
+        margin-top:0.26316em;
+        margin-bottom: 1.05263em
+    }
+}
+
+.js-accordion-with-descriptions .subsection-controls:after,.js-accordion-with-descriptions .subsection-wrapper:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.js-accordion-with-descriptions .subsection-controls:after,.js-accordion-with-descriptions .subsection-wrapper:after {
+    content: "";
+    display: block;
+    clear: both
+}
+			</code>
+		</pre>
+    </details>
+    <details>
+        <summary>HTML</summary>
+        <pre>
+			<code class="html">
+&lt;div class="js-hidden" data-module="accordion-with-descriptions"&gt;
+    &lt;div class="subsection-wrapper"&gt;
+        &lt;div class="subsection js-subsection"&gt;
+            &lt;div class="subsection__header"&gt;
+                &lt;h2 class="subsection__title"&gt;Category one&lt;/h2&gt;
+                &lt;p class="subsection__description"&gt;Short sentence describing category.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="subsection__content js-subsection-content" id="subsection_content_0"&gt;
+                &lt;ul class="subsection__list"&gt;
+                    &lt;li class="subsection__list-item"&gt;
+                         &lt;a href="#1"&gt;List item one&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="subsection__list-item"&gt;
+                         &lt;a href="#1"&gt;List item two&lt;/a&gt;
+                    &lt;/li&gt;                      
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="subsection js-subsection"&gt;
+            &lt;div class="subsection__header"&gt;
+                &lt;h2 class="subsection__title"&gt;Category two&lt;/h2&gt;
+                &lt;p class="subsection__description"&gt;Short sentence describing category.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="subsection__content js-subsection-content" id="subsection_content_1"&gt;
+                &lt;ul class="subsection__list"&gt;
+                    &lt;li class="subsection__list-item"&gt;
+                         &lt;a href="#1"&gt;List item one&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="subsection__list-item"&gt;
+                         &lt;a href="#1"&gt;List item two&lt;/a&gt;
+                    &lt;/li&gt;                      
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+			</code>
+		</pre>
+    </details>
+
+    <details>
+    	<summary>JS</summary>
+    	<pre>
+	    	<code class="js">
+&lt;script src="/public/javascripts/service-manaul_accordion.js"&gt;&lt;/script&gt;
+	    	</code>
+    	</pre>
+    	<h3 class="heading-small">Files to download</h3>
+    	<p>The JS requires jQuery</p>
+    	<ul class="list list-bullet">
+    		<li><a href="/public/javascripts/patterns/service-manaul_accordion.js">service-manaul_accordion.js</a></li>
+    	</ul>
+    </details>
+</section>
+
+<script src="/public/javascripts/patterns/service-manaul_accordion.js"></script>
