@@ -1,0 +1,106 @@
+/*
+
+Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+    display: block;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: auto;
+    padding: 1em;
+    margin: 0 0 30px 0;
+    background: #fcfcfc;
+    border: 1px solid #bfc1c3;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    direction: ltr;
+    text-align: left;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+    word-spacing: normal;
+    word-break: normal;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+    color: black;
+}
+
+.hljs,
+.hljs-subst {
+    color: #0b0c0c;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+    color: #d88;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+    color: #777;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+@media (min-width: 641px) {
+
+.hljs:before {
+    font-size: 14px;
+    line-height: 1.4285714286;
+}
+
+.hljs:before {
+    content: "CODE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 1.25;
+    background: #bfc1c3;
+    color: white;
+}
+}

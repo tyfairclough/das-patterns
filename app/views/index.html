@@ -1,132 +1,112 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK elements
+  ESFA pattern library
 {% endblock %}
 
 {% block content %}
 
-<main class="elements-index" id="content" role="main" tabindex="-1">
-
-
-
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <h1 class="heading-xlarge">
-        Manage apprenticeships
-      </h1>
-
-      <p class="lede">
-        This guide shows how to make your service look consistent with the rest of GOV.UK.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row">
+<main id="content" role="main">
+<div class="hgroup text">
+    <h1 class="heading-xlarge">
+        ESFA pattern library
+    </h1>
+    <ul class="list list-bullet">
+        <li>lift design patterns for your UI</li>
+        <li>provides a reference to validate your design choices</li>
+        <li>align yourself with other SFA products</li>
+    </ul>
+</div>
+<div class="grid-row">
     <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/layout/">Layout</a></h2>
-      <p>
-        Grid unit proportions, gutters and spacing.
-      </p>
-
+        <h2 class="heading-medium"><a href="patterns/interaction-design">Interaction design</a></h2>
+        <p>
+            The micro interactions joiningthe experience together
+        </p>
+        <ul class="list list-bullet">
+            <li>javascript enahcements</li>
+            <li>forms</li>
+            <li>validation</li>
+            <li>notifications</li>
+        </ul>
     </div>
     <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/typography/">Typography</a></h2>
-      <p>
-        Headings, body text, links, lists, inset text, hidden text.
-      </p>
-
+        <h2 class="heading-medium"><a href="patterns/page-layouts">Page layouts</a></h2>
+        <p>
+            Page designs
+        </p>
+        <ul class="list list-bullet">
+            <li>dashboards</li>
+            <li>search results</li>
+            <li>guides</li>
+        </ul>
     </div>
     <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/colour/">Colour</a></h2>
-      <p>
-        Colour contrast, Sass variables, colour palettes.
-      </p>
-
+        <h2 class="heading-medium"><a href="patterns/HTML-elements">HTML Elements</a></h2>
+        <p>
+            All the HTML Elements that can exist according to W3C
+        </p>
+        <ul class="list list-bullet">
+            <li>p</li>
+            <li>div</li>
+            <li>input</li>
+        </ul>
     </div>
-  </div>
+</div>
 
-  <div class="grid-row">
+
+<!-- <div class="grid-row">
     <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/icons-images/">Icons and images</a></h2>
-      <p>
-        Icons and image ratios.
-      </p>
-
+        <h2 class="heading-medium"><a href="patterns/visual-language">Visual language</a></h2>
+        <p>
+            The visceral experience and tone of voice
+        </p>
+        <ul class="list list-bullet">
+            <li>colour</li>
+            <li>art direction</li>
+            <li>iconography</li>
+        </ul>
     </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/data/">Data</a></h2>
-      <p>
-        Data in a table, numeric tabular data, data visualisation.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/buttons/">Buttons</a></h2>
-      <p>
-        Button text, button alignment, creating buttons.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/form-elements/">Form elements</a></h2>
-      <p>
-        Form fields, labels, focus states, radio buttons, checkboxes.
-      </p>
-
+    div class="column-one-third">
+        <h2 class="heading-medium"><a href="patterns/foundation">Foundation</a></h2>
+        <p>
+            Building blocks for any web based application
+        </p>
+        <ul class="list list-bullet">
+            <li>HTML boilerplate</li>
+            <li>CSS reset</li>
+            <li>CSS pre-processors</li>
+            <li>javascript frameworks</li>
+        </ul>
     </div>
     <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/errors/">Errors and validation</a></h2>
-      <p>
-        Summary boxes, highlighting errors in forms.
-      </p>
-
+        <h2 class="heading-medium"><a href="patterns/external-sites">External sites</a></h2>
+        <p>
+            Demonstrating how external sites flow into the core product.
+        </p>
+        <ul class="list list-bullet">
+            <li>mico-sites</li>
+            <li>landing pages</li>
+            <li>social media presence</li>
+        </ul>
     </div>
+</div> -->
+<!-- <div class="grid-row">
     <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/alpha-beta-banners/">Alpha and beta banners</a></h2>
-      <p>
-        How to create alpha and beta banners using the front-end toolkit.
-      </p>
-
+        <h2 class="heading-medium"><a href="patterns/user-journeys">User journeys</a></h2>
+        <p>
+            Common user journey patterns.
+        </p>
+        <ul class="list list-bullet">
+            <li>authentification</li>
+            <li>check &amp; sign</li>
+            <li>invitations</li>
+        </ul>
     </div>
-  </div>
+</div> -->
 
-  <div class="grid-row divider">
-    <div class="column-two-thirds">
-
-      <h3 class="heading-small">Looking for the styles?</h3>
-      <p>
-         The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass" rel="external">all the examples can be found on GitHub</a>.
-      </p>
-
-      <h3 class="heading-small">Want to discuss these patterns?</h3>
-      <p>
-        <a href="https://designpatterns.hackpad.com/" rel="external">Discuss design patterns for GOV.UK services on our hackpad</a>.
-      </p>
-
-    </div>
-  </div>
-
-</main><!-- / #content -->
+</main>
 
 {% endblock %}
 
-{% block body_end %}
-  <!-- GOV.UK elements redirect -->
-  <script src="/public/javascripts/redirect.js"></script>
-{% endblock %}
 

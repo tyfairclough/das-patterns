@@ -1,0 +1,129 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+
+<section id="ul">
+        <h3 class="heading-large">ul — lists</h3>
+        <p>List items start with a lowercase letter and have no full stop at the end.</p>    
+        <div class="example">
+            
+<ul>
+    <li>default list</li>
+    <li>default list</li>
+    <li>default list</li>
+</ul>            
+    </div>
+       <details>
+            <summary>HTML</summary>
+        <pre>
+            <code class="html">
+&lt;ul class="list"&gt;
+  &lt;li&gt;default list&lt;/li&gt;
+  &lt;li&gt;default list&lt;/li&gt;
+  &lt;li&gt;default list&lt;/li&gt;
+  &lt;li&gt;default list&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+        </pre>
+        </details>    
+    
+    <h4 class="heading-medium">Bulleted list</h4>
+    <div class="example">
+        <ul class="list list-bullet">
+          <li>here is a bulleted list</li>
+          <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+          <li>vestibulum id ligula porta felis euismod semper</li>
+          <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+        </ul>
+    </div>
+           <details>
+            <summary>HTML</summary>
+        <pre>
+            <code class="html">
+&lt;ul class="list list-bullet"&gt;
+  &lt;li&gt;here is a bulleted list&lt;/li&gt;
+  &lt;li&gt;vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor&lt;/li&gt;
+  &lt;li&gt;vestibulum id ligula porta felis euismod semper&lt;/li&gt;
+  &lt;li&gt;integer posuere erat a ante venenatis dapibus posuere velit aliquet&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+        </pre>
+        </details>  
+    
+    <h4 class="heading-medium">Links list</h4>    
+    <div class="example">
+        <ul class="list list-links">
+        <li><a href="#">related link</a></li>
+        <li><a href="#">related link</a></li>
+        <li><a href="#">related link</a></li>
+        </ul>
+    </div>
+           <details>
+            <summary>HTML</summary>
+        <pre>
+            <code class="html">
+&lt;ol class="list list-links"&gt;
+  &lt;li&gt;related link&lt;/li&gt;
+  &lt;li&gt;related link&lt;/li&gt;
+  &lt;li&gt;related link&lt;/li&gt;
+  &lt;li&gt;related link&lt;/li&gt;
+&lt;/ol&gt;
+            </code>
+        </pre>
+        </details>
+    
+    <h4 class="heading-medium">Content list</h4>    
+    <div class="example">
+        <ul class="list list-contents">
+            <li><a href="#">content link</a></li>
+            <li><a href="#">content link</a></li>
+            <li><a href="#">content link</a></li>
+        </ul>
+    </div>
+           <details>
+            <summary>HTML</summary>
+        <pre>
+            <code class="html">
+&lt;ul class="list list-contents"&gt;
+  &lt;li&gt;content link&lt;/li&gt;
+  &lt;li&gt;content link&lt;/li&gt;
+  &lt;li&gt;content link&lt;/li&gt;
+  &lt;li&gt;content link&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+        </pre>
+        </details>  
+    </section>
+    <section id="ol">
+            <h3 class="heading-large">ol — ordered lists</h3>
+        <p>List items start with a lowercase letter and have no full stop at the end.</p>        
+        <div class="example">
+            <ol class="list list-number">
+              <li>here is a numbered list</li>
+              <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+              <li>vestibulum id ligula porta felis euismod semper</li>
+              <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+            </ol>
+        </div>
+               <details>
+            <summary>HTML</summary>
+        <pre>
+            <code class="html">
+&lt;ol class="list list-number"&gt;
+  &lt;li&gt;here is a numbered list&lt;/li&gt;
+  &lt;li&gt;vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor&lt;/li&gt;
+  &lt;li&gt;vestibulum id ligula porta felis euismod semper&lt;/li&gt;
+  &lt;li&gt;integer posuere erat a ante venenatis dapibus posuere velit aliquet&lt;/li&gt;
+&lt;/ol&gt;
+            </code>
+        </pre>
+        </details>  
+    </section>
+</main>
+{% endblock %}

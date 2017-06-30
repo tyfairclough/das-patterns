@@ -1,20 +1,11 @@
-module.exports = {
- bind: function (app, assetPath) {
+var express = require('express')
+var router = express.Router()
 
-   app.get('/', function(req, res){
-		 res.render('patterns/index');
-		});
-		
-		app.get('/:id*', function(req, res){
-			
-			var defaultView = '/index';
-			
-			if (req.param(0) !== '') {
-				defaultView = req.param(0) + "/index";
-			}
-			
-		 res.render("patterns/" + req.param('id') + defaultView);
-		});
-		
- }
-}
+// Route index page
+router.get('/', function (req, res) {
+  res.render('index')
+})
+
+// add your routes here
+
+module.exports = router

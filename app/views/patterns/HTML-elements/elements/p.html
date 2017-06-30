@@ -1,0 +1,82 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+
+ <section id="p">
+     <h1 class="heading-xlarge">
+      &lt;p&gt;
+  </h1>
+        <div class="text">
+        <h3 class="heading-small">Paragraph text</h3>
+        <p>Use the GDS Transport Website font in Light and Bold. It’s licensed for use on the GOV.UK domains only.</p>
+        <p>For services publicly available on different domains, use an alternative typeface like Arial.</p>
+            
+            <h3 class="heading-small">Body copy</h3>
+<ul class="list list-bullet text">
+    <li>use GDS Transport Website Light</li>
+    <li>avoid using bold and italics</li>
+    <li>use 19px for body copy – 16px for smaller screens</li>
+    <li>use smaller sizes only if there’s a user need (eg 16px, 14px, 12px)</li>
+    <li>make sure lines of text don’t exceed 75 characters, as they become harder to read beyond that point</li>
+  </ul>
+            
+<div class="example">
+  <div class="text">
+    <p>
+  A <em class="highlight">19px</em> body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+</p>
+
+<p class="font-xsmall">
+  A <em class="highlight">16px</em> supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+</p>
+
+  </div>
+</div>
+            
+<details>
+    <summary>HTML</summary>
+    <pre>
+        <code class="html">
+&lt;p&gt;A 19px body copy paragraph, maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+&lt;p class="font-xsmall"&gt;A 16px supporting text paragraph, maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.&lt;/p        
+        </code>
+    </pre>
+
+</details>            
+        </div>
+     
+     
+     <div class="text">
+        <h3 class="heading-small">Lead paragraph</h3>
+         <ul class="list list-bullet">
+            <li>use 24px for a lead paragraph</li>
+            <li>there should only be one lead paragraph per page</li>
+         </ul>
+<div class="example">
+  <div class="text">
+    <p class="lede">
+  A <em class="highlight">24px</em> lead paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+</p>
+  </div>
+</div>
+     <details>
+        <summary>HTML</summary>    
+         <pre>
+            <code class="html">
+&lt;p class="lede"&gt;
+    A 24px lead paragraph, maecenas sed diam eget risus varius.
+&lt;/p&gt;
+            </code>
+         </pre>
+     </details>
+     </div>
+     
+    </section>
+</main>
+    {% endblock %}

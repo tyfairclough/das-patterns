@@ -1,19 +1,10 @@
-{% extends "layout.html" %}
+{% extends "layout_with-nav.html" %}
 
 {% block page_title %}
-DAS pattern library
-{% endblock %}
-
-{% block inside_header %}
-
+  ESFA pattern library
 {% endblock %}
 
 {% block content %}
-
-
-{% block after_header %}
-{% include "patterns/includes/header.html" %}
-{% endblock %}
 
 <main id="content" role="main" tabindex="-1">
   <h1 class="heading-xlarge">
@@ -59,6 +50,12 @@ DAS pattern library
   {% include "patterns/interaction-design/information.html" %}
   {% include "patterns/interaction-design/textarea.html" %}
   {% include "patterns/interaction-design/accordion.html" %} 
-</main>
 
+  <!-- Mask -->
+  <script src="/public/javascripts/jquery.mask.min.js"></script>
+  <!-- Patterns -->
+  <script src="/public/javascripts/patterns/NEEDS-TO-BE-BROKEN-DOWN.js"></script>
+
+</main>
 {% endblock %}
+

@@ -50,35 +50,36 @@
 </p>
 
 <form>
-  <div class="form-group error">
-    <fieldset>
+      <div class="form-group form-group-error">
+        <fieldset>
 
-      <legend id="example-personal-details">
+          <legend id="example-personal-details">
 
-        <span class="form-label-bold">
-  What type of organisation applies to you?
-        </span>
-        <span class="error-message">
-          Error message for a required input
-        </span>
+            <span class="form-label-bold">
+              What type of organisation applies to you?
+            </span>
+            <span class="error-message">
+              Error message for a required input
+            </span>
 
-      </legend>
+          </legend>
 
-        <label class="block-label selection-button-radio" data-target="public-sector" for="public-sector">
-                <input id="public-sector" type="radio" name="radio-group" value="public">
-                  Public sector organisation 
-        </label>
-        <label class="block-label selection-button-radio" data-target="private-sector" for="private-sector">
-                <input id="private-sector" type="radio" name="radio-group" value="private">
-                Private sector organisation
-        </label>
+          <div class="multiple-choice">
+            <input id="public-sector" type="radio" name="radio-group" value="public">
+            <label for="public-sector">Public sector organisation</label>
+          </div>
 
-    </fieldset>
-  </div>
+          <div class="multiple-choice">
+            <input id="private-sector" type="radio" name="radio-group" value="private">
+            <label for="private-sector">Private sector organisation</label>
+          </div>
 
-  <input class="button" type="submit" value="Continue">
+        </fieldset>
+      </div>
 
-</form>
+      <input class="button" type="submit" value="Continue">
+
+    </form>
 
 </div>
 

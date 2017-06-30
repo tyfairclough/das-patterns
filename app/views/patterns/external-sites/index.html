@@ -1,44 +1,27 @@
-{% extends "layout.html" %}
+{% extends "layout_with-nav.html" %}
 
 {% block page_title %}
-  DAS pattern library
+  ESFA pattern library
 {% endblock %}
-
-{% block inside_header %}
-
-{% endblock %}
-
-
-
 
 {% block content %}
 
-
-{% block after_header %}
-{% include "patterns/includes/header.html" %}
-{% endblock %}
-
 <main id="content" role="main" tabindex="-1">
-  <h1 class="heading-xlarge">
-    External sites
-  </h1>
-
-  <div class="text">
-    <p class="lede">
-      Demonstrating how external sites flow into the core product.
-    </p>
-  </div>
-
-  <h2 class="heading-small heading-contents">Contents:</h2>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <ul class="list list-contents">
-
-      </ul>
+    <h1 class="heading-xlarge">
+        External sites
+    </h1>
+    <div class="text">
+        <p class="lede">
+            Demonstrating how external sites flow into the core product.
+        </p>
     </div>
-  </div>
-
-  
-    
+    <h2 class="heading-small heading-contents">Contents:</h2>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <ul class="list list-contents">
+            </ul>
+        </div>
+    </div>
 </main>
+
 {% endblock %}
