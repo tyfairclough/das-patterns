@@ -1,0 +1,199 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+    <div class="hgroup">
+        <h1 class="heading-xlarge">
+          Wizards
+        </h1>
+        <div class="text">
+            <p class="lede">
+                Helping users complete a transaction through step-by-step guide patterns.
+            </p>
+        </div>
+    </div>
+    <h2 class="heading-small heading-contents">Contents:</h2>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <ul class="list list-contents">
+                <li><a href="./wizards.html">Welcome Wizard</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Welcome Wizard -->
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="hgroup">
+                <h2 class="heading-large">Welcome wizard</h2>            
+                <p class="lede">The welcome wizard pattern is a linear hub and spoke pattern.</p>
+                <p>It facilitates variable requirements and the option of retrospective changes. Unlike the Check your answers pattern the Welcome Wizard present 1 thing at a time and doesn't allow the user to choose which order to complete the steps. This lends itself to instances where later steps have dependencies on the pior steps.</p>
+            </div>
+    <a id="chardinStart" href="#">Initiate overlay description</a>
+            
+        </div>
+    </div>
+    <h3 class="heading-medium">Step 1</h3>    
+    <div class="example">
+        
+        <section class="info-summary" id="welcome">
+        
+        <div class="text hgroup">
+        <h2 class="heading-xlarge">Hi <span class="user-name">Sam</span>, welcome  to your new digital account</h2>
+       <p>Follow these steps to set up your account.</p>
+       </div>
+        
+<section>
+                
+                  
+                    
+                    <section id="add-paye" data-intro="Each step is encapsulated in a box. Only one step is loaded at a time (One thing at a time principle). Users have already been told what information they requred in their initial on-boarding." data-position="right">
+                        <div class="todo">
+                            <h3 class="heading-medium"><span data-intro="The total number of steps and current steps are indicated" data-position="top">Step 1 of 4</span></h3>
+                            <form class="inline">
+                              <div action="#">
+                                <fieldset>
+
+                                  <legend class="heading-small" data-intro="Phrase the question with the positive answer taking the user away from the wizard" data-position="left">Add more PAYE schemes now?</legend>
+                                    <p><span data-intro="The description explains why the question is being asked, this helps frame the need for the user." data-positio="bottom">This allows your schemes' levy funds to be paid into your account.</span></p>
+                                    <div class="multiple-choice">
+                                    <input id="add-paye-1" type="radio" name="add-paye-group" value="2">
+                                  <label  for="add-paye-1">
+                                      Yes
+                                  </label>
+                                    </div>
+                                    <div class="multiple-choice">                                    
+                                    <input id="add-paye-2" type="radio" name="add-paye-group" value="1">
+                                  <label class=" " for="add-paye-2">
+                                      No
+                                  </label>
+                                    </div>
+                                </fieldset>
+</div>
+                                                                    <div class="form-group sr-only">
+                                    <a href="#" id="action" class="button">Continue</a>
+                                    </div> 
+                            </form>
+   
+                        </div>
+                    </section>
+ 
+    <a class="hideWelcomeWizard" href="#"><span >Close</span> <i class="fa fa-times"></i></a>
+  
+                </section>   
+        </section>
+        
+    </div>
+    
+        <h3 class="heading-medium">Step 2</h3>
+    <div class="example">
+        <section class="info-summary" id="welcome">
+        <div class="text hgroup">
+        <h2 class="heading-xlarge">Hi <span class="user-name" data-intro="The introduction uses personalisation to improve the experience" data-position="left">Sam</span>, welcome  to your new digital account</h2>
+       <p>Follow these steps to set up your account.</p>
+       </div>
+        
+<section>
+                
+                  
+                    
+<section id="add-paye">
+                        <div class="done success-summary" data-intro="A completed step is denoted by a bold gov purple colour and a done label" data-position="right">
+                            <h3 class="heading-medium">Step 1 of 4 <span class="bold-small"><a href="#" data-intro="Clicking the review link reverts the step to its incomplete state" data-position="top">(review this step)</a></span></h3>
+                            <p><span data-intro="Using data in the feedback to improve user confidence their actions have been successful"><span class="addedPAYE">1</span> PAYE schemes added</span></p>
+                            <span>Done <i class="fa fa-check"></i></span>
+                        </div>
+                    </section>
+                    
+                    <section id="add-org">
+                        <div class="todo">
+                                    <h3 class="heading-medium">Step 2 of 4</h3>
+                            <form class="inline" action="#">
+                                <fieldset>
+                                  <legend class="heading-small">Add more organisations now? </legend>
+<p>This allows organisations to spend funds on apprentices.</p>
+                                    <div class="multiple-choice">                                    
+                                    <input id="add-org-1" type="radio" name="add-org-group" value="2">                                    
+                                  <label  for="add-org-1">
+                                      Yes
+                                  </label>
+
+                                    </div>
+                                    <div class="multiple-choice">                                                                        
+                                    <input id="add-org-2" type="radio" name="add-org-group" value="1">
+                                    <label class=" " for="add-org-2">
+                                      No
+                                  </label>
+                                    </div>
+
+                                    <div class="sr-only">
+                                    <!--<a href="/sprint/19/onboarding/before-you-start.html"> id="action" class="button">Continue</a>-->
+                                    <a href="#" id="action" class="button">Continue</a>
+                                    </div>            
+                                </fieldset>
+                                  <p><a href="/sprint/45/account/organisations/add">Add organisations now</a>.</p> 
+                            </form>
+                        </div>
+                    </section>
+                    <a class="hideWelcomeWizard" href="#"><span>Close</span> <i class="fa fa-times"></i></a>
+  
+                </section>
+        </section>
+    </div>
+    
+    <h3 class="heading-medium">Step 3</h3>
+
+    <div class="example">
+        <section class="info-summary" id="welcome">
+            <div class="text hgroup">
+        <h2 class="heading-xlarge">Hi <span class="user-name">Sam</span>, welcome  to your new digital account</h2>
+       <p>Follow these steps to set up your account.</p>
+       </div>
+<section>
+                
+                  
+                    
+                    <section id="add-paye">
+                        <div class="done success-summary">
+                            <h3 class="heading-medium">Step 2 of 4 <span class="bold-small"><a href="#">(review this step)</a></span></h3>
+                            <p><span class="addedPAYE">1</span> PAYE schemes added</p>
+                            <span>Done <i class="fa fa-check"></i></span>
+                        </div>
+                    </section>
+                    
+                    
+<section id="add-org">
+                        <div class="done success-summary">
+                            <h3 class="heading-medium">Step 1 of 4 <span class="bold-small"><a href="#">(review this step)</a></span></h3>
+                            <p><span class="addedPAYE">1</span> agreeement added</p>
+                            <span>Done <i class="fa fa-check"></i></span>
+                        </div>
+                    </section>
+     
+                    
+                    <section id="complete" data-intro="When the final step is complete a sueccess message is shown with a link to the dashboard. Returning users will automatically be diverted to the dashboard" data-position="left">
+                        <div class="complete">
+                            <h4 class="heading-medium">
+                                Tasks completed <i class="fa fa-check"></i>
+                            </h4>
+                            <p class="bold-small"><a href="#" id="hideWelcomeWizard">I'm done - take me to my homepage</a></p>
+                        </div>
+                        
+                    </section>       
+                    
+                    <a class="hideWelcomeWizard" href="#">
+                            <span data-intro="A persistent close link allows users to leave the wizard and continue manually." data-position="right">Close</span> <i class="fa fa-times"></i>
+                            </a>
+  
+                </section>        
+        </section>
+    </div>
+
+</main>
+
+{% endblock %}
