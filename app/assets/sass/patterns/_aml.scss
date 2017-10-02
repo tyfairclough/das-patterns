@@ -1,3 +1,9 @@
+// helpers
+
+.sr-only {
+    display: none;
+}
+
 .header-global {
     margin: 0 auto;
     max-width: 960px;
@@ -1890,4 +1896,67 @@ table.responsive {
 }
 .lable.mellow-red, .label.sfs {
     background: $mellow-red;
+}
+
+
+// Welcome Wizard
+
+#welcome {
+
+    padding: 20px 20px 0 20px;
+    
+    section > section {
+        margin-bottom: 20px;
+    }
+    
+    .hideWelcomeWizard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    }
+.todo {
+    background: $white;
+    border: 1px solid #bfc1c3;
+    padding: 15px;
+    margin-bottom: 15px;
+    overflow: auto;
+}
+
+.done {
+    background: #2e358b;
+    border-color: #2e358b;
+    color: white;
+    overflow: auto;
+    margin: 0;
+    position: relative;
+    a {
+        font-weight: 400;
+        color: $white;
+    }
+    p + span {
+        font-size: 24px;
+    font-weight: 900;
+    float: right;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    }
+}
+    .complete {
+    padding: 20px;
+    background: #28A197;
+    color: $white;
+        a {
+            color: white;
+        }
+    }
+}
+
+@media (min-width: 641px) {
+    #welcome {
+        .done {
+            border-color: $purple !important;
+        }
+    }
 }
