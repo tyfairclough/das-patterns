@@ -17,7 +17,7 @@
   "_id": "govuk_frontend_toolkit@5.1.2",
   "_inCache": true,
   "_location": "/govuk_frontend_toolkit",
-  "_nodeVersion": "0.10.48",
+  "_nodeVersion": ">=6.11.1 <7.0",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/govuk_frontend_toolkit-5.1.2.tgz_1489759479478_0.603055460145697"
