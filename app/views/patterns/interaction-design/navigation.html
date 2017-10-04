@@ -1,0 +1,52 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+
+        <div class="hgroup">
+        <h1 class="heading-xlarge">
+          Navigation
+        </h1>
+        <div class="text">
+            <p class="lede">
+                Helping users navigate through our service.
+            </p>
+        </div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h2 class="heading-medium">Top level menu</h2>
+            <p>We designed a top level navigation to facilitate users traversing through the product at any point.</p>
+        </div>
+    </div>
+    <nav style="left: 0; position: absolute; width: 100%;">
+        <div class="header-organisation closed">
+            <div class="header-inner">
+                <nav class="global-nav">
+                    <ul class="global-nav-links">
+                        <li class="home"><a href="/">Home</a></li>
+                        <li class="interaction-design"><a href="/patterns/interaction-design">Interaction design</a></li>
+                        <li class="page-layouts"><a href="/patterns/page-layouts">Page layouts</a></li>
+                        <li class="HTML-elements"><a href="/patterns/HTML-elements">HTML elements</a></li>
+                        <li class="visual-language"><a href="/patterns/visual-language">Visual language</a></li>
+
+                        <li class="external-sites"><a href="/patterns/external-sites">External sites</a></li>
+                        <li class="user-journeys"><a href="/patterns/user-journeys">User journeys</a></li>
+                        <li class="visual-language"><a href="/patterns/visual-language">Visual language</a></li>
+                        <li class="foundation"><a href="/patterns/foundation">Foundation</a></li>
+                        <li class="more"><a href="#">More …</a></li>
+                        <li class="menu"><a href="#">Menu <i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </nav>    
+</main>
+
+{% endblock %}
