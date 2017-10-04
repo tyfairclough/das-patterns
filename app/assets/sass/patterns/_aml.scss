@@ -241,7 +241,7 @@ nav.global-nav {
         list-style: none;
         margin: 0;
         margin-left: -$nav-padding;
-        margin-rightr: -$nav-padding;
+        margin-right: -$nav-padding;
         padding: 0;
         position: relative;
         li {
@@ -253,6 +253,9 @@ nav.global-nav {
                 position: relative;
                 &:focus {
                     outline: 0;
+                }
+                 &:hover {
+                    background: $grey-4;
                 }
                
             }
