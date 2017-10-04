@@ -1,3 +1,13 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+    
 <section id="forms">
     <h2 class="heading-large">Forms</h2>
     <p>Why do we use notifications, what is the purpose, how and when should they implemented</p>
@@ -40,6 +50,11 @@
     </div>
 </section>
 
+    
+  {% include "patterns/interaction-design/textarea.html" %}
+  {% include "patterns/interaction-design/errors.html" %}
+    
+    
 <script>
       $(document).ready(function() {
           /* ------------------------------------------
@@ -57,3 +72,7 @@
           });
       });
 </script>
+    
+    </main>
+
+{% endblock %}

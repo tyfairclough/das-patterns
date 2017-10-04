@@ -1,4 +1,13 @@
-   <section id="notifications">
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+<section id="notifications">
             <h2 class="heading-large">Notifications</h2>
             <p>Why do we use notifications, what is the purpose, how and when should they implemented</p>
             
@@ -243,3 +252,12 @@ $warning-colour:$orange;
 
        
        </section>
+    
+      {% include "patterns/interaction-design/transactions.html" %}
+  {% include "patterns/interaction-design/information.html" %}
+  {% include "patterns/interaction-design/errors.html" %}
+
+    
+</main>
+
+{% endblock %}
