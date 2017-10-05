@@ -4,6 +4,10 @@
   ESFA pattern library
 {% endblock %}
 
+
+
+
+
 {% block content %}
 
 <main id="content" role="main" tabindex="-1">
@@ -19,34 +23,115 @@
         </div>
     </div>
     
+
     <div class="grid-row">
         <div class="column-two-thirds">
-            <h2 class="heading-medium">Top level menu</h2>
-            <p>We designed a top level navigation to facilitate users traversing through the product at any point.</p>
+            <h2 class="heading-large">Menu</h2>
+            <p>We designed a top level navigation to facilitate users traversing through the product at any point.</p><p>Our product has non-linear task model and as such simple next steps don't always facilitate the user need. Our top menu gives users a broad sense where in the site they are and an easy, consistent way to move to other parts of the site.</p>
+            <h3 class="heading-small">Features</h3>
+            <p>The navigation has several features:</p>
+            <ul class="list list-bullet">
+                <li>mobile first approach.</li>
+                <li>progressively enhances</li>
+                <li>priority menu disclosure</li>
+            </ul>
         </div>
     </div>
-    <nav style="left: 0; position: absolute; width: 100%;">
-        <div class="header-organisation closed">
-            <div class="header-inner">
-                <nav class="global-nav">
-                    <ul class="global-nav-links">
-                        <li class="home"><a href="/">Home</a></li>
-                        <li class="interaction-design"><a href="/patterns/interaction-design">Interaction design</a></li>
-                        <li class="page-layouts"><a href="/patterns/page-layouts">Page layouts</a></li>
-                        <li class="HTML-elements"><a href="/patterns/HTML-elements">HTML elements</a></li>
-                        <li class="visual-language"><a href="/patterns/visual-language">Visual language</a></li>
 
-                        <li class="external-sites"><a href="/patterns/external-sites">External sites</a></li>
-                        <li class="user-journeys"><a href="/patterns/user-journeys">User journeys</a></li>
-                        <li class="visual-language"><a href="/patterns/visual-language">Visual language</a></li>
-                        <li class="foundation"><a href="/patterns/foundation">Foundation</a></li>
-                        <li class="more"><a href="#">More …</a></li>
-                        <li class="menu"><a href="#">Menu <i class="fa fa-bars"></i></a></li>
-                    </ul>
-                </nav>
+    <div class="example">   
+        <h2 class="heading-medium">Mobile menu</h2>
+            <iframe src="navigation-example.html" width="480px" height="300px"></iframe>    
+        <h2 class="heading-medium">Tablet menu</h2>
+            <iframe src="navigation-example.html" width="641px" height="300px"></iframe>    
+        <h2 class="heading-medium">Desktop menu</h2>
+            <iframe src="navigation-example.html" width="100%" height="300px"></iframe>    
+ </div>
+    
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h2 class="heading-large">Next steps</h2>
+            <p>Next steps is a design pattern built to concierge users at the end of a transaction onto relevant transactios that would naturally follow the prior process.</p>
+            
+            
+        <div class="example">
+            
+            <span class="form-hint">&lt;!-- end of transaction feedback goes here --&gt;</span>
+            <form action="">
+            <legend class="heading-medium">What next?</legend>
+        <div class="form-group">
+
+
+                                         <div class="multiple-choice">
+        <input id="thing1" type="radio" name="next" value="0">
+ <label data-target="thing1" for="thing1">Do the thing</label>
             </div>
+                                                
+                                    <div class="multiple-choice">
+        <input id="thing2" type="radio" name="next" value="2">
+            <label data-target="thing2" for="thing2">Do the other thing</label>
+            </div>            
+                                    <div class="multiple-choice">
+        <input id="homepage" type="radio" name="next" value="3">
+      <label data-target="homepage" for="homepage">Go back to the homepage</label>
+            </div>
+      </div>
+
+  
+      <a class="button" href="#" id="submit">Continue</a>
+      
+</form>    
         </div>
-    </nav>    
+        </div>
+        
+     
+    </div>
+    
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+        <h2 class="heading-large">
+            Breadcrumbs
+        </h2>
+        <p>We use breadcrumbs on hub and spoke pages, this is pages that help navigate users to transactional pages or static content pages.</p>
+            <p>Breadcrumbs should start with home and for subsequent pages be the h1 tag for said page.</p>
+            <div class="example">
+                <div class="breadcrumbs">
+        <ol role="navigation">
+            <li><a href="#">Home</a></li>
+            <li>Active page</li>
+        </ol>
+    </div>
+                <div class="breadcrumbs">
+        <ol role="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Level 1 page</a></li>
+            <li>Active page</li>
+        </ol>
+    </div>
+            </div>
+       </div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+        <h2 class="heading-medium">
+            Back buttons
+        </h2>
+        <p>We use back links when the user has entered a transaction. In some instances navigating backwards breaks the previous form submissions in a transaction. To help avoid these conseuqentlal error we control where the back button directs the user.</p>
+        
+        <h3 class="heading-small">Normal back button</h3>
+        <div class="example">
+            <a href="#" class="link-back">Back</a>
+        </div>
+        
+        <h3 class="heading-small">Back to specific step button</h3>
+        <div class="example">
+            <a href="#" class="link-back">Back to adding apprentice details</a>
+        </div>
+    </div>
+    </div>
+    
 </main>
 
 {% endblock %}
