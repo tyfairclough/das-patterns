@@ -5,6 +5,9 @@
             overflow: hidden;
              .global-nav-links li {
                  display: none;
+                 &.more {
+                     display: none;
+                 }
                  &.menu {
                      display: block;
                  }
@@ -29,9 +32,9 @@
             height: 44px;
             overflow: hidden;
             .global-nav-links li {
-                &.menu {
-                    display: none;
-                }
+            &.more, &.menu {
+                display: none;
+            }
                 &.more {
                     position: absolute;
                     top: 0;
@@ -56,9 +59,9 @@
             height: 50px;
             overflow: hidden;
             .global-nav-links li {
-                &.menu {
-                    display: none;
-                }
+            &.more, &.menu {
+                display: none;
+            }
                 &.more {
                     position: absolute;
                     top: 0;

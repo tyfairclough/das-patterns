@@ -1,0 +1,70 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+ <section id="details">
+        <h3 class="heading-xlarge">&lt;input /&gt; — Input fields</h3>
+        <p class="lede">Used in conjunction with other form elements to create interactive forms.</p>
+        
+        <div class="example">
+ 
+            <div class="form-group">
+                <label class="form-label">Input</label>
+                <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">       
+             <label class="form-label">Input with value</label>                
+                <input type="text" class="form-control" value="with a value" />
+            </div>
+            <div class="form-group">
+             <label class="form-label">Disabled input</label>
+                <input type="text" class="form-control" value="with a value" disabled />
+            </div>
+            <div class="form-group">
+             <label class="form-label">Number input</label>
+                <input type="number" class="form-control" />
+            </div>
+            <div class="form-group">
+             <label class="form-label">Hidden input</label>
+                <input hidden="" type="number" class="form-control" />
+            </div>
+            
+</div>
+<details>
+    <summary>HTML</summary>
+    <pre>            
+    <code class="html hljs xml">
+
+            &lt;div class="form-group"&gt;
+                &lt;label class="form-label"&gt;Input&lt;/label&gt;
+                &lt;input type="text" class="form-control" /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;       
+             &lt;label class="form-label"&gt;Input with value&lt;/label&gt;                
+                &lt;input type="text" class="form-control" value="with a value" /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+             &lt;label class="form-label"&gt;Disabled input&lt;/label&gt;
+                &lt;input type="text" class="form-control" value="with a value" disabled /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+             &lt;label class="form-label"&gt;Number input&lt;/label&gt;
+                &lt;input type="number" class="form-control" /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+             &lt;label class="form-label"&gt;Hidden input&lt;/label&gt;
+                &lt;input hidden="" type="number" class="form-control" /&gt;
+            &lt;/div&gt;
+
+    </code>
+    </pre>    
+</details>
+</section>   
+</main>
+
+{% endblock %}

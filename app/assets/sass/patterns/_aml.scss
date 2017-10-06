@@ -1,5 +1,8 @@
 // helpers
 
+
+.disabled { cursor: none; color: #ccc !important; text-decoration: line-through; }
+
 .sr-only {
     display: none;
 }
@@ -1895,7 +1898,7 @@ table.responsive {
 .label.blue, .label.mya {
     background: $govuk-blue;
 }
-.label.orange, .label.commitments {
+.label.orange, .label.fat {
     background: $orange;
 }
 .label.purple, .label.recruit {
