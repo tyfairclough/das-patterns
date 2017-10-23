@@ -1,0 +1,124 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+<section id="banners">
+
+    <div class="text">
+    <div class="hgroup">
+        <h2 class="heading-large">Design stage banners<span class="heading-secondary">Requires content</span></h2>
+        <p>We use banners to denote when the service is not live. There are different banners depending on the stage of delivery the project is in.</p>
+    </div>
+    
+
+            <h3 class="heading-small">Prototype banner </h3>
+            <p>When a project is live and you are iterating on the design add the class <code class="code">prototype</code> to the div with the class <code class="code">phase-banner</code>.</p>
+</div>            
+            <div class="example">
+<div class="service-info">
+		    <div class="phase-banner prototype">
+		        <p>
+		            <strong class="phase-tag">PROTOTYPE</strong>
+		            <span>This is not a real service. <a href="https://www.surveymonkey.co.uk/r/accessmylevysurvey?utm_source=proto&amp;utm_medium=research&amp;utm_campaign=phase-banner" target="_blank">Give feedback</a> and help us to build a better service. </span>
+		        </p>
+		    </div>
+		</div>
+            </div>
+    
+<details>
+    <summary>HTML</summary>
+            <pre>
+<code class="html">
+&lt;div class="phase-banner prototype"&gt;
+    &lt;p&gt;
+        &lt;strong class="phase-tag">PROTOTYPE&lt;/strong&gt;
+        &lt;span&gt;This is not a real service. &lt;a href="https://www.surveymonkey.co.uk/r/accessmylevysurvey?utm_source=proto&amp;utm_medium=research&amp;utm_campaign=phase-banner" target="_blank">Give feedback&lt;/a&gt; and help us to build a better service. &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+</code>
+            </pre>
+</details>    
+
+
+<details>
+    <summary>SASS</summary>
+    <pre>
+        <code class="sass">
+.phase-banner {
+        &.alpha {
+            .phase-tag {
+            background: $beta-colour
+            }
+        }
+        &.beta {
+            .phase-tag {
+            background-color: $govuk-blue;
+            }
+        } 
+        &.prototype, &.discovery {
+            .phase-tag {
+                background-color: $fuschia;
+            }            
+        }      
+    }
+
+      </code>
+    </pre>
+</details>
+    
+   
+    <div class="text">
+            <h3 class="heading-small">Discovery banner</h3>
+            <p>When in discovery add <code class="code">discovery</code> to the div with the class <code class="code">phase-banner</code>.</p>
+</div>            
+            <div class="example">
+<div class="service-info">
+		    <div class="phase-banner discovery">
+		        <p>
+		            <strong class="phase-tag">DISCOVERY</strong>
+		            <span>This is not a real service. <a href="https://www.surveymonkey.co.uk/r/accessmylevysurvey?utm_source=proto&amp;utm_medium=research&amp;utm_campaign=phase-banner" target="_blank">Give feedback</a> and help us to build a better service. </span>
+		        </p>
+		    </div>
+		</div>
+            </div> 
+    
+    <div class="text">
+            <h3 class="heading-small">Alpha banner</h3>
+            <p>When in alpha add <code class="code">alpha</code> to the div with the class <code class="code">phase-banner</code>.</p>
+</div>            
+            <div class="example">
+<div class="service-info">
+		    <div class="phase-banner alpha">
+		        <p>
+		            <strong class="phase-tag">ALPHA</strong>
+		            <span>This is a new service - your <a href="https://www.surveymonkey.co.uk/r/accessmylevysurvey?utm_source=proto&amp;utm_medium=research&amp;utm_campaign=phase-banner" target="_blank">feedback</a> will help us improve it. </span>
+		        </p>
+		    </div>
+		</div>
+            </div>    
+    
+    <div class="text">
+            <h3 class="heading-small">Beta banner</h3>
+            <p>When in beta add <code class="code">beta</code> to the div with the class <code class="code">phase-banner</code>.</p>
+</div>            
+            <div class="example">
+<div class="service-info">
+		    <div class="phase-banner beta">
+		        <p>
+		            <strong class="phase-tag">BETA</strong>
+		            <span>This is a new service - your <a href="https://www.surveymonkey.co.uk/r/accessmylevysurvey?utm_source=proto&amp;utm_medium=research&amp;utm_campaign=phase-banner" target="_blank">feedback</a> will help us improve it. </span>
+		        </p>
+		    </div>
+		</div>
+            </div>   
+    
+</section>
+    
+    </main>
+
+{% endblock %}

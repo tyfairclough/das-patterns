@@ -1,5 +1,73 @@
 // helpers
 
+@include media(tablet){
+    .feedback-smartsurvey {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: $light-blue;
+        bottom: -37px;
+        > div, section {
+            width: 960px;
+            margin: 0 auto;
+            padding: 15px 0;
+                        details {
+                summary {
+                    color: white;
+                }
+            }
+        }
+    }    
+}
+
+@include media(mobile){
+        .feedback-smartsurvey {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 200px;
+        background: $light-blue;
+        > div, section {
+            width: 100%;
+            margin: 0 auto;
+            padding: 15px;
+            color: white;
+            font-weight: 900;
+        }
+            details {
+                summary {
+                    color: white;
+                }
+            }
+    }    
+}
+
+
+.feedback-smartsurvey {
+    max-height: 60px;
+    transition: max-height 0.15s ease-out;
+//    overflow: hidden;
+
+    margin-top: auto;
+    bottom: -37px;
+}
+
+.feedback-smartsurvey:hover {
+    max-height: 100vh;
+    transition: max-height 0.25s ease-in;
+    position: absolute;
+    //top: 0;
+        -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    top: 0;
+    height: calc(100vh - 270px);
+}
+
+
+
+
 
 .disabled { cursor: none; color: #ccc !important; text-decoration: line-through; }
 
@@ -1970,3 +2038,218 @@ table.responsive {
         }
     }
 }
+
+
+
+/*----- alpha/beta banner -------*/
+
+.phase-banner {
+        &.alpha {
+            .phase-tag {
+            background: $beta-colour
+            }
+        }
+        &.beta {
+            .phase-tag {
+            background-color: $govuk-blue;
+            }
+        } 
+        &.prototype, &.discovery {
+            .phase-tag {
+                background-color: $fuschia;
+            }            
+        }      
+    }
+
+
+/*------ search page layout -----*/
+
+
+.list.list-links dt, .list.list-links dd {
+  float: left;
+  box-sizing: border-box;
+}
+
+.list.list-links dt {
+  font-weight: bold;
+  max-width: 20%;
+  padding-right: 7.5px;
+  clear: left;
+  margin-bottom: 1em;
+}
+
+.list.list-links dt b {
+  font-weight: 900;
+}
+
+@media (max-width: 640px) {
+  .list.list-links dt, .list.list-links dd {
+    float: none;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.list.list-links dt {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .list.list-links dt {
+    float: left;
+    clear: both;
+    display: inline-block;
+    width: auto;
+    margin-right: .5rem;
+    font-weight: normal;
+    margin-bottom: 0 !important;
+  }
+}
+
+.list.list-links dt {
+  max-width: none;
+  font-weight: normal;
+}
+
+li.added + li {
+  display: none;
+}
+
+.filters {
+  display: block;
+  margin: 0 0 20px 0;
+  border: 1px solid #dee0e2;
+  overflow: hidden;
+}
+
+.filters .toggler {
+  clear: both;
+  background: #dee0e2;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 5px 30px 5px 10px;
+  margin: 0;
+  top: 0;
+  float: none;
+  position: relative;
+  cursor: default;
+}
+
+.filters .toggled-content {
+  padding: 20px;
+}
+
+
+/* search field header */
+.search-header {
+  padding: 20px 0 0px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.search-header input {
+  -webkit-appearance: none;
+  border-radius: 0;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-size-adjust: 0.5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 10px;
+  display: block;
+  height: 50px;
+  border: 2px solid #6f777b;
+  border-right: none;
+  line-height: 48px !important;
+}
+
+.search-submit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  overflow: visible;
+}
+
+.search-submit button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  overflow: hidden;
+  text-indent: -5000px;
+  color: #fff;
+  background-color: #2b8cc4;
+  background-image: url(https://assets.publishing.service.gov.uk/frontend/search/search-button-fe10ecb60b18fdbcdadaf0918f1761b3847bf85d9924e3ca52a0110c648cb73a.png);
+  background-repeat: no-repeat;
+  background-position: -12.5% 50%;
+}
+
+.search-submit button:hover {
+  background-color: #267daf;
+}
+
+#results li {
+  position: relative;
+  overflow: auto;
+  border-bottom: 1px solid #BFC1C3;
+  margin: 10px 0;
+  padding: 0 0 15px;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#results li h2 {
+  margin: 0 0 5px;
+}
+
+#results li.added {
+  outline: 3px solid #6F777B;
+  padding: 10px;
+  border-bottom: none;
+  background: #F8F8F8;
+  color: #0B0C0C;
+  margin: 10px -10px;
+  box-sizing: content-box;
+}
+
+#results li.added h2 {
+  margin: 0;
+}
+
+#results li.added div {
+  margin: 10px -10px -10px;
+  padding: 10px;
+  color: #0b0c0c;
+  border-top: 1px solid #BFC1C3;
+  float: left;
+  width: 100%;
+  font-size: 16px;
+}
+
+@media (min-width: 641px) {
+  .search-header {
+    width: 66.666%;
+  }
+}
+
+
