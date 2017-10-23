@@ -21,9 +21,307 @@
  
         <details>
         <summary>HTML</summary>
+<pre>
+<code class="html">
+&lt;main class="organisations-add" id="content" role="main" tabindex="-1"&gt;
+  &lt;a href="#" class="link-back"&gt;Back&lt;/a&gt;
+
+    &lt;div class="error-summary hidden" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1"&gt;
+		  &lt;ul class="error-summary-list"&gt;
+		    &lt;li class="hidden"&gt;&lt;a href="#chn"&gt;Company not found&lt;/a&gt;&lt;/li&gt;
+		    &lt;li class="hidden"&gt;&lt;a href="#chn"&gt;Enter a Companies House number&lt;/a&gt;&lt;/li&gt;
+		    &lt;li class="hidden"&gt;&lt;a href="#ccn"&gt;Charity not found&lt;/a&gt;&lt;/li&gt;
+		  &lt;/ul&gt;
+		&lt;/div&gt;
+
+    
+		&lt;section id="search" xmldata="/sprint/48/proData.xml"&gt;
+	
+ 
+				&lt;section id="results-wrapper" class=""&gt;
+					&lt;h1 class="heading-large"&gt;Select your organisation&lt;/h1&gt;
+						&lt;div class="search-header"&gt;
+							&lt;fieldset class="search-input"&gt;
+				    		&lt;label for="search-main"&gt;
+				        	&lt;h1 class="heading-medium"&gt;Search results &lt;span class="visuallyhidden"&gt;for “”&lt;/span&gt;&lt;/h1&gt;
+									&lt;/label&gt;
+							    &lt;input type="search" name="q" id="search-main" value="search term entered here" data-intro="Include the original search term from the preceeding page, allow them to edit it here and re-submit" data-position="top"&gt;
+				  		&lt;/fieldset&gt;
+							&lt;fieldset class="search-submit"&gt;
+								&lt;button type="submit" class="button"&gt;Search&lt;/button&gt;
+				  		&lt;/fieldset&gt;
+						&lt;/div&gt;
+				    &lt;p data-intro="Feedback of the number of results helps users evaluate if their query needs amending in some use cases" data-position="left"&gt;&lt;span class="count"&gt;120&lt;/span&gt; results found&lt;/p&gt;
+				        &lt;div class="grid-row"&gt;
+				
+				            &lt;div class="column-one-third"&gt;
+				                &lt;aside data-intro="Filters allow users to refine their search when a keyword alone does not provide satisfactory results" data-position="left"&gt;
+				                    &lt;h3 class="bold-small"&gt;Filter results&lt;/h3&gt;
+				                    &lt;fieldset class="filters filters-accordion"&gt;
+				                    &lt;h2 class="toggler heading-small"&gt;Organisation type&lt;/h2&gt;
+				                    &lt;div class="toggled-content"&gt;
+				                        &lt;div class="form-group org-search-filter"&gt;
+				                            &lt;legend class="form-label sr-only"&gt;Select an organisation type&lt;/legend&gt;
+				                            
+				                            &lt;div class="multiple-choice"&gt;
+															        &lt;input id="ltd" type="radio" name="org-type-filter" value="Private limited company"&gt; 
+															        &lt;label for="ltd"&gt;Private limited company&lt;/label&gt;
+															      &lt;/div&gt;
+															      &lt;div class="multiple-choice"&gt;
+															        &lt;input id="plc" type="radio" name="org-type-filter" value="Public limited company"&gt; 
+															        &lt;label for="plc"&gt;Public limited company&lt;/label&gt;
+															      &lt;/div&gt;
+															      &lt;div class="multiple-choice"&gt;
+															        &lt;input id="pb" type="radio" name="org-type-filter" value="Public body"&gt; 
+															        &lt;label for="pb"&gt;Public body&lt;/label&gt;
+															      &lt;/div&gt;
+															      &lt;div class="multiple-choice"&gt;
+															        &lt;input id="all" type="radio" name="org-type-filter" value="all" checked="checked"&gt; 
+															        &lt;label for="all"&gt;All&lt;/label&gt;
+															      &lt;/div&gt;
+
+				                        &lt;/div&gt;
+				                    &lt;/div&gt;
+				                &lt;/fieldset&gt;
+				                &lt;/aside&gt;
+				            &lt;/div&gt;            
+				            &lt;div class="column-two-thirds"&gt;
+				                &lt;div id="results"&gt;&lt;ul class="list list-links" style="min-height: 0px;"&gt;&lt;li class="item animated none" data-id="1&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Harper Adams University"&gt;Harper Adams University&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;Newport
+Shropshire, TF10 8NB&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Public" sector=""&gt;&lt;span class="type"&gt;Public sector&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="2&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=GlaxoSmithKline GSK"&gt;GlaxoSmithKline GSK&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;170 Kenilworth Rd, Balsall Common, Coventry CV7 7EW&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Public" limited="" company=""&gt;&lt;span class="type"&gt;Public limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li data-intro="We show already used data points to help reduce the users cognitive load in the usecase of adding results to a store" data-position="right" class="added item animated none"&gt;&lt;h2 class="heading-medium"&gt;Bentley Motors Limited&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address&gt;Pyms Lane, Crewe, Cheshire, CW1 3PL, England&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;div&gt;Already added — &lt;a href="/sprint/48/account/organisations/index"&gt;view my organisations&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="4&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Servest Group Ltd"&gt;Servest Group Ltd&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;Servest/Arthur McKay
+Warehouse W
+Western Gateway
+Royal Victoria Docks
+London
+E16 IBD&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="5&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Sunderland City Council"&gt;Sunderland City Council&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="6&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=4 Ventures Ltd"&gt;4 Ventures Ltd&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="7&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=700 Club"&gt;700 Club&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="8&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=ARRIVA PLC"&gt;ARRIVA PLC&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;1 Admiral Way, Doxford International Business, Park Sunderland, Tyne And Wear, SR3 3XP&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Public" limited="" company=""&gt;&lt;span class="type"&gt;Public limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="9&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=A2Dominion Homes Limited"&gt;A2Dominion Homes Limited&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated none" data-id="10&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=A2Dominion Homes Limited"&gt;A2Dominion Homes Limited&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="11&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Tescos Plc"&gt;Tescos Plc&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Public" limited="" company=""&gt;&lt;span class="type"&gt;Public limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="12&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=NSPCC"&gt;NSPCC&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Charity"&gt;&lt;span class="type"&gt;Charity&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="13&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=NSPCC"&gt;NSPCC&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="14&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=National Trust"&gt;National Trust&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Trust"&gt;&lt;span class="type"&gt;Trust&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="15&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=NHS Public Health England"&gt;NHS Public Health England&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Public" body=""&gt;&lt;span class="type"&gt;Public body&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="16&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Mid Essex Mental Heatlh Trust"&gt;Mid Essex Mental Heatlh Trust&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Public" body=""&gt;&lt;span class="type"&gt;Public body&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="17&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Great Baddow High School"&gt;Great Baddow High School&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Psuedo" public="" body=""&gt;&lt;span class="type"&gt;Psuedo Public body&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="18&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Essex Fire Service"&gt;Essex Fire Service&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Public" body=""&gt;&lt;span class="type"&gt;Public body&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="19&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=Exxon"&gt;Exxon&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Industrial" and="" provident="" organisation=""&gt;&lt;span class="type"&gt;Industrial and Provident organisation&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="20&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=123 Facilities Ltd - (s C4)"&gt;123 Facilities Ltd - (s C4)&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="21&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=180 Housing Ltd"&gt;180 Housing Ltd&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="22&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=2010 Rotherham Ltd"&gt;2010 Rotherham Ltd&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="23&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=20-20 Housing Co-operative Limited"&gt;20-20 Housing Co-operative Limited&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;&lt;li class="item animated jp-hidden" data-id="24&quot;"&gt;&lt;h2 class="heading-medium"&gt;&lt;a href="/sprint/48/account/organisations/confirm.html?name=28a Supported Living Limited"&gt;28a Supported Living Limited&lt;/a&gt;&lt;/h2&gt;&lt;dl class="result-data-list"&gt;&lt;dt&gt;&lt;b&gt;Address&lt;/b&gt;&lt;/dt&gt;&lt;dd&gt;&lt;address class="form-hint"&gt;154 Principal Places&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&lt;dd data-filter="Private" limited="" company=""&gt;&lt;span class="type"&gt;Private limited company&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;
+                                    
+                                    
+                                    &lt;/ul&gt;&lt;aside data-intro="Revealing a manual add at the end of the results allows users to complete their journey when they can't find our preferable data" data-position="bottom" id="manualentrylink" style="display:none;"&gt;&lt;h5 class="heading-small"&gt;Can't find your organisation?&lt;/h5&gt;&lt;p&gt; You can &lt;a href="manual-input.html"&gt;add it manually here&lt;/a&gt;.&lt;/p&gt;&lt;/aside&gt;&lt;/div&gt;  
+													&lt;div id="pagedat" style="display: none;"&gt;&lt;a class="jp-current"&gt;1&lt;/a&gt;&lt;span class="jp-hidden"&gt;...&lt;/span&gt;&lt;a href="#" class="jp-hidden"&gt;2&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;3&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;4&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;5&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;6&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;7&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;8&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;9&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;10&lt;/a&gt;&lt;a href="#" class="jp-hidden"&gt;11&lt;/a&gt;&lt;span&gt;...&lt;/span&gt;&lt;a&gt;12&lt;/a&gt;&lt;/div&gt;
+				
+				
+				                &lt;div class="page-navigation"&gt;
+				                    &lt;a class="page-navigation__btn previous jp-disabled hidden"&gt;
+				                        &lt;i class="arrow-button fa fa-angle-left"&gt;&lt;/i&gt;
+				                        &lt;span class="description"&gt;Previous &lt;span class="hide-mob"&gt;page&lt;/span&gt;&lt;/span&gt;
+				                        &lt;span class="counter"&gt;Page &lt;span class="prevPage"&gt;0&lt;/span&gt; of &lt;span class="totalPage"&gt;12&lt;/span&gt;&lt;/span&gt;
+				                    &lt;/a&gt;
+				
+				
+				
+				                    &lt;a style="" class="page-navigation__btn next"&gt;
+				                        &lt;i class="arrow-button fa fa-angle-right"&gt;&lt;/i&gt;
+				                        &lt;span class="description"&gt;Next &lt;span class="hide-mob"&gt;page&lt;/span&gt;&lt;/span&gt;
+				                        &lt;span class="counter"&gt;Page &lt;span class="nextPage"&gt;2&lt;/span&gt; of &lt;span class="totalPage"&gt;12&lt;/span&gt;&lt;/span&gt;
+				                    &lt;/a&gt;
+				
+				                &lt;/div&gt;
+				            &lt;/div&gt;
+				        &lt;/div&gt;
+				    &lt;/section&gt;
+
+&lt;/section&gt;
+
+&lt;/main&gt;    
+</code>
+</pre>            
         </details>
         <details>
         <summary>SASS</summary>
+            
+            <pre>
+                <code class="css">
+
+.list.list-links dt, .list.list-links dd {
+  float: left;
+  box-sizing: border-box;
+}
+
+.list.list-links dt {
+  font-weight: bold;
+  max-width: 20%;
+  padding-right: 7.5px;
+  clear: left;
+  margin-bottom: 1em;
+}
+
+.list.list-links dt b {
+  font-weight: 900;
+}
+
+@media (max-width: 640px) {
+  .list.list-links dt, .list.list-links dd {
+    float: none;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.list.list-links dt {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .list.list-links dt {
+    float: left;
+    clear: both;
+    display: inline-block;
+    width: auto;
+    margin-right: .5rem;
+    font-weight: normal;
+    margin-bottom: 0 !important;
+  }
+}
+
+.list.list-links dt {
+  max-width: none;
+  font-weight: normal;
+}
+
+li.added + li {
+  display: none;
+}
+
+.filters {
+  display: block;
+  margin: 0 0 20px 0;
+  border: 1px solid #dee0e2;
+  overflow: hidden;
+}
+
+.filters .toggler {
+  clear: both;
+  background: #dee0e2;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 5px 30px 5px 10px;
+  margin: 0;
+  top: 0;
+  float: none;
+  position: relative;
+  cursor: default;
+}
+
+.filters .toggled-content {
+  padding: 20px;
+}
+
+
+/* search field header */
+.search-header {
+  padding: 20px 0 0px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.search-header input {
+  -webkit-appearance: none;
+  border-radius: 0;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-size-adjust: 0.5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 10px;
+  display: block;
+  height: 50px;
+  border: 2px solid #6f777b;
+  border-right: none;
+  line-height: 48px !important;
+}
+
+.search-submit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  overflow: visible;
+}
+
+.search-submit button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  overflow: hidden;
+  text-indent: -5000px;
+  color: #fff;
+  background-color: #2b8cc4;
+  background-image: url(https://assets.publishing.service.gov.uk/frontend/search/search-button-fe10ecb60b18fdbcdadaf0918f1761b3847bf85d9924e3ca52a0110c648cb73a.png);
+  background-repeat: no-repeat;
+  background-position: -12.5% 50%;
+}
+
+.search-submit button:hover {
+  background-color: #267daf;
+}
+
+#results li {
+  position: relative;
+  overflow: auto;
+  border-bottom: 1px solid #BFC1C3;
+  margin: 10px 0;
+  padding: 0 0 15px;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#results li h2 {
+  margin: 0 0 5px;
+}
+
+#results li.added {
+  outline: 3px solid #6F777B;
+  padding: 10px;
+  border-bottom: none;
+  background: #F8F8F8;
+  color: #0B0C0C;
+  margin: 10px -10px;
+  box-sizing: content-box;
+}
+
+#results li.added h2 {
+  margin: 0;
+}
+
+#results li.added div {
+  margin: 10px -10px -10px;
+  padding: 10px;
+  color: #0b0c0c;
+  border-top: 1px solid #BFC1C3;
+  float: left;
+  width: 100%;
+  font-size: 16px;
+}
+
+@media (min-width: 641px) {
+  .search-header {
+    width: 66.666%;
+  }
+}
+
+
+                
+                </code>
+            </pre>
         </details>
         
     </div>
