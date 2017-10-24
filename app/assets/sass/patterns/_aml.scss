@@ -1707,56 +1707,41 @@ table.form {
 
 
 
-.page-navigation__btn {
-    display: inline-block;
-    font-size: 1em;
-    margin-right: -4px;
-    overflow: hidden;
-    padding: 1.2em 0.6em;
-    text-decoration: none;
-    vertical-align: top;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.page-navigation__btn:hover,
-.page-navigation__btn:focus {
-    background-color: #F8F8F8;
-}
-
-.page-navigation__btn .arrow-button {
-    color: #2e358b;
-    float: left;
-    font-size: 3.5em;
-    margin-right: 10px;
-    margin-top: -0.2em
-}
-
-.page-navigation__btn.previous {
-    text-align: left
-}
-
-.page-navigation__btn.next {
-    text-align: right
-}
-
-.page-navigation__btn.next .arrow-button {
-    float: right;
-    margin-left: 10px;
-    margin-right: 0
-}
-
-.page-navigation__btn:hover {
-    text-decoration: underline
-}
-
-.page-navigation__btn:hover .arrow-button {
-    color: #2e8aca
-}
-
-.page-navigation__btn:active,
-.page-navigation__btn:focus {
-    background-color: #f8f8f8
+.page-navigation {
+    .previous, .next {
+        display: inline-block;
+        font-size: 1em;
+        margin-right: -4px;
+        overflow: hidden;
+        padding: 1.2em 0.6em;
+        text-decoration: none;
+        vertical-align: top;
+        width: 50%;
+        box-sizing: border-box;
+        color: $govuk-blue;
+        &:hover, &:focus {
+            background-color: #F8F8F8;
+            color: $link-hover-colour;
+            cursor: pointer;
+        }
+        .arrow-button {
+            float: left;
+            font-size: 3.5em;
+            margin-right: 10px;
+            margin-top: -0.2em;
+        }
+    }
+    .previous {
+        text-align: left
+    }    
+    .next {
+        text-align: right;
+        .arrow-button {
+            float: right;
+            margin-left: 10px;
+            margin-right: 0
+        }            
+    }    
 }
 
 .colspan {

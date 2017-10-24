@@ -275,6 +275,131 @@ function progressiveMenuDisclosure() {
     </div>
     </div>
     
+    <div class="grid-row" id="pagination">
+        <div class="column-two-thirds">
+            <h2 class="heading-medium">Pagination</h2>
+            <p>Paging is used to break up long lists into managable data sets.</p>
+            
+            <h3 class="heading-small">First page</h3>
+            <div class="example">
+            <div class="page-navigation">
+                    <a class="previous hidden" href="#">
+                        <i class="arrow-button fa fa-angle-left"></i>
+                        <span class="description">Previous <span class="hide-mob">page</span></span>
+                        <span class="counter">Page <span class="prevPage"></span> of <span class="totalPage"></span></span>
+                    </a>
+                    <a class="next" href="#">
+                        <i class="arrow-button fa fa-angle-right"></i>
+                        <span class="description">Next <span class="hide-mob">page</span></span>
+                        <span class="counter">Page <span class="nextPage">2</span> of <span class="totalPage">10</span></span>
+                    </a>
+
+                </div>
+            </div>
+            
+            <h3 class="heading-small">Middle page(s)</h3>
+            <div class="example">
+            <div class="page-navigation">
+                    <a class="previous" href="#">
+                        <i class="arrow-button fa fa-angle-left"></i>
+                        <span class="description">Previous <span class="hide-mob">page</span></span>
+                        <span class="counter">Page <span class="prevPage">1</span> of <span class="totalPage">10</span></span>
+                    </a>
+                    <a class="next" href="#">
+                        <i class="arrow-button fa fa-angle-right"></i>
+                        <span class="description">Next <span class="hide-mob">page</span></span>
+                        <span class="counter">Page <span class="nextPage">3</span> of <span class="totalPage">10</span></span>
+                    </a>
+
+                </div>
+            </div>
+            <h3 class="heading-small">Last page</h3>
+            <div class="example">
+            <div class="page-navigation">
+                    <a class="previous" href="#">
+                        <i class="arrow-button fa fa-angle-left"></i>
+                        <span class="description">Previous <span class="hide-mob">page</span></span>
+                        <span class="counter">Page <span class="prevPage">9</span> of <span class="totalPage">10</span></span>
+                    </a>
+                    <a class="next hidden" href="#">
+                        <i class="arrow-button fa fa-angle-right"></i>
+                        <span class="description">Next <span class="hide-mob">page</span></span>
+                        <span class="counter">Page <span class="nextPage"></span> of <span class="totalPage"></span></span>
+                    </a>
+
+                </div>
+            </div>
+            
+            <details>
+                <summary>
+                SASS
+                </summary>
+                <pre>
+                    <code class="css">
+.page-navigation {
+    .previous, .next {
+        display: inline-block;
+        font-size: 1em;
+        margin-right: -4px;
+        overflow: hidden;
+        padding: 1.2em 0.6em;
+        text-decoration: none;
+        vertical-align: top;
+        width: 50%;
+        box-sizing: border-box;
+        color: $govuk-blue;
+        &:hover, &:focus {
+            background-color: #F8F8F8;
+            color: $link-hover-colour;
+            cursor: pointer;
+        }
+        .arrow-button {
+            float: left;
+            font-size: 3.5em;
+            margin-right: 10px;
+            margin-top: -0.2em;
+        }
+    }
+    .previous {
+        text-align: left
+    }    
+    .next {
+        text-align: right;
+        .arrow-button {
+            float: right;
+            margin-left: 10px;
+            margin-right: 0
+        }            
+    }    
+}                    
+                    </code>
+                </pre>
+            </details>
+            
+            <details>
+                <summary>
+                HTML
+                </summary>
+<pre>
+    <code class="html">
+&lt;div class="page-navigation"&gt;
+    &lt;a class="previous" href="#"&gt;
+        &lt;i class="arrow-button fa fa-angle-left"&gt;&lt;/i&gt;
+        &lt;span class="description"&gt;Previous &lt;span class="hide-mob"&gt;page&lt;/span&gt;&lt;/span&gt;
+        &lt;span class="counter"&gt;Page &lt;span class="prevPage"&gt;1&lt;/span&gt; of &lt;span class="totalPage"&gt;10&lt;/span&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a class="next" href="#"&gt;
+        &lt;i class="arrow-button fa fa-angle-right"&gt;&lt;/i&gt;
+        &lt;span class="description"&gt;Next &lt;span class="hide-mob"&gt;page&lt;/span&gt;&lt;/span&gt;
+        &lt;span class="counter"&gt;Page &lt;span class="nextPage"&gt;3&lt;/span&gt; of &lt;span class="totalPage"&gt;10&lt;/span&gt;&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;    
+    </code>
+</pre>                
+            </details>
+        </div>
+    </div>
+    
 </main>
 
 {% endblock %}
