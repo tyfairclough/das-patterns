@@ -93,7 +93,7 @@
     }
     a {
         border-bottom: 1px solid #000;
-        color: #fff;
+        color: $white;
         display: inline-block;
         padding: 2px 0;
         text-decoration: none;
@@ -516,16 +516,16 @@ nav.global-nav ul {
                 text-transform: none;
                 font-weight: bold;
                 margin: 5px 0 15px;
-                color: #fff;
+                color: $white;
             }
             p {
                 margin: 15px 0 20px;
-                color: #fff;
+                color: $white;
             }
         }
     }
     .in-page-navigation {
-        color: #fff;
+        color: $white;
         margin: 0 0 40px;
         width: 100%;
         h2 {
@@ -540,11 +540,11 @@ nav.global-nav ul {
             }
         }
         a {
-            color: #fff;
+            color: $white;
             text-decoration: none;
             font-weight: normal;
             &:hover {
-                color: #fff;
+                color: $white;
                 text-decoration: underline;
             }
         }
@@ -560,7 +560,7 @@ nav.global-nav ul {
                 color: black;
                 margin-top: 30px;
                 .number {
-                    background: #fff;
+                    background: $white;
                     padding-right: 10px;
                     font-weight: bold;
                 }
@@ -570,7 +570,7 @@ nav.global-nav ul {
                 color: black;
                 margin-top: 30px;
                 .number {
-                    background: #fff;
+                    background: $white;
                     color: #6f777b;
                     padding-right: 10px;
                 }
@@ -1216,7 +1216,7 @@ span.notification {
     border: none;
     overflow: hidden;
     text-indent: -5000px;
-    color: #fff;
+    color: $white;
     background-color: #2b8cc4;
     background-image: url(https://assets.publishing.service.gov.uk/frontend/search/search-button-fe10ecb60b18fdbcdadaf0918f1761b3847bf85d9924e3ca52a0110c648cb73a.png);
     background-repeat: no-repeat;
@@ -1918,7 +1918,7 @@ table.responsive {
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
-    color: #fff;
+    color: $white;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
@@ -2158,7 +2158,7 @@ li.added + li {
   border: none;
   overflow: hidden;
   text-indent: -5000px;
-  color: #fff;
+  color: $white;
   background-color: #2b8cc4;
   background-image: url(https://assets.publishing.service.gov.uk/frontend/search/search-button-fe10ecb60b18fdbcdadaf0918f1761b3847bf85d9924e3ca52a0110c648cb73a.png);
   background-repeat: no-repeat;
@@ -2185,28 +2185,31 @@ li.added + li {
 }
 
 #results li.added {
-  outline: 3px solid #6F777B;
-  padding: 10px;
-  border-bottom: none;
-  background: #F8F8F8;
-  color: #0B0C0C;
-  margin: 10px -10px;
-  box-sizing: content-box;
+    outline: 3px solid $grey-2;
+    padding: 10px;
+    border-bottom: none;
+    background: $grey-4;
+    color: $grey-1;
+    margin: 10px -10px;
+    box-sizing: content-box;
+    span {
+        color: $grey-1;
+    }
+    h2 {
+        margin: 0;
+    }
+    div {
+        margin: 10px -10px -10px;
+        padding: 10px;
+        color: #0b0c0c;
+        border-top: 1px solid #BFC1C3;
+        float: left;
+        width: 100%;
+        font-size: 16px;
+    }
 }
 
-#results li.added h2 {
-  margin: 0;
-}
 
-#results li.added div {
-  margin: 10px -10px -10px;
-  padding: 10px;
-  color: #0b0c0c;
-  border-top: 1px solid #BFC1C3;
-  float: left;
-  width: 100%;
-  font-size: 16px;
-}
 
 @media (min-width: 641px) {
   .search-header {
@@ -2215,3 +2218,222 @@ li.added + li {
 }
 
 
+
+       
+/*------ tabs pattern -----*/
+
+#tabs-container {
+    margin-bottom: 10px;
+    .tabs-menu {
+        float: left;
+        border-bottom: 1px solid $grey-3;
+        width: 100%;
+        padding-left: 10px;
+        box-sizing: border-box;
+        li {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            margin-right: 5px;
+            color: #000;
+            background-color: $grey-3;
+            border-top: 1px solid $grey-2;
+            border-right: 1px solid $grey-2;
+            border-left: 1px solid $grey-2;
+            bottom: -1px;
+            line-height: 44px;
+            &:hover {
+                line-height: 51px;
+                margin-top: -6px;
+                margin-bottom: -1px;
+                background: $grey-4;
+                text-decoration: underline;
+            }
+            &:focus {
+                outline: 3px solid $focus-colour;
+            }
+            &.current {
+                position: relative;
+                background-color: $white;
+                border-bottom: 1px solid $white;
+                z-index: 5;
+                line-height: 50px;
+                margin-bottom: -1px;
+                margin-top: -7px;
+                a {
+                    color: #000;
+                }
+            }
+            a {
+                padding: 15px;
+                margin-top: 0px;
+                color: $link-colour;
+                text-decoration: none;
+                &:focus {
+                    background: none;
+                    border: 0;
+                    outline: 0;
+                }
+            }
+        }
+    }
+    .tab-content {
+        overflow: auto;
+        border: 1px solid $grey-2;
+        border-top: 0;
+        padding: 15px;
+    }
+}
+/*----- timeline pattern -----*/
+
+.timeline {
+    padding-top: 0px;
+    padding-left: 0;
+    padding-bottom: 0px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    background: $white;
+    box-sizing: border-box;
+    .title {
+        box-sizing: border-box;
+        margin-top: 0px;
+        &.date {
+            margin-top: 30px;
+        }
+    }
+    .body {
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 15px;
+        position: relative;
+        box-sizing: border-box;
+        div {
+            span {
+                color: $grey-1
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: $grey-3;
+            border-radius: 100%;
+            left: -25px;
+            top: 5px;
+            z-index: 99;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        width: 1px;
+        background: #BFC1C3;
+        top: 5px;
+        bottom: 7px;
+        left: -1px;
+    }
+    &.large {
+        &:before {
+            top: 30px;
+            bottom: -30px;
+        }
+        .entry {
+            .title {
+                color: $grey-1;
+                margin-left: 20px;
+            }
+            &.start {
+                .body {
+                    &:after {
+                        content: "Start";
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        border: 1px solid $grey-3;
+                        background-color: $grey-3;
+                        border-radius: 100%;
+                        margin-top: 20px;
+                        right: auto;
+                        z-index: 99;
+                        margin-left: -30px;
+                        text-indent: 30px;
+                        font-weight: 400;
+                        color: gray;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .timeline {
+        &:before {
+            bottom: 15px;
+        }
+    }
+    .timeline.large {
+        margin-left: 0;
+        padding: 0 15px;
+        float: left;
+        &:before {
+            left: calc(33% + 15px);
+            top: 0;
+            bottom: 0;
+        }
+        .entry {
+            clear: both;
+            text-align: left;
+            position: relative;
+            margin-bottom: 0px;
+            .title {
+                width: 33%;
+                margin-top: 0;
+                margin-bottom: .5em;
+                margin-left: 0;
+                float: left;
+                padding-right: 15px;
+                text-align: right;
+                position: relative;
+                top: -5px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid $grey-3;
+                    background-color: $grey-3;
+                    border-radius: 100%;
+                    top: 15%;
+                    right: -15px;
+                    z-index: 99;
+                }
+            }
+            &.start {
+                .body {
+                    &:after {
+                        margin-left: -34px;
+                        text-indent: 34px;
+                    }
+                }
+            }
+        }
+        .body {
+            width: 66%;
+            margin: 0 0 30px;
+            padding-left: 30px;
+            float: right;
+            position: relative;
+            top: -5px;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

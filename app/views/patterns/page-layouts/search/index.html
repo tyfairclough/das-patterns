@@ -9,7 +9,7 @@
 <main id="content" role="main" tabindex="-1">
     
     <div class="hgroup">
-        <h3 class="heading-large">Search</h3>
+        <h3 class="heading-large">Search results</h3>
         <p>For a simple search of organisations we use this basic pattern.</p>
         <h4 class="heading-small">No results</h4>
         <p>The layout has 2 key views. The normal results and the last page which has a hook to a manual entry. We've used this pattern to allow as many people through the system as possible.</p>
@@ -130,6 +130,9 @@ E16 IBD&lt;/address&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/dt&gt;&l
             
             <pre>
                 <code class="css">
+
+/*------ search page layout -----*/
+
 
 .list.list-links dt, .list.list-links dd {
   float: left;
@@ -262,7 +265,7 @@ li.added + li {
   border: none;
   overflow: hidden;
   text-indent: -5000px;
-  color: #fff;
+  color: $white;
   background-color: #2b8cc4;
   background-image: url(https://assets.publishing.service.gov.uk/frontend/search/search-button-fe10ecb60b18fdbcdadaf0918f1761b3847bf85d9924e3ca52a0110c648cb73a.png);
   background-repeat: no-repeat;
@@ -289,28 +292,31 @@ li.added + li {
 }
 
 #results li.added {
-  outline: 3px solid #6F777B;
-  padding: 10px;
-  border-bottom: none;
-  background: #F8F8F8;
-  color: #0B0C0C;
-  margin: 10px -10px;
-  box-sizing: content-box;
+    outline: 3px solid $grey-2;
+    padding: 10px;
+    border-bottom: none;
+    background: $grey-4;
+    color: $grey-1;
+    margin: 10px -10px;
+    box-sizing: content-box;
+    span {
+        color: $grey-1;
+    }
+    h2 {
+        margin: 0;
+    }
+    div {
+        margin: 10px -10px -10px;
+        padding: 10px;
+        color: #0b0c0c;
+        border-top: 1px solid #BFC1C3;
+        float: left;
+        width: 100%;
+        font-size: 16px;
+    }
 }
 
-#results li.added h2 {
-  margin: 0;
-}
 
-#results li.added div {
-  margin: 10px -10px -10px;
-  padding: 10px;
-  color: #0b0c0c;
-  border-top: 1px solid #BFC1C3;
-  float: left;
-  width: 100%;
-  font-size: 16px;
-}
 
 @media (min-width: 641px) {
   .search-header {

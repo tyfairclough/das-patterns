@@ -1,0 +1,533 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+    <section id="timeline">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-large" id="transactions">Timeline</h2>
+                <p class="lede">Used to express events in a chronological order.</p>
+                <p>Can be used in combination with the filter pattern.</p>
+            </div>
+        </div>
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                
+                <h3 class="heading-medium">Compact timeline</h3>
+                <p>Used for 1 column layouts on desktop</p>
+        <div class="example">
+<div class="timeline">
+    <div class="body">
+        <div><span style="">Today</span>
+            <br>The thing happened
+            <br><span style="">At 1:25pm</span>
+            <br><a href="#">See details</a></div>
+    </div>
+
+    <div class="body">
+        <div><span style="">Yesterday</span>
+            <br>The thing happened
+            <br><span style="">At 9:45am by Sarah Thomson</span>
+            <br><a href="#">See details</a></div>
+    </div>
+
+    <div class="body">
+        <div><span style="">17 June 2018</span>
+            <br>The thing happened
+            <br><span style="">At 5:30pm by Sarah Thomson</span>
+            <br><a href="#">See details</a></div>
+    </div>
+
+    <div class="body">
+        <div><span style="">15 June 2018</span>
+            <br>The thing happened
+            <br><span style="">At 5:34pm by Sarah Thomson</span>
+            <br><a href="#">See details</a></div>
+    </div>
+
+    <div class="body hidden">
+        <div><span style="">12 June 2018</span>
+            <br>The thing happened
+            <br><span style="">At 3:34pm</span>
+            <br><a href="">See details</a></div>
+    </div>
+
+    <div class="body">
+        <div><span style="">12 June 2018</span>
+            <br>The thing happened
+            <br><span style="">At 3:34pm</span>
+            <br><a href="">See details</a></div>
+    </div>
+
+    <div class="body">
+        <div><a href="#">See all activity</a></div>
+    </div>
+</div> 
+        </div>
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;div class="timeline"&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;&lt;span style=""&gt;Today&lt;/span&gt;
+            &lt;br&gt;The thing happened
+            &lt;br&gt;&lt;span style=""&gt;At 1:25pm&lt;/span&gt;
+            &lt;br&gt;&lt;a href="#"&gt;See details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="body"&gt;
+        &lt;div&gt;&lt;span style=""&gt;Yesterday&lt;/span&gt;
+            &lt;br&gt;The thing happened
+            &lt;br&gt;&lt;span style=""&gt;At 9:45am by Sarah Thomson&lt;/span&gt;
+            &lt;br&gt;&lt;a href="#"&gt;See details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="body"&gt;
+        &lt;div&gt;&lt;span style=""&gt;17 June 2018&lt;/span&gt;
+            &lt;br&gt;The thing happened
+            &lt;br&gt;&lt;span style=""&gt;At 5:30pm by Sarah Thomson&lt;/span&gt;
+            &lt;br&gt;&lt;a href="#"&gt;See details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="body"&gt;
+        &lt;div&gt;&lt;span style=""&gt;15 June 2018&lt;/span&gt;
+            &lt;br&gt;The thing happened
+            &lt;br&gt;&lt;span style=""&gt;At 5:34pm by Sarah Thomson&lt;/span&gt;
+            &lt;br&gt;&lt;a href="#"&gt;See details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="body hidden"&gt;
+        &lt;div&gt;&lt;span style=""&gt;12 June 2018&lt;/span&gt;
+            &lt;br&gt;The thing happened
+            &lt;br&gt;&lt;span style=""&gt;At 3:34pm&lt;/span&gt;
+            &lt;br&gt;&lt;a href=""&gt;See details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="body"&gt;
+        &lt;div&gt;&lt;span style=""&gt;12 June 2018&lt;/span&gt;
+            &lt;br&gt;The thing happened
+            &lt;br&gt;&lt;span style=""&gt;At 3:34pm&lt;/span&gt;
+            &lt;br&gt;&lt;a href=""&gt;See details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="body"&gt;
+        &lt;div&gt;&lt;a href="#"&gt;See all activity&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;                 
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+    .timeline {
+        padding-top: 0px;
+        padding-left: 0;
+        padding-bottom: 0px;
+        margin-left: 5px;
+        position: relative;
+        width: 100%;
+        background: #FFF;    
+        .body {
+              width: 100%;
+              margin-left: 20px;
+              margin-bottom: 30px;
+              position: relative;
+                div {
+                    span {
+                        color: $grey-1
+                    }
+                }
+            &:before {
+              content: "";
+              position: absolute;
+              width: 8px;
+              height: 8px;
+              background-color: #BFC1C3;
+              border-radius: 100%;
+              left: -25px;
+              top: 24%;
+              z-index: 99;            
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 1px;
+            background: #BFC1C3;
+            top: 30px;
+            bottom: 10px;
+            left: -1px;
+        }
+    }             
+                </code>
+            </pre>
+        </details>            
+            </div>
+        </div>
+      <div class="grid-row">
+            <div class="column-two-thirds">
+                
+                <h3 class="heading-medium">Wide timeline</h3>
+                <p>Used for 2 third column layouts on desktop, full width on mobile</p>
+        <div class="example">
+<div class="timeline large">
+  <div class="entry">
+    <div class="title date">
+      <span class="font-small">Today</span>
+    </div>
+    <div class="body">
+      <div>A thing happened for Anne Smith</div>
+        <div class="time"><span class="time">At  1:25pm</span> - <a class="details" href="#">Details</a></div>
+  </div>
+  </div>
+    <div class="entry">
+    <div class="title">
+    </div>
+    <div class="body">
+      <div>A thing happened for Aziz Anzari</div>
+        <div class="time"><span class="time">At  1:25pm</span> - <a class="details" href="#">Details</a></div>
+  </div>
+  </div>
+ <div class="entry">
+    <div class="title date">
+      <span class="font-small">Yesterday</span>
+    </div>
+    <div class="body">
+      <div>Pete Kowalczyk did a thing</div>
+        <div class="time"><span class="time">At  3:40pm</span></div>
+      </div>
+  </div>  
+  <div class="entry">
+    <div class="title">
+    </div>
+    <div class="body">
+        <div>A thing happened for Anne Smith</div>
+        <div class="time"><span class="time">At  3:34pm</span> by Pete Kowalczyk - <a class="details" href="#">Details</a></div>
+    </div>
+  </div>
+    <div class="entry">
+    <div class="title">
+    </div>
+    <div class="body">
+        <div>A thing happened for Aziz Anzari</div>
+        <div class="time"><span class="time">At  3:34pm</span> by Pete Kowalczyk - <a class="details" href="#">Details</a></div>
+    </div>
+  </div>                
+  <div class="entry">
+    <div class="title date">
+        <span class="font-small">22 June 2018</span>                    
+    </div>
+    <div class="body">
+        <div>A thing happened</div>
+        <div class="time"><span class="time">At  midnight</span> - <a class="details" href="#">Details</a></div>
+    </div>
+  </div>
+                
+ <div class="entry">
+    <div class="title">
+    </div>
+    <div class="body">
+        <div>Pete Kowalczyk did a thing</div>
+        <div class="time"><span class="time">At  2:59pm</span>
+    </div>
+  </div>
+                </div>
+        
+ <div class="entry">
+    <div class="title date">
+        <span class="font-small">19 June 2018</span>                    
+    </div>
+    <div class="body">
+        <div>Sarah Thomson did a thing</div>
+        <div class="time"><span class="time">At  2:46pm</span></div>
+    </div>
+  </div>                   
+  <div class="entry">
+    <div class="title">
+    </div>
+    <div class="body">
+        <div>Another thing happened</div>
+        <div class="time"><span class="time">At  2:24pm</span> by Sarah Thomson - <a class="details" href="#">Details</a></div>
+    </div>
+  </div>                
+  <div class="entry start">
+    <div class="title">
+    </div>
+    <div class="body">
+        <div>The thing happened</div>
+        <div class="time"><span class="time">At  2:24pm</span> by Sarah Thomson</div>
+    </div>
+  </div> 
+</div>
+        </div>
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;div class="timeline large"&gt;
+  &lt;div class="entry"&gt;
+    &lt;div class="title date"&gt;
+      &lt;span class="font-small"&gt;Today&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+      &lt;div&gt;A thing happened for Anne Smith&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  1:25pm&lt;/span&gt; - &lt;a class="details" href="#"&gt;Details&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;div class="entry"&gt;
+    &lt;div class="title"&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+      &lt;div&gt;A thing happened for Aziz Anzari&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  1:25pm&lt;/span&gt; - &lt;a class="details" href="#"&gt;Details&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;div class="entry"&gt;
+    &lt;div class="title date"&gt;
+      &lt;span class="font-small"&gt;Yesterday&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+      &lt;div&gt;Pete Kowalczyk did a thing&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  3:40pm&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;  
+  &lt;div class="entry"&gt;
+    &lt;div class="title"&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;A thing happened for Anne Smith&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  3:34pm&lt;/span&gt; by Pete Kowalczyk - &lt;a class="details" href="#"&gt;Details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;div class="entry"&gt;
+    &lt;div class="title"&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;A thing happened for Aziz Anzari&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  3:34pm&lt;/span&gt; by Pete Kowalczyk - &lt;a class="details" href="#"&gt;Details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;                
+  &lt;div class="entry"&gt;
+    &lt;div class="title date"&gt;
+        &lt;span class="font-small"&gt;22 June 2018&lt;/span&gt;                    
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;A thing happened&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  midnight&lt;/span&gt; - &lt;a class="details" href="#"&gt;Details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+                
+ &lt;div class="entry"&gt;
+    &lt;div class="title"&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;Pete Kowalczyk did a thing&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  2:59pm&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+                &lt;/div&gt;
+        
+ &lt;div class="entry"&gt;
+    &lt;div class="title date"&gt;
+        &lt;span class="font-small"&gt;19 June 2018&lt;/span&gt;                    
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;Sarah Thomson did a thing&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  2:46pm&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;                   
+  &lt;div class="entry"&gt;
+    &lt;div class="title"&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;Another thing happened&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  2:24pm&lt;/span&gt; by Sarah Thomson - &lt;a class="details" href="#"&gt;Details&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;                
+  &lt;div class="entry start"&gt;
+    &lt;div class="title"&gt;
+    &lt;/div&gt;
+    &lt;div class="body"&gt;
+        &lt;div&gt;The thing happened&lt;/div&gt;
+        &lt;div class="time"&gt;&lt;span class="time"&gt;At  2:24pm&lt;/span&gt; by Sarah Thomson&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+&lt;/div&gt;
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+.timeline {
+    padding-top: 0px;
+    padding-left: 0;
+    padding-bottom: 0px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    background: #FFF;
+    box-sizing: border-box;
+    .title {
+        box-sizing: border-box;
+        margin-top: 0px;
+        &.date {
+            margin-top: 30px;
+        }
+    }
+    .body {
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 15px;
+        position: relative;
+        box-sizing: border-box;
+        div {
+            span {
+                color: $grey-1
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #BFC1C3;
+            border-radius: 100%;
+            left: -25px;
+            top: 5px;
+            z-index: 99;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        width: 1px;
+        background: #BFC1C3;
+        top: 5px;
+        bottom: 7px;
+        left: -1px;
+    }
+    &.large {
+        &:before {
+            top: 30px;
+            bottom: -30px;
+        }
+        .entry {
+            .title {
+                color: $grey-1;
+                margin-left: 20px;
+            }
+            &.start {
+                .body {
+                    &:after {
+                        content: "Start";
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        border: 1px solid #ddd;
+                        background-color: #ddd;
+                        border-radius: 100%;
+                        margin-top: 20px;
+                        right: auto;
+                        z-index: 99;
+                        margin-left: -30px;
+                        text-indent: 30px;
+                        font-weight: 400;
+                        color: gray;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .timeline {
+        &:before {
+            bottom: 15px;
+        }
+    }
+    .timeline.large {
+        margin-left: 0;
+        padding: 0 15px;
+        float: left;
+        &:before {
+            left: calc(33% + 15px);
+            top: 0;
+            bottom: 0;
+        }
+        .entry {
+            clear: both;
+            text-align: left;
+            position: relative;
+            margin-bottom: 0px;
+            .title {
+                width: 33%;
+                margin-top: 0;
+                margin-bottom: .5em;
+                margin-left: 0;
+                float: left;
+                padding-right: 15px;
+                text-align: right;
+                position: relative;
+                top: -5px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid #ddd;
+                    background-color: #ddd;
+                    border-radius: 100%;
+                    top: 15%;
+                    right: -15px;
+                    z-index: 99;
+                }
+            }
+            &.start {
+                .body {
+                    &:after {
+                        margin-left: -34px;
+                        text-indent: 34px;
+                    }
+                }
+            }
+        }
+        .body {
+            width: 66%;
+            margin: 0 0 30px;
+            padding-left: 30px;
+            float: right;
+            position: relative;
+            top: -5px;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}        
+                </code>
+            </pre>
+        </details>            
+            </div>
+        </div>
+
+    </section>
+</main>
+{% endblock %}

@@ -21,3 +21,20 @@ $(document).ready(function () {
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
 })
+
+
+// js to support patterns in library
+
+$(document).ready(function() {
+
+    //tabs pattern
+    $(".tabs-menu a").click(function(event) {
+    event.preventDefault();
+    $(this).parent().addClass("current");
+    $(this).parent().siblings().removeClass("current");
+    var tab = $(this).attr("href");
+    $(".tab-content").not(tab).css("display", "none");
+    $(tab).fadeIn();
+    });
+
+});  

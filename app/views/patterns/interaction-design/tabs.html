@@ -1,0 +1,160 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+    <section id="tabs">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-large" id="transactions">Tabs</h2>
+                <p class="lede">The Navigation tabs pattern is an exmple of skeuomorphism in the GUI intended to organise related content.</p>
+                <p>Tabs provide an easy way to show large amounts of similar structured data parted by categories</p>
+                <p>Tabs create a context for content, when a tab is selected the relevant content is loaded inside the content area.</p>
+            </div>
+        </div>
+
+        
+        <div class="grid-row">
+            <div class="column-two-thirds">
+        <div class="example">
+            <div id="tabs-container">
+                <ul class="tabs-menu">
+                    <li class="current"><a href="#tab-1">Tab title 1</a></li>
+                    <li class=""><a href="#tab-2">Tab title 2</a></li>
+                </ul>
+                <div id="tab-1" class="tab-content" style="">
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                </div>
+
+
+                <div id="tab-2" class="tab-content" style="display: none;">
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                    <p>The quick brown fox jumps over the lazy dog.</p>
+                </div>
+            </div>
+        </div>
+        <details>
+            <summary>JS</summary>
+            <pre>
+	    	<code class="js">
+    //tabs pattern
+    $(".tabs-menu a").click(function(e) {
+        e.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });	    	</code>
+    	</pre>
+        </details>
+        
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;div id="tabs-container"&gt;
+    &lt;ul class="tabs-menu"&gt;
+        &lt;li class="current"&gt;&lt;a href="#tab-1"&gt;Tab title 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=""&gt;&lt;a href="#tab-2"&gt;Tab title 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id="tab-1" class="tab-content" style=""&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;/div&gt;
+
+
+    &lt;div id="tab-2" class="tab-content" style="display: none;"&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+        &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;                
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+
+#tabs-container {
+    margin-bottom: 10px;
+    .tabs-menu {
+        float: left;
+        border-bottom: 1px solid #d4d4d1;
+        width: 100%;
+        padding-left: 10px;
+        box-sizing: border-box;
+        li {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            margin-right: 5px;
+            color: #000;
+            background-color: $grey-3;
+            border-top: 1px solid $grey-2;
+            border-right: 1px solid $grey-2;
+            border-left: 1px solid $grey-2;
+            bottom: -1px;
+            line-height: 44px;
+            &:hover {
+                line-height: 51px;
+                margin-top: -6px;
+                margin-bottom: -1px;
+                background: $grey-4;
+                text-decoration: underline;
+            }
+            &.current {
+                position: relative;
+                background-color: #fff;
+                border-bottom: 1px solid #fff;
+                z-index: 5;
+                line-height: 50px;
+                margin-bottom: -1px;
+                margin-top: -7px;
+                a {
+                    color: #000;
+                }
+            }
+            a {
+                padding: 15px;
+                margin-top: 0px;
+                color: #005EA5;
+                text-decoration: none;
+                &:focus {
+                    background: none;
+                    border: 0;
+                    outline: 0;
+                }
+            }
+        }
+    }
+    .tab-content {
+        overflow: auto;
+        border: 1px solid $grey-2;
+        border-top: 0;
+        padding: 15px;
+    }
+}                
+                </code>
+            </pre>
+        </details>    
+</div>
+</div>
+
+    </section>
+</main>
+{% endblock %}
