@@ -1,0 +1,69 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
+
+        <div class="hgroup">
+        <h1 class="heading-xlarge">
+          Next steps
+        </h1>
+            <p class="text lede">
+                Next steps is a design pattern built to concierge users at the end of a transaction onto relevant transactios that would naturally follow the prior process.
+            </p>
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">        
+        <div class="example">
+            
+            <span class="form-hint">&lt;!-- end of transaction feedback goes here --&gt;</span>
+            <form action="">
+            <legend class="heading-medium">What next?</legend>
+        <div class="form-group">
+
+
+                                         <div class="multiple-choice">
+        <input id="thing1" type="radio" name="next" value="0">
+ <label data-target="thing1" for="thing1">Do the thing</label>
+            </div>
+                                                
+                                    <div class="multiple-choice">
+        <input id="thing2" type="radio" name="next" value="2">
+            <label data-target="thing2" for="thing2">Do the other thing</label>
+            </div>            
+                                    <div class="multiple-choice">
+        <input id="homepage" type="radio" name="next" value="3">
+      <label data-target="homepage" for="homepage">Go back to the homepage</label>
+            </div>
+      </div>
+
+  
+      <a class="button" href="#" id="submit">Continue</a>
+      
+</form>    
+        </div>
+        </div>
+        
+     
+    </div>
+    
+</main>
+
+{% endblock %}

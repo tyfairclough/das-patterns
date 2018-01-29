@@ -1,8 +1,32 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
+    
 <section id="accordion">
     <div class="grid-row">
-        <div class="column-two-thirds">
-            <h2 class="heading-large" id="transactions">Accordion</h2>
-            <p>Use this pattern to breakdown larger lists on links or information, to provide the user with easier to select from subcategories</p>
+        <div class="column-full">
+            <div class="hroup">
+                <h2 class="heading-xlarge" id="transactions">Accordion</h2>
+                <p class="text lede">Use this pattern to breakdown larger lists on links or information, to provide the user with easier to select from subcategories</p>
+            </div>
         </div>
     </div>
     <div class="example">
@@ -337,3 +361,6 @@ p {
 </section>
 
 <script src="/public/javascripts/patterns/service-manaul_accordion.js"></script>
+</main>
+
+{% endblock %}

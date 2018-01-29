@@ -4,15 +4,39 @@
   ESFA pattern library
 {% endblock %}
 
-{% block content %}
+{% block global_header_text %}
+  ESFA
+{% endblock %}
 
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
 <section id="notifications">
-            <h2 class="heading-large">Notifications</h2>
-            <p>Why do we use notifications, what is the purpose, how and when should they implemented</p>
+    <div class="hgroup">
+        <h2 class="heading-xlarge">Notifications</h2>
+        <p class="lede text">Why do we use notifications, what is the purpose, how and when should they implemented</p>    
+    </div>
             
     
-    <h3 class="heading-large">Interactive notifications</h3>
+    <div class="grid-row">
+    <div class="column-two-thirds">
+  <h2 class="heading-small heading-contents">Contents:</h2>
+      <ul class="list list-contents">
+        <li><a href="#interactive">Interactive notifications</a></li>
+        <li><a href="#transactions">Transaction complete</a></li>
+      </ul>
+    </div>
+  </div>
+    
+    <h3 class="heading-large" id="interactive">Interactive notifications</h3>
     <p>These notifications are shown in direct relation to an action a user has taken.</p>
         <details>
             <summary>SASS</summary>    
@@ -257,7 +281,6 @@ $warning-colour:$orange;
        </section>
 
       {% include "patterns/interaction-design/transactions.html" %}
-  {% include "patterns/interaction-design/errors.html" %}
 
     
 </main>

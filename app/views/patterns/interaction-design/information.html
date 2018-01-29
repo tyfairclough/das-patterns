@@ -4,14 +4,27 @@
   ESFA pattern library
 {% endblock %}
 
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
 
 <section id="information">
 
     <div class="text">
     <div class="hgroup">
-        <h2 class="heading-large">Information</h2>
+        <h2 class="heading-large">Information callouts</h2>
         <p>When information is not part of a feedback loop we use these visual treatments to draw attention to information deemed more important than the body content. There are several levels of contrast that can be used to achieve the level of prescendence you require.</p>
         <p>While Notifications must remain at the top of the content the information boxes should be used in situe, close to the item it impacts.</p>
     </div>

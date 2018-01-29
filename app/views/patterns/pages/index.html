@@ -1,0 +1,99 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+    <h1 class="heading-xlarge">
+      Pages
+    </h1>
+    <div class="text">
+        <p class="lede">
+            Full page layouts consisting of multiple design components.
+        </p>
+    </div>
+
+     <table class="mb-30">
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+              <tr>
+                <td><a href="page-layouts/documents/index.html">Documents</a></td>
+                <td><span class="label mya">Manage apprenticeships</span></td>
+                <td><span class="label blue">complete</span></td>
+                <td>For legal and guideance pages</td>
+            </tr>
+              <tr>
+                <td><a href="page-layouts/search/index.html">Search results</a></td>
+                <td><span class="label mya">Manage apprenticeships</span></td>
+                <td><span class="label blue">complete</span></td>
+                <td>Results page of organisation's legal entities</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">Search results - Training providers</a></td>
+                <td><span class="label fat">Find Apprenticeship Training</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Results page for a training provider search</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">Search results - Apprenticeships</a></td>
+                <td><span class="label fat">Find Apprenticeship Training</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Results page for an apprenticeship framework or standard</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">Dashboard</a></td>
+                <td><span class="label sfs">Contracts</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>The contracts dashboard for training providers</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">Dashboard</a></td>
+                <td><span class="label recruit">Recruit an apprentice</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>The recruitment dashboard for training providers</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">Finance dashboard</a></td>
+                <td><span class="label mya">Manage apprenticeships</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>A dashboard for financial data in manage apprenticeships</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">Organisations</a></td>
+                <td><span class="label mya">Manage apprenticeships</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Organisation management screen</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">PAYE Schemes</a></td>
+                <td><span class="label mya">Manage apprenticeships</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>An organisation's PAYE numbers and associated English percentage</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="disabled">New requisition</a> </td>
+                <td><span class="label recruit">Recruit an apprentice</span></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Main interface for posted job</td>
+            </tr>
+        </tbody>
+      </table>
+    
+</main>
+
+{% endblock %}

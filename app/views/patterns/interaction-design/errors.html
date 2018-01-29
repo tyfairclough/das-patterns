@@ -1,7 +1,31 @@
+{% extends "layout_with-nav.html" %}
 
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
+    
 <section id="errors">
-    <h2 class="heading-large">Errors</h2>
-
+    <div class="hgroup">
+    <h2 class="heading-xlarge">Errors</h2>
+    <p class="lede text">How we alert users to issues on the page.</p>
+    </div>
+    
     <h3 class="heading-medium" id="one-question-per-page">Ask one question per page</h3>
 <div class="text">
   <p>
@@ -15,7 +39,7 @@
     Summarise errors at the top of the page
   </h3>
 <p class="text lead-in">
-    You must:
+    You should:
   </p>
 <ul class="text list list-bullet">
     <li>show an error summary at the top of the page</li>
@@ -151,7 +175,7 @@
            
 <div class="panel panel-border-narrow">
     <h3 class="heading-small">
-      The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+      The error summary should appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
     </h3>
   </div>
 <h3 class="heading-medium" id="highlight-errors">Highlight errors in forms</h3>
@@ -292,3 +316,5 @@
 </details>
 
 </section>
+    
+    {% endblock %}

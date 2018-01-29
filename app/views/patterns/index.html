@@ -1,0 +1,148 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="hgroup text">
+        <h1 class="heading-xlarge">
+            Patterns
+        </h1>
+        <p class="lede text">Patterns are guidance on how to solve certain types of problem. They include examples of successful approaches but are flexible and don’t prescribe exact design solutions.</p>
+
+    </div>
+    <h3 class="heading-medium">Interaction patterns</h3>
+
+    <table class="mb-30">
+        <thead>
+            <tr>
+                <th>Pattern</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><a href="interaction-design/accordion">Accordion</a></td>
+                <td><span class="label blue">recommended</span></td>
+                <td>Interrupt the user flow with important information</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/feedback">Feedback</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>A consistent approach to giving users feedback in the service</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/forms">Forms</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>A collection of form interaction elements and components</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/tabs.html">Tabs</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Compartmentalising related content on a page</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="heading-medium">Feedback patterns</h3>
+
+    <table class="mb-30">
+        <thead>
+            <tr>
+                <th>Pattern</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><a href="interaction-design/errors">Errors</a></td>
+                <td><span class="label blue">recommended</span></td>
+                <td>Alerting users to issues with the page</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/notifications.html">Notifications</a></td>
+                <td><span class="label blue">recommended</span></td>
+                <td>Updating users to changes in the service</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3 class="heading-medium">Navigation patterns</h3>
+    
+        <table class="mb-30">
+        <thead>
+            <tr>
+                <th>Pattern</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><a href="interaction-design/main-menu.html">Main menu</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Patterns to allow users to traverse through the service</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/breadcrumbs.html">Breadcrumbs and back buttons</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Our approach to the 'back' button</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/next-steps.html">Next steps</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>How users navigate after completing a transaction</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/pagination.html">Pagination</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>How we present the paging of data</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3 class="heading-medium">Visual cognition patterns</h3>
+    
+        <table class="mb-30">
+        <thead>
+            <tr>
+                <th>Pattern</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><a href="interaction-design/information.html">Information callouts</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>When information is not part of a feedback loop</td>
+            </tr>
+            <tr>
+                <td><a href="interaction-design/timeline.html">Timelines</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Used to express events in a chronological order</td>
+            </tr>
+        </tbody>
+    </table>
+
+</main>
+
+{% endblock %}

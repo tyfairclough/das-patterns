@@ -4,8 +4,17 @@
   ESFA pattern library
 {% endblock %}
 
-{% block content %}
+{% block global_header_text %}
+  ESFA
+{% endblock %}
 
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main" tabindex="-1">
     <h1 class="heading-xlarge">
         User journeys
@@ -15,20 +24,54 @@
             Common user journey patterns.
         </p>
     </div>
-    <h2 class="heading-small heading-contents">Contents:</h2>
-    <div class="grid-row">
-        <div class="column-two-thirds">
-            <ul class="list list-contents">
-                <li><a href="#search" class="disabled">Search</a></li>
-                <li><a href="/patterns/interaction-design/navigation#nextsteps">Next steps</a></li>
-                <li><a href="/patterns/interaction-design/wizards#welcomewizard">Welcome wizard</a></li>
-                <li><a href="#login" class="disabled">Login</a></li>
-                <li><a href="#register" class="disabled">Register</a></li>
-                <li><a href="#crud" class="disabled"><acroynm title="Create Replace Update Destroy">CRUD</acroynm></a></li>
-                <li><a href="#crud" class="disabled"><acroynm title="Access Control Levels">ACL</acroynm></a></li>
-            </ul>
-        </div>
-    </div>
+    <table class="mb-30">
+        <thead>
+          <tr>
+            <th>Pattern</th>
+            <th>Status</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+              <tr>
+                <td><a href="#search" class="disabled">Search</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Our pattern for taking users from an initial screen to a result page</td>
+            </tr>
+              <tr>
+                <td><a href="/patterns/interaction-design/next-steps">Next steps</a></td>
+                <td><span class="label blue">complete</span></td>
+                <td>How users navigate after a transaction has been complete</td>
+            </tr>
+            <tr>
+                <td><a href="/patterns/user-journeys/welcome-wizard">Welcome wizard</a></td>
+                <td><span class="label blue">complete</span></td>
+                <td>A step-by-step hub and spoke welcome splash screen that can incoporate basic logic(IFTT)</td>
+            </tr>
+            <tr>
+                <td><a href="#login" class="disabled">Login</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Our design convetion for login user journeys</td>
+            </tr>
+            <tr>
+                <td><a href="#register" class="disabled">Register</a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>Our registration pattern for an organisation's accounts.</td>
+            </tr>
+            <tr>
+                <td><a href="#crud" class="disabled"><acroynm title="Create Replace Update Destroy">CRUD</acroynm></a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>A re-usable create; replace; update; destroy interface and journeys</td>
+            </tr>
+            <tr>
+                <td><a href="#crud" class="disabled"><acroynm title="Access Control Levels">ACL</acroynm></a></td>
+                <td><span class="label grey-1">in-development</span></td>
+                <td>An organisation's access control level (ACL) management interface and journeys</td>
+            </tr>
+        </tbody>
+      </table>
+    
 </main>
 
 {% endblock %}

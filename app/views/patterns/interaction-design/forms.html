@@ -4,13 +4,30 @@
   ESFA pattern library
 {% endblock %}
 
-{% block content %}
+{% block global_header_text %}
+  ESFA
+{% endblock %}
 
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
     
 <section id="forms">
-    <h2 class="heading-large">Forms</h2>
-    <p>Why do we use notifications, what is the purpose, how and when should they implemented</p>
+    
+    <div class="hgroup">
+        <h2 class="heading-xlarge">Forms</h2>
+        <p class="lede text">Why do we use notifications, what is the purpose, how and when should they implemented</p>
+    </div>
+    
+    
     <h3 class="heading-medium">Input with units</h3>
     <p>Adding the unit to an input helps the user quickly understand the type of input required.</p>
     <h4 class="heading-small">Unit before</h4>
@@ -52,7 +69,6 @@
 
     
   {% include "patterns/interaction-design/textarea.html" %}
-  {% include "patterns/interaction-design/errors.html" %}
     
     
 <script>

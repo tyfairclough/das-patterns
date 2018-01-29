@@ -4,6 +4,10 @@
   ESFA pattern library
 {% endblock %}
 
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -17,9 +21,97 @@
         <li>align yourself with other SFA products</li>
     </ul>
 </div>
+    
+    
+    <table class="mb-30 hidden">
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Description</th>
+            <th>Includes</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            
+              <tr>
+                <td><a href="/patterns/interruption-card">HTML Elements</a></td>
+                <td><span class="label--blue">All the HTML Elements that can exist according to W3C</span></td>
+                <td>
+                    <ul class="list list-bullet">
+                        <li>scaffolding</li>
+                        <li>p</li>
+                        <li>div</li>
+                        <li>input</li>
+                    </ul>
+                  </td>
+              </tr>
+              <tr>
+                <td><a href="/patterns/index">Patterns</a></td>
+                <td><span class="label--blue">The micro interactions joiningtheexperiencetogether</span></td>
+                <td>
+                    <ul class="list list-bullet">
+                                <li>javascript enahcements</li>
+                                <li>forms</li>
+                                <li>validation</li>
+                                <li>notifications</li>
+                            </ul>
+                  </td>
+              </tr>
+              <tr>
+                <td><a href="patterns/page-layouts">Pages</a></td>
+                <td><span class="label--blue">The micro interactions joiningtheexperiencetogether</span></td>
+                <td>
+        <ul class="list list-bullet">
+            <li>dashboards</li>
+            <li>search results</li>
+            <li>documents</li>
+        </ul>
+                  </td>
+              </tr>
+              <tr>
+                <td><a href="patterns/page-layouts">User journeys</a></td>
+                <td>The micro interactions joiningtheexperiencetogether</td>
+                <td>
+                    <ul class="list list-bullet">
+                        <li>welcome wizard</li>
+                        <li>search</li>
+                        <li>on-boarding</li>
+                    </ul>
+                  </td>
+              </tr>
+              <tr>
+                <td><a href="patterns/visual-language/index.html">Visual language</a></td>
+                <td>Styled content</td>
+                <td>
+                    <ul class="list list-bullet">
+                        <li>Information boxes</li>
+                        <li>Content wrappers</li>
+                    </ul>
+              </td>
+              </tr>
+
+          
+        </tbody>
+      </table>
+    
+    
 <div class="grid-row">
-    <div class="column-one-third">
-        <h2 class="heading-medium"><a href="patterns/interaction-design">Interaction design</a></h2>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/elements">Elements</a></h2>
+        <p>
+            All the HTML Elements that can exist according to W3C
+        </p>
+        <ul class="list list-bullet">
+            <li>scaffolding</li>
+            <li>p</li>
+            <li>div</li>
+            <li>input</li>
+        </ul>
+    <hr />
+    </div>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/index">Patterns</a></h2>
         <p>
             The micro interactions joiningtheexperiencetogether
         </p>
@@ -29,32 +121,33 @@
             <li>validation</li>
             <li>notifications</li>
         </ul>
+    <hr />
     </div>
-    <div class="column-one-third">
-        <h2 class="heading-medium"><a href="patterns/page-layouts">Page layouts</a></h2>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/page-layouts">Pages</a></h2>
         <p>
-            Page designs
+            A collection of components to form a page layout
         </p>
         <ul class="list list-bullet">
             <li>dashboards</li>
             <li>search results</li>
-            <li>guides</li>
+            <li>documents</li>
         </ul>
+    <hr />        
     </div>
-    <div class="column-one-third">
-        <h2 class="heading-medium"><a href="patterns/HTML-elements">HTML Elements</a></h2>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/page-layouts">User journeys</a></h2>
         <p>
-            All the HTML Elements that can exist according to W3C
+            Joined up pages to create a complete user journey
         </p>
         <ul class="list list-bullet">
-            <li>p</li>
-            <li>div</li>
-            <li>input</li>
+            <li>welcome wizard</li>
+            <li>search</li>
+            <li>on-boarding</li>
         </ul>
+    <hr />        
     </div>
-</div>
-    <div class="grid-row">
-            <div class="column-one-third">
+    <div class="column-half">
         <h2 class="heading-medium"><a href="patterns/visual-language/index.html">Visual language</a></h2>
         <p>
             Styled content
@@ -64,59 +157,7 @@
             <li>Content wrappers</li>
         </ul>
     </div>
-    </div>
-        
-
-
-<!-- <div class="grid-row">
-    <div class="column-one-third">
-        <h2 class="heading-medium"><a href="patterns/visual-language">Visual language</a></h2>
-        <p>
-            The visceral experience and tone of voice
-        </p>
-        <ul class="list list-bullet">
-            <li>colour</li>
-            <li>art direction</li>
-            <li>iconography</li>
-        </ul>
-    </div>
-    div class="column-one-third">
-        <h2 class="heading-medium"><a href="patterns/foundation">Foundation</a></h2>
-        <p>
-            Building blocks for any web based application
-        </p>
-        <ul class="list list-bullet">
-            <li>HTML boilerplate</li>
-            <li>CSS reset</li>
-            <li>CSS pre-processors</li>
-            <li>javascript frameworks</li>
-        </ul>
-    </div>
-    <div class="column-one-third">
-        <h2 class="heading-medium"><a href="patterns/external-sites">External sites</a></h2>
-        <p>
-            Demonstrating how external sites flow into the core product.
-        </p>
-        <ul class="list list-bullet">
-            <li>mico-sites</li>
-            <li>landing pages</li>
-            <li>social media presence</li>
-        </ul>
-    </div>
-</div> -->
-<!-- <div class="grid-row">
-    <div class="column-one-third">
-        <h2 class="heading-medium"><a href="patterns/user-journeys">User journeys</a></h2>
-        <p>
-            Common user journey patterns.
-        </p>
-        <ul class="list list-bullet">
-            <li>authentification</li>
-            <li>check &amp; sign</li>
-            <li>invitations</li>
-        </ul>
-    </div>
-</div> -->
+</div>
     <div class="grid-row">
         <div class="column-two-thirds">
     <div class="panel panel-width-thin">

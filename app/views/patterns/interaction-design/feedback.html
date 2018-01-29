@@ -4,24 +4,33 @@
   ESFA pattern library
 {% endblock %}
 
-{% block content %}
+{% block global_header_text %}
+  ESFA
+{% endblock %}
 
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
     <div class="hgroup">
         <h1 class="heading-xlarge">
           Feedback
         </h1>
-        <div class="text">
-            <p class="lede">
+            <p class="text lede">
                 Allowing users to feedback their experience using the service.
             </p>
-        </div>
     </div>
     <h2 class="heading-small heading-contents">Contents:</h2>
     <div class="grid-row">
         <div class="column-two-thirds">
             <ul class="list list-contents">
-                <li><a href="./wizards.html">Beta banner</a></li>
                 <li><a href="./wizards.html">Smart Survey</a></li>
             </ul>
         </div>

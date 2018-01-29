@@ -4,14 +4,29 @@
   ESFA pattern library
 {% endblock %}
 
-{% block content %}
+{% block global_header_text %}
+  ESFA
+{% endblock %}
 
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
     <section id="tabs">
+        <div class="hgroup">
+<h2 class="heading-xlarge" id="transactions">Tabs</h2>
+                <p class="lede text">The Navigation tabs pattern is an exmple of skeuomorphism in the GUI intended to organise related content.</p>        
+        </div>
         <div class="grid-row">
             <div class="column-two-thirds">
-                <h2 class="heading-large" id="transactions">Tabs</h2>
-                <p class="lede">The Navigation tabs pattern is an exmple of skeuomorphism in the GUI intended to organise related content.</p>
+                
                 <p>Tabs provide an easy way to show large amounts of similar structured data parted by categories</p>
                 <p>Tabs create a context for content, when a tab is selected the relevant content is loaded inside the content area.</p>
             </div>

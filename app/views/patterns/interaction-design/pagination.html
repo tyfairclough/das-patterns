@@ -4,23 +4,29 @@
   ESFA pattern library
 {% endblock %}
 
+{% block global_header_text %}
+  ESFA
+{% endblock %}
 
+{{ global_header_text|default('ESFA') }}
 
-
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
 
 {% block content %}
-
 <main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
 
         <div class="hgroup">
         <h1 class="heading-xlarge">
           Navigation
         </h1>
-        <div class="text">
-            <p class="lede">
+            <p class="text lede">
                 Helping users navigate through our service.
             </p>
-        </div>
     </div>
     
     

@@ -1252,7 +1252,7 @@ span.notification {
 
 @media (min-width: 769px) {
 #global-header .header-wrapper .header-global .header-logo {
-        width: 100% !important;
+        width: auto !important;
     }
 }
 
@@ -1934,8 +1934,12 @@ table.responsive {
 .label.purple, .label.recruit {
     background: $purple;
 }
-.lable.mellow-red, .label.sfs {
+.label.mellow-red, .label.sfs {
     background: $mellow-red;
+}
+
+.label.grey-1 {
+    background: $grey-1;
 }
 
 

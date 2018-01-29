@@ -1,0 +1,73 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
+
+        <div class="hgroup">
+        <h1 class="heading-xlarge">
+          Breadcrumbs
+        </h1>
+            <p class="text lede">
+We use breadcrumbs on hub and spoke pages, this is pages that help navigate users to transactional pages or static content pages.            </p>
+            <p class="text">Breadcrumbs should start with home and for subsequent pages be the h1 tag for said page.</p>
+    </div>
+
+    <div class="grid-row" id="breadcrumbs">
+        <div class="column-two-thirds">
+            <div class="example">
+                <div class="breadcrumbs">
+        <ol role="navigation">
+            <li><a href="#">Home</a></li>
+            <li>Active page</li>
+        </ol>
+    </div>
+                <div class="breadcrumbs">
+        <ol role="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Level 1 page</a></li>
+            <li>Active page</li>
+        </ol>
+    </div>
+            </div>
+       </div>
+    </div>
+    
+    <div class="grid-row" id="backbuttons">
+        <div class="column-two-thirds">
+        <h2 class="heading-xlarge">
+            Back buttons
+        </h2>
+            <p class="lede">We use back links when the user has entered into a linear transaction journey.</p><p> In some instances navigating backwards breaks the previous form submissions in a transaction. To help avoid these conseuqentlal error we control where the back button directs the user.</p>
+        
+        <h3 class="heading-small">Normal back button</h3>
+        <div class="example">
+            <a href="#" class="link-back">Back</a>
+        </div>
+        
+        <h3 class="heading-small">Back to specific step button</h3>
+        <div class="example">
+            <a href="#" class="link-back">Back to adding apprentice details</a>
+        </div>
+    </div>
+    </div>
+    
+</main>
+
+{% endblock %}
