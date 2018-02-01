@@ -1,0 +1,107 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" class="scripts" role="main" tabindex="-1">
+    
+    <div class="hgroup">
+    <h1 class="heading-xlarge">
+      Scripts
+    </h1>
+    <div class="text">
+        <p class="lede">
+            Helpful snippets of js to use in your projects.
+        </p>
+    </div>    
+    </div>
+    <div class="grid-row">
+    <div class="column-full">
+      <h2 class="heading-medium">Run scripts on the right page</h2>
+        <p>This script reads the <span class="code">&lt;main&gt;</span> element's class name and looks for it in a switch statement. If a match is found it executes a function within which your pages javascript can reside.</p>
+
+        <pre>
+            <code class="js">
+switch (className) {
+   case 'a-page':
+       aPage();
+   break;
+   case 'finance-page':
+       financePage();
+   break;
+   default: break;
+};
+
+function financePage(){};
+
+            </code>
+        </pre>
+        
+  </div>
+    </div>
+    
+    <div class="grid-row">
+    <div class="column-full">
+      <h2 class="heading-medium">Redirect users when they use a radio select list</h2>
+        <p>This script reads the <span class="code">&lt;main&gt;</span> element's class name and looks for it in a switch statement. If a match is found it executes a function within which your pages javascript can reside.</p>
+
+        <pre>
+            <code class="js">
+ $(".button").click(function(e){
+    e.preventDefault(); 
+    state = $("input[name=radio-group]:checked").val()                  
+    switch (state) {
+        case 'yes':
+            // do something if they select the "yes" options
+            window.location.href = "go-to-a-page";             
+        break;
+        case 'no':
+            // do something if they select the "no" options
+            window.location.href = "go-to-a-page";   
+        break;
+        default: 
+            // if they select nothing 
+            alert("select an option");
+        break;
+    }                        
+});       
+            </code>
+        </pre>
+        
+        <pre>
+            <code class="html">
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;fieldset&gt;
+
+      &lt;legend&gt;
+        &lt;h1 class="heading-medium"&gt;Ask your question&lt;/h1&gt;
+      &lt;/legend&gt;
+
+      &lt;div class="multiple-choice"&gt;
+        &lt;input id="radio-1" type="radio" name="radio-group" value="yes"&gt;
+        &lt;label for="radio-1"&gt;Yes&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="multiple-choice"&gt;
+        &lt;input id="radio-2" type="radio" name="radio-group" value="no"&gt;
+        &lt;label for="radio-2"&gt;No&lt;/label&gt;
+      &lt;/div&gt;
+
+    &lt;/fieldset&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+            </code>
+        </pre>
+        
+  </div>
+    </div>
+</main>
+
+{% endblock %}
