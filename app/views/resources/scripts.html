@@ -40,7 +40,6 @@ switch (className) {
 };
 
 function financePage(){};
-
             </code>
         </pre>
         
@@ -102,6 +101,69 @@ function financePage(){};
         
   </div>
     </div>
+    
+    <div class="grid-row">
+    <div class="column-full">
+      <h2 class="heading-medium">Using URL parameters</h2>
+        <p>This script reads the query string in a URL and then executes a line of code for each one.</p>
+
+        <pre>
+            <code class="js">
+
+// declare the variables you want to catch in the URL
+var userName = getQueryVariable("name");
+
+
+// get url variables    
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) {
+            return pair[1];
+        }
+    }
+    return (false);
+}    
+
+// you can now use userName as a variable
+// example in jquery $("#name").text(userName);
+            </code>
+        </pre>
+        
+        <pre>
+            <code class="html">
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;fieldset&gt;
+
+      &lt;legend&gt;
+        &lt;h1 class="heading-medium"&gt;Ask your question&lt;/h1&gt;
+      &lt;/legend&gt;
+
+      &lt;div class="multiple-choice"&gt;
+        &lt;input id="radio-1" type="radio" name="radio-group" value="yes"&gt;
+        &lt;label for="radio-1"&gt;Yes&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="multiple-choice"&gt;
+        &lt;input id="radio-2" type="radio" name="radio-group" value="no"&gt;
+        &lt;label for="radio-2"&gt;No&lt;/label&gt;
+      &lt;/div&gt;
+
+    &lt;/fieldset&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+            </code>
+        </pre>
+        
+  </div>
+    </div>
 </main>
 
 {% endblock %}
+
+
+
+
+
