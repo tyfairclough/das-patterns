@@ -1,0 +1,59 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" class="scripts" role="main" tabindex="-1">
+    
+    <div class="hgroup">
+    <h1 class="heading-xlarge">
+      das-mya-beta
+    </h1>
+    <div class="text">
+        <p class="lede">
+            The manage apprenticeship funding experience for employers.
+        </p>
+    </div>    
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h2 class="heading-medium">How to use this prototype</h2>
+            <p>To view a prototype you need to add the sprint number to the end of the url. for example sprint 48 is <code class="code">https://das-mya-beta.herokuapp.com/sprint/48/index</code>. Pages need to end with a name, pages ending with a trailing / will not render.</p>
+            
+            <h3 class="heading-small">Prototype link</h3>
+            <a href="https://das-mya-beta.herokuapp.com" target="_blank">https://das-mya-beta.herokuapp.com</a>
+            <h3 class="heading-small">Login credentials</h3>
+            <dl>
+                <dt>Username</dt>
+                <dd>n/a</dd>
+                <dt>Password</dt>
+                <dd>n/a</dd>
+            </dl>
+          
+        </div>
+        <aside class="column-third">
+            <div class="related">
+                  <h3 class="heading-small">Github repositry</h3>
+                <a href="https://github.com/tyfairclough/das-mya-beta" target="_blank" class="font-xsmall">https://github.com/tyfairclough/das-mya-beta</a>
+  <h3 class="heading-small">Maintained by</h3>
+        
+        <a href="mailto:ty@digi2al.co.uk">Ty Fairclough</a>
+            </div>
+        </aside>
+    </div>
+</main>
+
+{% endblock %}
+
+
+
+
+
