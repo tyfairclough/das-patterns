@@ -1,0 +1,451 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
+    <section id="tabs">
+        <div class="hgroup">
+<h2 class="heading-xlarge" id="transactions">Filters</h2>
+                <p class="lede text">Filters help users cut large data sets into useful subsets that answer their user need.</p>        
+        </div>
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <p>Lets talk about the filters generally here.</p>
+            </div>
+        </div>
+
+        
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-medium">Filter container</h2>
+                <p>Filters live inside collapsible containers. They're open by default and have a maximum height of 500px. We compartmentalise the filters largely due to their inherit variability. By fixing a max height to the contained content we can ensure other filters are reasonably accesible to the user. The javascript enhancement that allows the filter containers to collapse is a small enhancement that allows users to change the heirarchy of the filters to promote/demote filters that they want.</p>
+                <a class="text-link" href="#">Overlay ignition</a>
+        <div class="example">
+            <div class="grid-row">
+                <div class="column-half">            
+<fieldset class="filters filters-accordion">
+                    <h2 class="toggler heading-small">Filter group</h2>
+                    <div class="toggled-content">
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here                        
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        
+                        
+                    </div>
+                </fieldset>               
+<fieldset class="filters filters-accordion closed">
+                    <h2 class="toggler heading-small">Filter group</h2>
+                    <div class="toggled-content closed">
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here                        
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        
+                        
+                    </div>
+                </fieldset>               
+<fieldset class="filters filters-accordion closed">
+                    <h2 class="toggler heading-small">Filter group</h2>
+                    <div class="toggled-content closed">
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here                        
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        content goes here
+                        
+                        
+                    </div>
+                </fieldset>    
+                </div>
+            </div>
+        </div>
+        <details>
+            <summary>JS</summary>
+            <pre>
+	    	<code class="js">
+//filter example
+            </code>
+    	</pre>
+        </details>
+        
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;!-- html is going here --&gt;            
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+/* CSS/SASS here */     
+                </code>
+            </pre>
+        </details>    
+</div>
+            
+</div> 
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-medium">Search input</h2>
+                <p>The first example information</p>
+                <a class="text-link" href="#">Overlay ignition</a>
+        <div class="example">
+                        <div class="grid-row">
+                <div class="column-half">
+<fieldset class="filters filters-accordion">
+                    <h2 class="toggler heading-small">Keyword search</h2>
+                    <div class="toggled-content">
+
+                  <div class="form-group search-header">
+                            <label for="search-main" class="form-label-bold">
+                                Enter a job or skill
+                                </label>
+							    <input type="search" name="q" id="search-main">
+                        <div class="search-submit">
+								<button type="submit" class="button">Search</button>
+                        </div>
+                        </div>
+
+                    </div>
+                </fieldset>                      
+                            </div>
+            </div>
+        </div>
+        <details>
+            <summary>JS</summary>
+            <pre>
+	    	<code class="js">
+//filter example
+            </code>
+    	</pre>
+        </details>
+        
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;!-- html is going here --&gt;            
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+/* CSS/SASS here */     
+                </code>
+            </pre>
+        </details>    
+</div>
+            
+</div>        
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-medium">Radio options</h2>
+                <p>There is unlikely a need for a radio select in your filter options as they enforce a single choice and filtering tends to be multi-faceted.</p>
+                <a class="text-link" href="#">Overlay ignition</a>
+        <div class="example">
+                        <div class="grid-row">
+                <div class="column-half">
+<fieldset class="filters filters-accordion">
+                    <h2 class="toggler heading-small">Show only</h2>
+                    <div class="toggled-content">
+                        <div class="form-group">
+                                <legend for="activityType" class="form-label-bold sr-only">Type</legend>                            
+                   <div class="multiple-choice">
+                                <input id="apprentice" type="radio" value="apprentice" name="activityType">
+                                <label class="" for="apprentice">Ended</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="payment" type="radio" value="payment" name="activityType">
+                                <label class="" for="payment">Ending soon</label>
+                            </div>
+         
+                            <div class="multiple-choice">
+                                <input id="service" type="radio" value="service" name="activityType">
+                                <label class="" for="service">In draft</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                            </div>
+            </div>
+        </div>
+        <details>
+            <summary>JS</summary>
+            <pre>
+	    	<code class="js">
+//filter example
+            </code>
+    	</pre>
+        </details>
+        
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;!-- html is going here --&gt;            
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+/* CSS/SASS here */     
+                </code>
+            </pre>
+        </details>    
+</div>
+</div>
+        
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-medium">Checkboxes</h2>
+                <p>The first example information</p>
+                <a class="text-link" href="#">Overlay ignition</a>
+        <div class="example">
+            
+            <div class="grid-row">
+                <div class="column-half">
+ <fieldset class="filters filters-accordion">
+                    <h2 class="toggler heading-small">More filters</h2>
+                <div class="toggled-content">
+                     <div class="form-group">
+                            <legend for="ofsteadFilter" class="form-label-bold">Ofsted rating (optional)</legend>                            
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-1" type="checkbox" value="1" checked="">
+                            <label class="block-label" for="ofstedFilter-1">Outstanding (<span class="ofstedCount1">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-2" type="checkbox" value="2" checked="">
+                            <label class="block-label" for="ofstedFilter-2">Good (<span class="ofstedCount2">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-3" type="checkbox" value="3" checked="">
+                            <label class="block-label" for="ofstedFilter-3">Satisfactory (<span class="ofstedCount3">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-4" type="checkbox" value="4" checked="">
+                            <label class="block-label" for="ofstedFilter-4">Inadequate (<span class="ofstedCount4">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-4" type="checkbox" value="4" checked="">
+                            <label class="block-label" for="ofstedFilter-4">Inadequate (<span class="ofstedCount4">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-4" type="checkbox" value="4" checked="">
+                            <label class="block-label" for="ofstedFilter-4">Inadequate (<span class="ofstedCount4">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-4" type="checkbox" value="4" checked="">
+                            <label class="block-label" for="ofstedFilter-4">Inadequate (<span class="ofstedCount4">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-4" type="checkbox" value="4" checked="">
+                            <label class="block-label" for="ofstedFilter-4">Inadequate (<span class="ofstedCount4">34</span>)</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="ofstedFilter-4" type="checkbox" value="4" checked="">
+                            <label class="block-label" for="ofstedFilter-4">Inadequate (<span class="ofstedCount4">34</span>)</label>
+                        </div>
+                            
+                        </div>
+                </div>
+            </fieldset>                
+                </div>
+            </div>
+
+        </div>
+        <details>
+            <summary>JS</summary>
+            <pre>
+	    	<code class="js">
+//filter example
+            </code>
+    	</pre>
+        </details>
+        
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;!-- html is going here --&gt;            
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+/* CSS/SASS here */     
+                </code>
+            </pre>
+        </details>    
+</div>
+</div>  
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h2 class="heading-medium">Select lists</h2>
+                <p>The first example information</p>
+                <a class="text-link" href="#">Overlay ignition</a>
+        <div class="example">
+                        <div class="grid-row">
+                <div class="column-half">
+     <fieldset class="filters filters-accordion">
+                    <h2 class="toggler heading-small">More filters</h2>
+                <div class="toggled-content">
+                        <div class="form-group">
+                            <label for="singleSelect" class="form-label-bold">Single select</label>
+                            <select id="singleSelect" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                <option value="acme-training-ltd">Acme Training Ltd</option>
+                                <option value="learn-direct">Learn Direct</option>
+                                <option value="in-house-training">In-house training</option>
+                            </select>
+                        </div>                        <div class="form-group">
+                            <label for="multiSelect" class="form-label-bold">Multi select</label>
+                            <select id="multiSelect" multiple="" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                <option value="acme-training-ltd">Acme Training Ltd</option>
+                                <option value="learn-direct">Learn Direct</option>
+                                <option value="in-house-training">In-house training</option>
+                            </select>
+                        </div>
+                </div>
+            </fieldset>
+                            </div>
+            </div>
+        </div>
+        <details>
+            <summary>JS</summary>
+            <pre>
+	    	<code class="js">
+//filter example
+            </code>
+    	</pre>
+        </details>
+        
+        <details>
+            <summary>HTML</summary>
+            <pre>
+                <code class="html">
+&lt;!-- html is going here --&gt;            
+                </code>
+            </pre>
+        </details>        
+        <details>
+            <summary>SASS</summary>
+            <pre>
+                <code class="css">
+/* CSS/SASS here */     
+                </code>
+            </pre>
+        </details>    
+</div>
+</div>
+
+    </section>
+</main>
+{% endblock %}

@@ -32,5 +32,12 @@ $(document).ready(function() {
     $(".tab-content").not(tab).css("display", "none");
     $(tab).fadeIn();
     });
+    
+    
+    $(".toggler").click(function(e){
+        e.preventDefault();
+        $(this).parent().toggleClass("closed")
+        $(this).next().toggleClass("closed")
+    })
 
 });  
