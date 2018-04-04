@@ -274,7 +274,7 @@ table.responsive {
 <h4 class="heading-small">Additional treatments</h4>        
         <p>If you need to highlight columns use the <code class="code">.highlight</code> class on the cells that need highlighting. The grey on black visual treatment <a href="https://webaim.org/resources/contrastchecker/?fcolor=0B0C0C&bcolor=BFC1C3" rel="external">passes WCAG AAA</a> at normal and large text sizes with a contrast ratio of 10.85:1.</p>
     <p>For times when a large amount of data is absolutely necessary you can utilise the <code class="code">.small</code> classs to reduce the size of the content. Always try to maintain the default size and in cases where you have multiple tables default to small on all tables if any one table requires it. This creates a consistency to the interface and avoids a dissonance that can sometimes occur when users are presented with data in differing formats.</p>
-              
+              <p>You can highlight total rows in the <code class="code">&lt;tfoot&gt;</code> element by adding the class <code class="code">.total</code> to both the <code class="code">&lt;tr&gt;</code> and <code class="code">&lt;td&gt;</code> elements. When combined with <code class="code">data-labels</code> you can create an elegent &lsquo;totals&rsquo; card.</p>
             </div>
         </div>      
 <div class="example">
@@ -446,7 +446,6 @@ td, th {
     </tr>
   </tbody>
 </table>
-
 </div>
       
 <details>
