@@ -1842,11 +1842,19 @@ dl.course-details {
 }
 
 
+// Table highlights
 
 td, th {
     &.highlight {
         background: $grey-3;
     }
+}
+
+
+// Small tables
+
+table.small th, table.small td {
+    font-size: 16px;
 }
 
 // Responsive Tables
@@ -1859,9 +1867,10 @@ table.responsive {
        // border: 1px solid $border-colour;
         margin-bottom: 10px;
         display: block;
-        float: lefåt;
+        float: left;
         width: 100%;
         box-sizing: border-box;
+        border: 2px solid $border-colour;
         td {
             display: block;
             text-align: right;
@@ -1950,6 +1959,12 @@ table.responsive {
 
 }
 
+
+// Table fix
+
+.example table .highlight {
+    color: $black;
+}
 
 // Labels
 

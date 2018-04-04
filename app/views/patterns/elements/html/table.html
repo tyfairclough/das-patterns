@@ -23,18 +23,14 @@
 <div class="hgroup">        
 <h3 class="heading-medium" id="responsive-table">Responsive tables — card UI</h3>
         <p>Your tables should work on mobile devices. To utilise the responsive table behaviour use the class <code class="code">.responsive</code> against the <code class="code">&lt;table&gt;</code> element.</p>
+    <p>The mobile magic sauce in the mark-up is driven by <code class="code">data-label="lorem ipsum"</code> in the html which is then rendered in a psuedo element at small screensizes. Using markup like this: <code class="code">content: attr(data-label)</code></p>
+        <a id="chardinStart" href="#">Initiate overlay description</a>
+
 </div>        
 <details>
     <summary>SASS</summary>
 <pre>
     <code class="sass">
-
-td, th {
-    &.highlight {
-        background: $grey-3;
-    }
-}
-
 // Responsive Tables
 
 table.responsive {
@@ -45,9 +41,10 @@ table.responsive {
        // border: 1px solid $border-colour;
         margin-bottom: 10px;
         display: block;
-        float: lefåt;
+        float: left;
         width: 100%;
         box-sizing: border-box;
+        border: 2px solid $border-colour;
         td {
             display: block;
             text-align: right;
@@ -120,6 +117,9 @@ table.responsive {
                     &.total {
                         border-bottom: 2px solid #000;
                     }
+                    &:last-child {
+                        padding-left: 0;
+                    }
                 }
             }
         }
@@ -131,7 +131,7 @@ table.responsive {
         }
     }
 
-}    
+}
     </code>
 </pre>
 </details>                
@@ -139,7 +139,7 @@ table.responsive {
 <div class="example">
 <table class="responsive">
             <thead>
-                <tr>
+                <tr data-intro="When viewed on a mobile device the table headers are repeated for each row. Each table cell includes a data-label repeating the column header name." data-position="top">
                     <th scope="col" class="tw-25"><span class="no-wrap">Date</span></th>
                     <th scope="col" class="tw-25">Description</th>
                     <th scope="col" class="numeric">Amount</th>
@@ -204,77 +204,81 @@ table.responsive {
     <summary>HTML</summary>
 <pre>
     <code class="html">
-&lt;table class="responsive"&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th scope="col" class="tw-25"&gt;&lt;span class="no-wrap"&gt;Date&lt;/span&gt;&lt;/th&gt;
-                    &lt;th scope="col" class="tw-25"&gt;Description&lt;/th&gt;
-                    &lt;th scope="col" class="numeric"&gt;Amount&lt;/th&gt;
-                    &lt;th&gt;&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td data-label="Date"&gt;
-                        &lt;span class="no-wrap"&gt; 22 April 2017 &lt;/span&gt;
-                    &lt;/td&gt;
-                    &lt;td data-label="Description"&gt;
+&#x3C;table class=&#x22;responsive&#x22;&#x3E;
+            &#x3C;thead&#x3E;
+                &#x3C;tr data-intro=&#x22;When viewed on a mobile device the table headers are repeated for each row. Each table cell includes a data-label repeating the column header name.&#x22; data-position=&#x22;top&#x22;&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22; class=&#x22;tw-25&#x22;&#x3E;&#x3C;span class=&#x22;no-wrap&#x22;&#x3E;Date&#x3C;/span&#x3E;&#x3C;/th&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22; class=&#x22;tw-25&#x22;&#x3E;Description&#x3C;/th&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22; class=&#x22;numeric&#x22;&#x3E;Amount&#x3C;/th&#x3E;
+                    &#x3C;th&#x3E;&#x3C;/th&#x3E;
+                &#x3C;/tr&#x3E;
+            &#x3C;/thead&#x3E;
+            &#x3C;tbody&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;td data-label=&#x22;Date&#x22;&#x3E;
+                        &#x3C;span class=&#x22;no-wrap&#x22;&#x3E; 22 April 2017 &#x3C;/span&#x3E;
+                    &#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Description&#x22;&#x3E;
                         Levy
 
-                    &lt;/td&gt;
-                    &lt;td class="numeric" data-label="Amount"&gt; £5,000.00&lt;/td&gt;
-                    &lt;td class="numeric"&gt;
-                        &lt;a title="View details for the transaction on 15 Mar 2018" href="/sprint/31/account/finance/levy.html"&gt;
-                            Details &lt;span class="vh"&gt; for the transaction on 20 Oct 2017&lt;/span&gt;
-                        &lt;/a&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td data-label="Date"&gt;
-                        &lt;span class="no-wrap"&gt; 5 Apr 2017&lt;/span&gt;
-                    &lt;/td&gt;
-                    &lt;td data-label="Description"&gt;
+                    &#x3C;/td&#x3E;
+                    &#x3C;td class=&#x22;numeric&#x22; data-label=&#x22;Amount&#x22;&#x3E; &#xA3;5,000.00&#x3C;/td&#x3E;
+                    &#x3C;td class=&#x22;numeric&#x22;&#x3E;
+                        &#x3C;a title=&#x22;View details for the transaction on 15 Mar 2018&#x22; href=&#x22;/sprint/31/account/finance/levy.html&#x22;&#x3E;
+                            Details &#x3C;span class=&#x22;vh&#x22;&#x3E; for the transaction on 20 Oct 2017&#x3C;/span&#x3E;
+                        &#x3C;/a&#x3E;
+                    &#x3C;/td&#x3E;
+                &#x3C;/tr&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;td data-label=&#x22;Date&#x22;&#x3E;
+                        &#x3C;span class=&#x22;no-wrap&#x22;&#x3E; 5 Apr 2017&#x3C;/span&#x3E;
+                    &#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Description&#x22;&#x3E;
 
                             Acme Ltd
 
-                    &lt;/td&gt;
-                    &lt;td class="numeric" data-label="Amount"&gt; -£2,000.00&lt;/td&gt;
-                    &lt;td class="numeric"&gt;
-                        &lt;a title="View details for the transaction on 15 Apr 2018" href="/sprint/31/account/finance/payment-details-levy.html"&gt;
-                            Details &lt;span class="vh"&gt; for the transaction on  4 Nov 2017&lt;/span&gt;
-                        &lt;/a&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td data-label="Date"&gt;
-                        &lt;span class="no-wrap"&gt; 5 Apr 2017&lt;/span&gt;
-                    &lt;/td&gt;
-                    &lt;td data-label="Description"&gt;
+                    &#x3C;/td&#x3E;
+                    &#x3C;td class=&#x22;numeric&#x22; data-label=&#x22;Amount&#x22;&#x3E; -&#xA3;2,000.00&#x3C;/td&#x3E;
+                    &#x3C;td class=&#x22;numeric&#x22;&#x3E;
+                        &#x3C;a title=&#x22;View details for the transaction on 15 Apr 2018&#x22; href=&#x22;/sprint/31/account/finance/payment-details-levy.html&#x22;&#x3E;
+                            Details &#x3C;span class=&#x22;vh&#x22;&#x3E; for the transaction on  4 Nov 2017&#x3C;/span&#x3E;
+                        &#x3C;/a&#x3E;
+                    &#x3C;/td&#x3E;
+                &#x3C;/tr&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;td data-label=&#x22;Date&#x22;&#x3E;
+                        &#x3C;span class=&#x22;no-wrap&#x22;&#x3E; 5 Apr 2017&#x3C;/span&#x3E;
+                    &#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Description&#x22;&#x3E;
 
-                            Co-invested — Anvil Plc
+                            Co-invested &#x2014; Anvil Plc
 
-                    &lt;/td&gt;
-                    &lt;td class="numeric" data-label="Amount"&gt; -£1,000.00&lt;/td&gt;
-                    &lt;td class="numeric"&gt;
-                        &lt;a title="View details for the transaction on 15 Apr 2018" href="/sprint/31/account/finance/payment-details.html"&gt;
-                            Details &lt;span class="vh"&gt; for the transaction on  4 Nov 2017&lt;/span&gt;
-                        &lt;/a&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
+                    &#x3C;/td&#x3E;
+                    &#x3C;td class=&#x22;numeric&#x22; data-label=&#x22;Amount&#x22;&#x3E; -&#xA3;1,000.00&#x3C;/td&#x3E;
+                    &#x3C;td class=&#x22;numeric&#x22;&#x3E;
+                        &#x3C;a title=&#x22;View details for the transaction on 15 Apr 2018&#x22; href=&#x22;/sprint/31/account/finance/payment-details.html&#x22;&#x3E;
+                            Details &#x3C;span class=&#x22;vh&#x22;&#x3E; for the transaction on  4 Nov 2017&#x3C;/span&#x3E;
+                        &#x3C;/a&#x3E;
+                    &#x3C;/td&#x3E;
+                &#x3C;/tr&#x3E;
 
 
-            &lt;/tbody&gt;
-        &lt;/table&gt;
+            &#x3C;/tbody&#x3E;
+        &#x3C;/table&#x3E;
     </code>
 </pre>    
 </details>               
         
-        
+        <div class="grid-row">
+            <div class="column-two-thirds">
 <h4 class="heading-small">Additional treatments</h4>        
-        <p>If you need to highlight columns use the <code class="code">.highlight</code> class on the cells that need highlighting.</p>
-        
+        <p>If you need to highlight columns use the <code class="code">.highlight</code> class on the cells that need highlighting. The grey on black visual treatment <a href="https://webaim.org/resources/contrastchecker/?fcolor=0B0C0C&bcolor=BFC1C3" rel="external">passes WCAG AAA</a> at normal and large text sizes with a contrast ratio of 10.85:1.</p>
+    <p>For times when a large amount of data is absolutely necessary you can utilise the <code class="code">.small</code> classs to reduce the size of the content. Always try to maintain the default size and in cases where you have multiple tables default to small on all tables if any one table requires it. This creates a consistency to the interface and avoids a dissonance that can sometimes occur when users are presented with data in differing formats.</p>
+              
+            </div>
+        </div>      
 <div class="example">
-        <table class="responsive">
+        <table class="small responsive">
             <thead>
                 <tr>
                     <th colspan="2"></th>
@@ -316,7 +320,7 @@ table.responsive {
                     <td><a href="">Details</a></td>
                 </tr>
             </tbody>
-            <tfoot>
+            <tfoot data-intro="Totals row use the same principal of showing data-labels to expose the additional content for mobile." data-position="bottom">
                 <tr class="total">
                     <td data-label="Totals"> </td>
                     <td data-label="Paid from levy" class="total numeric">-£875.00</td>
@@ -333,63 +337,82 @@ table.responsive {
     <summary>HTML</summary>
     <pre>
         <code class="html">
-&lt;table class="responsive"&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th colspan="2"&gt;&lt;/th&gt;
-                    &lt;th class="highlight colgroup" scope="colgroup" colspan="2"&gt;Co-investment&lt;/th&gt;
-                    &lt;th colspan="2"&gt;&lt;/th&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;th scope="col"&gt;Course&lt;/th&gt;
-                    &lt;th scope="col" class="numeric"&gt;Paid from levy&lt;/th&gt;
-                    &lt;th scope="col" class="highlight numeric"&gt;90% paid by Government&lt;/th&gt;
-                    &lt;th scope="col" class="highlight numeric"&gt;10% paid by you&lt;/th&gt;
-                    &lt;th scope="col" class="numeric"&gt;Amount&lt;/th&gt;
-                    &lt;th&gt;&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td data-label="Course"&gt;Financial services administrator level 3&lt;/td&gt;
-                    &lt;td data-label="Paid from levy" class="numeric"&gt;-£1000.00&lt;/td&gt;
-                    &lt;td data-label="90% paid by Government" class="highlight numeric"&gt;£0.00&lt;/td&gt;
-                    &lt;td data-label="10% by you" class="highlight numeric"&gt;£0.00&lt;/td&gt;
-                    &lt;td data-label="Amount" class="numeric"&gt;£-1000.00&lt;/td&gt;
-                    &lt;td&gt;&lt;a href=""&gt;Details&lt;/a&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td data-label="Course"&gt;Financial services administrator level 3&lt;/td&gt;
-                    &lt;td data-label="Paid from levy" class="numeric"&gt;-£1000.00&lt;/td&gt;
-                    &lt;td data-label="90% paid by Government" class="highlight numeric"&gt;£0.00&lt;/td&gt;
-                    &lt;td data-label="10% by you" class="highlight numeric"&gt;£0.00&lt;/td&gt;
-                    &lt;td data-label="Amount" class="numeric"&gt;£-1000.00&lt;/td&gt;
-                    &lt;td&gt;&lt;a href=""&gt;Details&lt;/a&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td data-label="Course"&gt;Financial services administrator level 3&lt;/td&gt;
-                    &lt;td data-label="Paid from levy" class="numeric"&gt;-£1000.00&lt;/td&gt;
-                    &lt;td data-label="90% paid by Government" class="highlight numeric"&gt;£0.00&lt;/td&gt;
-                    &lt;td data-label="10% by you" class="highlight numeric"&gt;£0.00&lt;/td&gt;
-                    &lt;td data-label="Amount" class="numeric"&gt;£-1000.00&lt;/td&gt;
-                    &lt;td&gt;&lt;a href=""&gt;Details&lt;/a&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-            &lt;tfoot&gt;
-                &lt;tr class="total"&gt;
-                    &lt;td data-label="Totals"&gt; &lt;/td&gt;
-                    &lt;td data-label="Paid from levy" class="total numeric"&gt;-£875.00&lt;/td&gt;
-                    &lt;td data-label="90% paid by Government" class="total numeric highlight"&gt;-£875.00&lt;/td&gt;
-                    &lt;td data-label="10% by you" class="total numeric highlight"&gt;-£875.00&lt;/td&gt;
-                    &lt;td data-label="Amount"s class="total numeric"&gt;-£875.00&lt;/td&gt;
-                    &lt;td&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tfoot&gt;
-        &lt;/table&gt;
+        &#x3C;table class=&#x22;small responsive&#x22;&#x3E;
+            &#x3C;thead&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;th colspan=&#x22;2&#x22;&#x3E;&#x3C;/th&#x3E;
+                    &#x3C;th class=&#x22;highlight colgroup&#x22; scope=&#x22;colgroup&#x22; colspan=&#x22;2&#x22;&#x3E;Co-investment&#x3C;/th&#x3E;
+                    &#x3C;th colspan=&#x22;2&#x22;&#x3E;&#x3C;/th&#x3E;
+                &#x3C;/tr&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22;&#x3E;Course&#x3C;/th&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22; class=&#x22;numeric&#x22;&#x3E;Paid from levy&#x3C;/th&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22; class=&#x22;highlight numeric&#x22;&#x3E;90% paid by Government&#x3C;/th&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22; class=&#x22;highlight numeric&#x22;&#x3E;10% paid by you&#x3C;/th&#x3E;
+                    &#x3C;th scope=&#x22;col&#x22; class=&#x22;numeric&#x22;&#x3E;Amount&#x3C;/th&#x3E;
+                    &#x3C;th&#x3E;&#x3C;/th&#x3E;
+                &#x3C;/tr&#x3E;
+            &#x3C;/thead&#x3E;
+            &#x3C;tbody&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;td data-label=&#x22;Course&#x22;&#x3E;Financial services administrator level 3&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Paid from levy&#x22; class=&#x22;numeric&#x22;&#x3E;-&#xA3;1000.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;90% paid by Government&#x22; class=&#x22;highlight numeric&#x22;&#x3E;&#xA3;0.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;10% by you&#x22; class=&#x22;highlight numeric&#x22;&#x3E;&#xA3;0.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Amount&#x22; class=&#x22;numeric&#x22;&#x3E;&#xA3;-1000.00&#x3C;/td&#x3E;
+                    &#x3C;td&#x3E;&#x3C;a href=&#x22;&#x22;&#x3E;Details&#x3C;/a&#x3E;&#x3C;/td&#x3E;
+                &#x3C;/tr&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;td data-label=&#x22;Course&#x22;&#x3E;Financial services administrator level 3&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Paid from levy&#x22; class=&#x22;numeric&#x22;&#x3E;-&#xA3;1000.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;90% paid by Government&#x22; class=&#x22;highlight numeric&#x22;&#x3E;&#xA3;0.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;10% by you&#x22; class=&#x22;highlight numeric&#x22;&#x3E;&#xA3;0.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Amount&#x22; class=&#x22;numeric&#x22;&#x3E;&#xA3;-1000.00&#x3C;/td&#x3E;
+                    &#x3C;td&#x3E;&#x3C;a href=&#x22;&#x22;&#x3E;Details&#x3C;/a&#x3E;&#x3C;/td&#x3E;
+                &#x3C;/tr&#x3E;
+                &#x3C;tr&#x3E;
+                    &#x3C;td data-label=&#x22;Course&#x22;&#x3E;Financial services administrator level 3&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Paid from levy&#x22; class=&#x22;numeric&#x22;&#x3E;-&#xA3;1000.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;90% paid by Government&#x22; class=&#x22;highlight numeric&#x22;&#x3E;&#xA3;0.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;10% by you&#x22; class=&#x22;highlight numeric&#x22;&#x3E;&#xA3;0.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Amount&#x22; class=&#x22;numeric&#x22;&#x3E;&#xA3;-1000.00&#x3C;/td&#x3E;
+                    &#x3C;td&#x3E;&#x3C;a href=&#x22;&#x22;&#x3E;Details&#x3C;/a&#x3E;&#x3C;/td&#x3E;
+                &#x3C;/tr&#x3E;
+            &#x3C;/tbody&#x3E;
+            &#x3C;tfoot data-intro=&#x22;Totals row use the same principal of showing data-labels to expose the additional content for mobile.&#x22; data-position=&#x22;bottom&#x22;&#x3E;
+                &#x3C;tr class=&#x22;total&#x22;&#x3E;
+                    &#x3C;td data-label=&#x22;Totals&#x22;&#x3E; &#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Paid from levy&#x22; class=&#x22;total numeric&#x22;&#x3E;-&#xA3;875.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;90% paid by Government&#x22; class=&#x22;total numeric highlight&#x22;&#x3E;-&#xA3;875.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;10% by you&#x22; class=&#x22;total numeric highlight&#x22;&#x3E;-&#xA3;875.00&#x3C;/td&#x3E;
+                    &#x3C;td data-label=&#x22;Amount&#x22;s class=&#x22;total numeric&#x22;&#x3E;-&#xA3;875.00&#x3C;/td&#x3E;
+                    &#x3C;td&#x3E;&#x3C;/td&#x3E;
+                &#x3C;/tr&#x3E;
+            &#x3C;/tfoot&#x3E;
+        &#x3C;/table&#x3E;
         </code>
     </pre>
 </details>        
-        
+<details>
+    <summary>SASS</summary>
+    <pre>
+        <code class="css">
+// Small tables
+
+table.small th, table.small td {
+    font-size: 16px;
+}
+
+// Table highlights
+
+td, th {
+    &.highlight {
+        background: $grey-3;
+    }
+}
+        </code>
+    </pre>
+</details>        
         
 <h3 class="heading-medium" id="data-table-numeric">Numeric tabular data</h3>        
 <ul class="text list list-bullet">
@@ -464,6 +487,10 @@ table.responsive {
     </section>
     
 </main>
+
+
+
+&#x3C;div&#x3E;TEST&#x3C;/div&#x3E;
     
     {% endblock %}
     
