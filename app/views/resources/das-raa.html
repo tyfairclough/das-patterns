@@ -1,0 +1,59 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" class="scripts" role="main" tabindex="-1">
+    
+    <div class="hgroup">
+    <h1 class="heading-xlarge">
+      das-fat-beta
+    </h1>
+    <div class="text">
+        <p class="lede">
+            Find apprenticeship training experience.
+        </p>
+    </div>    
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h2 class="heading-medium">How to use this prototype</h2>
+            <p>To view a prototype you need to add /sprints/sprint- then sprint number to the end of the url. for example sprint 2 is <code class="code">https://das-raa-v2.herokuapp.com/sprints/sprint-2</code></p>
+            
+            <h3 class="heading-small">Prototype link</h3>
+            <a href="https://das-raa-v2.herokuapp.com/" target="_blank">https://das-raa-v2.herokuapp.com/</a>
+            <h3 class="heading-small">Login credentials</h3>
+            <dl>
+                <dt>Username</dt>
+                <dd>test_user</dd>
+                <dt>Password</dt>
+                <dd>das-raa-v2-02</dd>
+            </dl>
+          
+        </div>
+        <aside class="column-third">
+            <div class="related">
+                  <h3 class="heading-small">Github repositry</h3>
+                <a href="#" target="_blank" class="font-xsmall">not available</a>
+  <h3 class="heading-small">Maintained by</h3>
+        
+        <a href="mailto:daniel.sensecall@education.gov.uk">Dan Sensecall</a>
+            </div>
+        </aside>
+    </div>
+</main>
+
+{% endblock %}
+
+
+
+
+
